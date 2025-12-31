@@ -68,7 +68,7 @@ export default function About() {
                 </div>
 
                 <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">
-                  About <span className="gradient-text">Andrew</span>
+                  About <span className="gradient-text-red">Andrew</span>
                 </h1>
 
                 <p className="text-lg text-muted-foreground mb-6">
