@@ -64,6 +64,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/prompts" className="hover:text-primary transition-colors">
+                  AI Prompts
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" className="hover:text-primary transition-colors">
                   Contact
                 </Link>
