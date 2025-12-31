@@ -42,49 +42,69 @@ export default function Index() {
       <main>
         <HeroSection />
 
-        {/* About Preview Section */}
-        <section id="about-preview" className="py-24 bg-secondary/30">
+        {/* Farm Insights Section */}
+        <section id="farm-insights" className="py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="animate-slide-up">
                 <SectionHeader
-                  title="Driving Growth at the Intersection of Finance & Technology"
-                  subtitle="Recent CU Boulder graduate combining analytical rigor with entrepreneurial execution to deliver measurable impact in fast-paced startup environments."
+                  title="Building the Future of Agriculture at Farm Insights"
+                  subtitle="Applying my entrepreneurial finance education from CU Boulder's Leeds School of Business to help revolutionize how farmers make decisions."
                 />
+                <p className="text-muted-foreground mb-4">
+                  As Financial Analyst at Farm Insights, I'm at the forefront of an AI-powered AgTech 
+                  startup transforming agricultural decision-making. From architecting fundraising 
+                  strategies to building market intelligence systems, I help drive the strategic 
+                  and financial foundation that enables our technology to reach farmers nationwide.
+                </p>
                 <p className="text-muted-foreground mb-6">
-                  At Farm Insights, I've architected a $1M pre-seed fundraising strategy, 
-                  built comprehensive 5-year financial models, and developed AI-powered 
-                  marketing systems that drive real results. My background includes 
-                  founding a digital news platform that scaled to 120,000+ monthly visitors.
+                  My work spans financial modeling, investor relations, go-to-market strategy, 
+                  and building AI-powered content systems—all aimed at helping Farm Insights 
+                  deliver actionable intelligence to the agricultural community.
                 </p>
                 <Button asChild>
                   <Link to="/about">
-                    Learn More About Me <ArrowRight className="ml-2 h-4 w-4" />
+                    Learn More About My Work <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <StatsCard
-                  value="$1M+"
-                  label="Pre-Seed Strategy"
-                  description="Fundraising campaign design"
-                />
-                <StatsCard
-                  value="450+"
-                  label="Counties Analyzed"
-                  description="Market intelligence database"
-                />
-                <StatsCard
-                  value="120K+"
-                  label="Monthly Visitors"
-                  description="Dirty Politix platform"
-                />
-                <StatsCard
-                  value="Top 20"
-                  label="AgLaunch365"
-                  description="Accelerator finalist"
-                />
+              <div className="space-y-6">
+                <div className="p-6 rounded-2xl bg-card border border-border">
+                  <h3 className="font-display text-lg font-semibold mb-4 text-primary">Strategic Growth & Fundraising</h3>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                      Designed comprehensive investor outreach campaign targeting AgTech and AI-focused VCs
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                      Secured Top 20 finalist position at AgLaunch365 accelerator from hundreds of global applicants
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                      Created investor pitch deck with continuous improvement process and documented enhancements
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="p-6 rounded-2xl bg-card border border-border">
+                  <h3 className="font-display text-lg font-semibold mb-4 text-accent">Market Intelligence & Operations</h3>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                      Built proprietary market intelligence engine covering 450+ U.S. farming counties
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                      Developed custom "Opportunity Score" algorithm to identify optimal market entry points
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                      Established AI-assisted content workflow aligned with brand voice guidelines
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
