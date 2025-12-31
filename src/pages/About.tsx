@@ -1,4 +1,4 @@
-import { MapPin, Calendar, Award, Target } from "lucide-react";
+import { Calendar, Award, Target } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionHeader from "@/components/SectionHeader";
@@ -62,10 +62,6 @@ export default function About() {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="animate-slide-up">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm mb-6">
-                  <MapPin className="h-4 w-4 text-primary" />
-                  <span>Denver, Colorado</span>
-                </div>
 
                 <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">
                   About <span className="gradient-text-red">Andrew</span>
