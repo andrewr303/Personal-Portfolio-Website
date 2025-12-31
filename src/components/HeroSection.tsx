@@ -49,21 +49,6 @@ export default function HeroSection() {
               </Button>
             </div>
 
-            {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8">
-              <div className="text-center">
-                <div className="font-display text-3xl font-bold text-primary">$1M+</div>
-                <div className="text-sm text-muted-foreground">Fundraising Strategy</div>
-              </div>
-              <div className="text-center">
-                <div className="font-display text-3xl font-bold text-accent">450+</div>
-                <div className="text-sm text-muted-foreground">Markets Analyzed</div>
-              </div>
-              <div className="text-center">
-                <div className="font-display text-3xl font-bold text-primary">120K+</div>
-                <div className="text-sm text-muted-foreground">Monthly Visitors</div>
-              </div>
-            </div>
 
             {/* Social Links */}
             <div className="flex items-center gap-4 pt-4">
