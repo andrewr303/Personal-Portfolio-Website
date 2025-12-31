@@ -31,7 +31,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link to="/" className="font-display text-xl font-bold">
-          <span className="gradient-text">AR</span>
+          <span className="gradient-text-red">AR</span>
         </Link>
 
         {/* Desktop Navigation */}
