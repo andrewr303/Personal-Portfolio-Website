@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, Linkedin, Send, ExternalLink } from "lucide-react";
+import { Mail, Linkedin, Send, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -14,12 +14,6 @@ const contactInfo = [
     label: "Email",
     value: "andrew@andrewvrodriguez.com",
     href: "mailto:andrew@andrewvrodriguez.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "(720) 409-7992",
-    href: "tel:7204097992",
   },
   {
     icon: Linkedin,
