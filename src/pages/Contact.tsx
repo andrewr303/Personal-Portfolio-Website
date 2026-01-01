@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, Linkedin, MapPin, Send, ExternalLink } from "lucide-react";
+import { Mail, Phone, Linkedin, Send, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -27,11 +27,6 @@ const contactInfo = [
     value: "in/andrewvrodriguez",
     href: "https://linkedin.com/in/andrewvrodriguez",
     external: true,
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "Denver, Colorado",
   },
 ];
 
