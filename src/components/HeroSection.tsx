@@ -42,7 +42,7 @@ export default function HeroSection() {
 
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="glow">
-                <Link to="/experience">View My Work</Link>
+                <Link to="/projects">View My Work</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link to="/contact">Connect With Me</Link>
