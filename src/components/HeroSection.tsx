@@ -1,4 +1,4 @@
-import { ArrowDown, Linkedin, Mail, Phone } from "lucide-react";
+import { ArrowDown, Linkedin, Mail, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -69,11 +69,13 @@ export default function HeroSection() {
                 <Mail className="h-5 w-5" />
               </a>
               <a
-                href="tel:7204097992"
+                href="https://github.com/andrewr303"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 rounded-full glass hover:bg-primary/20 transition-colors"
-                aria-label="Phone"
+                aria-label="GitHub"
               >
-                <Phone className="h-5 w-5" />
+                <Github className="h-5 w-5" />
               </a>
             </div>
           </div>
