@@ -221,27 +221,6 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-secondary/30">
-          <div className="container mx-auto px-4 text-center">
-            <div className="flex flex-wrap justify-center gap-6">
-              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
-                <a
-                  href="https://linkedin.com/in/andrewvrodriguez"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Connect on LinkedIn <Linkedin className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
-                <a href="mailto:andrew@andrewvrodriguez.com">
-                  Send an Email <Mail className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
