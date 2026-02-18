@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import SectionHeader from "@/components/SectionHeader";
 import ExperienceCard from "@/components/ExperienceCard";
-import StatsCard from "@/components/StatsCard";
 import SkillBadge from "@/components/SkillBadge";
 
 const skills = {
@@ -36,14 +35,14 @@ const skills = {
 
 export default function Index() {
   return (
-    <div className="min-h-screen dark">
+    <div className="min-h-screen">
       <Navbar />
       
       <main>
         <HeroSection />
 
         {/* Farm Insights Section */}
-        <section id="farm-insights" className="py-24 bg-secondary/30">
+        <section id="farm-insights" className="py-24 bg-secondary/50">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="animate-slide-up">
@@ -70,7 +69,7 @@ export default function Index() {
               </div>
 
               <div className="space-y-6">
-                <div className="p-6 rounded-2xl bg-card border border-border">
+                <div className="p-6 rounded-2xl bg-card border border-border shadow-sm">
                   <h3 className="font-display text-lg font-semibold mb-4 text-primary">Strategic Growth & Fundraising</h3>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-2">
@@ -88,19 +87,19 @@ export default function Index() {
                   </ul>
                 </div>
 
-                <div className="p-6 rounded-2xl bg-card border border-border">
-                  <h3 className="font-display text-lg font-semibold mb-4 text-accent">Market Intelligence & Operations</h3>
+                <div className="p-6 rounded-2xl bg-card border border-border shadow-sm">
+                  <h3 className="font-display text-lg font-semibold mb-4 text-foreground">Market Intelligence & Operations</h3>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2" />
                       Built proprietary market intelligence engine covering 450+ U.S. farming counties
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2" />
                       Developed custom "Opportunity Score" algorithm to identify optimal market entry points
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2" />
                       Established AI-assisted content workflow aligned with brand voice guidelines
                     </li>
                   </ul>
@@ -120,7 +119,7 @@ export default function Index() {
             />
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="p-6 rounded-2xl bg-card border border-border">
+              <div className="p-6 rounded-2xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-3 rounded-xl bg-primary/10">
                     <Briefcase className="h-6 w-6 text-primary" />
@@ -134,10 +133,10 @@ export default function Index() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-card border border-border">
+              <div className="p-6 rounded-2xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 rounded-xl bg-accent/10">
-                    <Code className="h-6 w-6 text-accent" />
+                  <div className="p-3 rounded-xl bg-muted">
+                    <Code className="h-6 w-6 text-foreground" />
                   </div>
                   <h3 className="font-display text-xl font-semibold">Technical Skills</h3>
                 </div>
@@ -148,7 +147,7 @@ export default function Index() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-card border border-border">
+              <div className="p-6 rounded-2xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-3 rounded-xl bg-chart-4/10">
                     <Lightbulb className="h-6 w-6 text-chart-4" />
@@ -166,7 +165,7 @@ export default function Index() {
         </section>
 
         {/* Experience Preview */}
-        <section className="py-24 bg-secondary/30">
+        <section className="py-24 bg-secondary/50">
           <div className="container mx-auto px-4">
             <SectionHeader
               title="Professional Experience"
@@ -222,7 +221,7 @@ export default function Index() {
                 />
                 
                 <div className="space-y-6">
-                  <div className="p-6 rounded-2xl bg-card border border-border">
+                  <div className="p-6 rounded-2xl bg-card border border-border shadow-sm">
                     <div className="flex items-start gap-4">
                       <div className="p-3 rounded-xl bg-primary/10">
                         <GraduationCap className="h-6 w-6 text-primary" />
@@ -241,7 +240,7 @@ export default function Index() {
                     </div>
                   </div>
 
-                  <div className="p-6 rounded-2xl bg-card border border-border">
+                  <div className="p-6 rounded-2xl bg-card border border-border shadow-sm">
                     <h4 className="font-semibold mb-3">Certifications & Recognition</h4>
                     <ul className="space-y-2 text-muted-foreground">
                       <li className="flex items-center gap-2">
@@ -261,8 +260,8 @@ export default function Index() {
                 </div>
               </div>
 
-              <div className="p-8 rounded-2xl glass glow">
-                <blockquote className="text-xl font-display italic mb-4">
+              <div className="p-8 rounded-2xl bg-card border border-border shadow-lg">
+                <blockquote className="text-xl font-display italic mb-4 text-foreground">
                   "Committed to delivering measurable impact and supporting strategic 
                   growth in fast-paced, innovative organizations."
                 </blockquote>
@@ -273,21 +272,21 @@ export default function Index() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-secondary/30">
+        <section className="py-24 bg-foreground">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-              Let's Build Something <span className="gradient-text">Amazing</span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-background">
+              Let's Build Something Amazing
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-background/70 mb-8 max-w-2xl mx-auto">
               Whether you're looking for a strategic financial partner, need help 
               with fundraising, or want to discuss AI-powered growth strategies, 
               I'd love to connect.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="glow">
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <Link to="/contact">Get In Touch</Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
+              <Button asChild size="lg" variant="outline" className="border-background/30 text-background hover:bg-background/10">
                 <a href="/Andrew-Rodriguez-Resume.pdf" download>
                   Download Resume
                 </a>

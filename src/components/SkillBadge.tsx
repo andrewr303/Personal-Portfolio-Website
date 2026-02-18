@@ -6,7 +6,7 @@ interface SkillBadgeProps {
 export default function SkillBadge({ name, category = "finance" }: SkillBadgeProps) {
   const categoryStyles = {
     finance: "bg-primary/10 text-primary border-primary/20",
-    tech: "bg-accent/10 text-accent border-accent/20",
+    tech: "bg-muted text-foreground border-border",
     leadership: "bg-chart-4/10 text-chart-4 border-chart-4/20",
   };
 

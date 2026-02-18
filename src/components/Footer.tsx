@@ -5,39 +5,39 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-card/50">
+    <footer className="border-t border-border bg-secondary/30">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <Link to="/" className="font-display text-2xl font-bold">
-              <span className="gradient-text-red">Andrew Rodriguez</span>
+              <span className="gradient-text">Andrew Rodriguez</span>
             </Link>
             <p className="mt-4 text-muted-foreground max-w-md">
               Financial Analyst & Startup Strategist specializing in AgTech,
               AI-powered tools, and data-driven growth strategies.
             </p>
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-3 mt-6">
               <a
                 href="https://linkedin.com/in/andrewvrodriguez"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
                 href="mailto:andrew@andrewvrodriguez.com"
-                className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/andrewr303"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
