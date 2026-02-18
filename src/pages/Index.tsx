@@ -272,21 +272,21 @@ export default function Index() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-foreground">
+        <section className="py-24 bg-primary">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-background">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
               Let's Build Something Amazing
             </h2>
-            <p className="text-lg text-background/70 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-primary-foreground/70 mb-8 max-w-2xl mx-auto">
               Whether you're looking for a strategic financial partner, need help 
               with fundraising, or want to discuss AI-powered growth strategies, 
               I'd love to connect.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
                 <Link to="/contact">Get In Touch</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-background/30 text-background hover:bg-background/10">
+              <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                 <a href="/Andrew-Rodriguez-Resume.pdf" download>
                   Download Resume
                 </a>
