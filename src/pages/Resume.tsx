@@ -204,7 +204,7 @@ const certifications = [
   {
     title: "Tax Preparation Certification",
     issuer: "Tax Help Colorado / VITA",
-    year: "2023",
+    year: "2014",
     description: "IRS-certified volunteer tax preparer specializing in low-income tax assistance.",
   },
   {
