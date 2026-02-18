@@ -121,8 +121,7 @@ export default function Projects() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <SectionHeader
-              title="Featured Reports"
-              subtitle="Click to view or download full academic reports and analyses"
+              title="Projects"
               centered
             />
 
@@ -161,11 +160,6 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  {/* Bottom CTA */}
-                  <div className="mt-4 pt-4 border-t border-border flex items-center gap-2 text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                    <FileText className="h-4 w-4" />
-                    View Full Report
-                  </div>
                 </a>
               ))}
             </div>
