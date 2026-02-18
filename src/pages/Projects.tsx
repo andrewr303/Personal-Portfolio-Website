@@ -130,8 +130,6 @@ export default function Projects() {
                 <a
                   key={proj.title}
                   href={proj.file}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="group relative p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer block"
                 >
                   {/* Icon header */}
