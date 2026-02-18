@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FileText, Download, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -127,9 +128,9 @@ export default function Projects() {
 
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {pdfProjects.map((proj) => (
-                <a
+                <Link
                   key={proj.title}
-                  href={proj.file}
+                  to={`/view-pdf?file=${encodeURIComponent(proj.file)}&title=${encodeURIComponent(proj.title)}`}
                   className="group relative p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer block"
                 >
                   {/* Icon header */}
@@ -158,7 +159,7 @@ export default function Projects() {
                     ))}
                   </div>
 
-                </a>
+                </Link>
               ))}
             </div>
           </div>
