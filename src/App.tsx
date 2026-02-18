@@ -12,6 +12,7 @@ import Prompts from "./pages/Prompts";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Ventures from "./pages/Ventures";
 import PdfViewer from "./pages/PdfViewer";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/prompts" element={<Prompts />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/ventures" element={<Ventures />} />
           <Route path="/view-pdf" element={<PdfViewer />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
