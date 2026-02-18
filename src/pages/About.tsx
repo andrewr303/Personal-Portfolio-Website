@@ -29,6 +29,20 @@ const skillCategories = [
 
 const experiences = [
   {
+    period: "June 2025 - Present",
+    company: "Farm Insights",
+    role: "Financial Analyst",
+    bullets: [
+      "Architecting fundraising strategy for AI-powered AgTech startup transforming agricultural decision-making.",
+      "Designed comprehensive investor outreach campaign targeting AgTech and AI-focused VCs.",
+      "Secured Top 20 finalist position at AgLaunch365 accelerator from hundreds of global applicants.",
+      "Created investor pitch deck with continuous improvement process and documented enhancements.",
+      "Built proprietary market intelligence engine covering 450+ U.S. farming counties.",
+      "Developed custom 'Opportunity Score' algorithm to identify optimal market entry points.",
+      "Established AI-assisted content workflow aligned with brand voice guidelines.",
+    ],
+  },
+  {
     period: "June 2023 - Present",
     company: "Dirty Politix LLC",
     role: "Owner",
