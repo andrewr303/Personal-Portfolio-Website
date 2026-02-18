@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionHeader from "@/components/SectionHeader";
 import { Badge } from "@/components/ui/badge";
-import headshotImg from "@/assets/andrew-headshot.jpg";
 
 // Education Components
 interface TimelineItemProps {
@@ -67,7 +66,7 @@ function CertificationCard({ title, issuer, year, description }: CertificationCa
   );
 }
 
-// Skills data (from About)
+// Skills data
 const skillCategories = [
   {
     title: "Financial Analysis",
@@ -281,62 +280,6 @@ export default function Resume() {
       <Navbar />
 
       <main className="pt-24">
-        {/* Hero / Intro */}
-        <section className="py-16 bg-secondary/30">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="animate-slide-up">
-                <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">
-                  About <span className="gradient-text">Andrew</span>
-                </h1>
-                <p className="text-lg text-muted-foreground mb-6">
-                  I'm Andrew Rodriguez, a visionary finance professional with a passion for entrepreneurship and innovation. Armed with a BSBA in Finance from the University of Colorado Boulder, I'm on a mission to revolutionize how businesses leverage financial insights and cutting-edge tech.
-                </p>
-                <p className="text-muted-foreground">
-                  Whether I'm turning complex data into actionable strategies or implementing AI-driven financial solutions, I'm driven by the potential to create value and impact. If you're looking for someone who can speak the language of finance fluently while thinking outside the spreadsheet, you've come to the right place!
-                </p>
-              </div>
-
-              <div className="relative flex justify-center animate-fade-in">
-                <div className="relative">
-                  <div className="absolute -inset-4 gradient-primary rounded-3xl opacity-20 blur-3xl" />
-                  <img
-                    src={headshotImg}
-                    alt="Andrew Rodriguez"
-                    className="relative w-full max-w-md rounded-3xl border-2 border-primary/30 glow"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Skills */}
-        <section className="py-24">
-          <div className="container mx-auto px-4">
-            <SectionHeader title="Skills & Expertise" subtitle="A comprehensive toolkit spanning finance, technology, and leadership" centered />
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {skillCategories.map((cat) => (
-                <div key={cat.title} className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all hover:shadow-lg group">
-                  <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
-                    <cat.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-display text-lg font-semibold mb-4">{cat.title}</h3>
-                  <ul className="space-y-2">
-                    {cat.skills.map((skill) => (
-                      <li key={skill} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Farm Insights - Featured Role */}
         <section className="py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
@@ -409,8 +352,21 @@ export default function Resume() {
           </div>
         </section>
 
-        {/* School Projects */}
+        {/* Education Timeline */}
         <section className="py-24 bg-secondary/30">
+          <div className="container mx-auto px-4">
+            <SectionHeader title="Education" subtitle="Academic foundation in finance and business" />
+
+            <div className="max-w-3xl mx-auto mt-12">
+              {education.map((edu, index) => (
+                <TimelineItem key={index} {...edu} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* School Projects */}
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <SectionHeader title="School Projects" subtitle="Academic work demonstrating analytical and financial modeling expertise" centered />
 
@@ -436,21 +392,34 @@ export default function Resume() {
           </div>
         </section>
 
-        {/* Education Timeline */}
-        <section className="py-24">
+        {/* Skills */}
+        <section className="py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <SectionHeader title="Education" subtitle="Academic foundation in finance and business" />
+            <SectionHeader title="Skills & Expertise" subtitle="A comprehensive toolkit spanning finance, technology, and leadership" centered />
 
-            <div className="max-w-3xl mx-auto mt-12">
-              {education.map((edu, index) => (
-                <TimelineItem key={index} {...edu} />
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {skillCategories.map((cat) => (
+                <div key={cat.title} className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all hover:shadow-lg group">
+                  <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
+                    <cat.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-display text-lg font-semibold mb-4">{cat.title}</h3>
+                  <ul className="space-y-2">
+                    {cat.skills.map((skill) => (
+                      <li key={skill} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* Certifications */}
-        <section className="py-24 bg-secondary/30">
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <div className="flex items-center gap-3 mb-8">
               <BookOpen className="h-6 w-6 text-primary" />
@@ -466,7 +435,7 @@ export default function Resume() {
         </section>
 
         {/* Recognition */}
-        <section className="py-24">
+        <section className="py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <SectionHeader title="Recognition & Awards" centered />
 
