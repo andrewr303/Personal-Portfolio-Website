@@ -1,4 +1,4 @@
-import { ExternalLink, Rocket, TrendingUp, Shield, BarChart3 } from "lucide-react";
+import { ExternalLink, Rocket, TrendingUp, Shield, BarChart3, Vote, Bot, Megaphone } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -34,6 +34,37 @@ const ventures = [
       },
     ],
     tags: ["AI/ML", "FinTech", "Creator Economy", "SaaS"],
+    embed: true,
+  },
+  {
+    name: "ElectionAI",
+    tagline: "Changing How Elections Are Won with AI",
+    url: "https://electionai.io",
+    description:
+      "ElectionAI is revolutionizing the political landscape by harnessing the power of artificial intelligence to transform how campaigns are run. From voter outreach to data-driven strategy, we're building the tools that give campaigns an unprecedented edge.",
+    details:
+      "By integrating AI across every facet of campaign operations, ElectionAI empowers political teams to make smarter decisions, reach the right voters, and maximize impact—all at a fraction of the traditional cost.",
+    features: [
+      {
+        icon: Bot,
+        title: "AI-Powered Campaign Strategy",
+        description:
+          "Leverage machine learning to analyze voter sentiment, predict turnout, and optimize messaging across demographics.",
+      },
+      {
+        icon: Megaphone,
+        title: "Smart Voter Outreach",
+        description:
+          "Automated, personalized voter engagement at scale—reaching the right people with the right message at the right time.",
+      },
+      {
+        icon: Vote,
+        title: "Data-Driven Insights",
+        description:
+          "Real-time analytics dashboards that turn complex election data into actionable campaign intelligence.",
+      },
+    ],
+    tags: ["AI/ML", "Political Tech", "Data Analytics", "SaaS"],
     embed: true,
   },
 ];
@@ -159,20 +190,6 @@ export default function Ventures() {
           </section>
         ))}
 
-        {/* Coming Soon */}
-        <section className="py-24 bg-secondary/30">
-          <div className="container mx-auto px-4 text-center">
-            <div className="inline-flex p-4 rounded-2xl bg-primary/10 mb-6">
-              <TrendingUp className="h-8 w-8 text-primary" />
-            </div>
-            <h2 className="font-display text-3xl font-bold mb-4">
-              More Coming Soon
-            </h2>
-            <p className="text-muted-foreground max-w-lg mx-auto">
-              Another venture is in the works. Check back soon for updates.
-            </p>
-          </div>
-        </section>
       </main>
 
       <Footer />
