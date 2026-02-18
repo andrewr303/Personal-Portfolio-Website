@@ -1,7 +1,7 @@
 import { ArrowDown, Linkedin, Mail, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import headshotImg from "@/assets/andrew-headshot.jpg";
+import headshotImg from "@/assets/andrew-farm-insights.jpg";
 
 export default function HeroSection() {
   return (
