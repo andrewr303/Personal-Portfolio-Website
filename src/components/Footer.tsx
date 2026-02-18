@@ -106,10 +106,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:7204097992"
+                  href="mailto:andrew@hypestake.ai"
                   className="hover:text-primary transition-colors"
                 >
-                  (720) 409-7992
+                  andrew@hypestake.ai
                 </a>
               </li>
             </ul>
