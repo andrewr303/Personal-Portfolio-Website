@@ -32,11 +32,23 @@ export default function PdfViewer() {
 
       {/* PDF embed */}
       <div className="flex-1">
-        <iframe
-          src={file}
+        <object
+          data={file}
+          type="application/pdf"
           className="w-full h-full min-h-[calc(100vh-57px)]"
           title={title}
-        />
+        >
+          <div className="flex flex-col items-center justify-center h-full min-h-[calc(100vh-57px)] gap-4">
+            <p className="text-muted-foreground text-center max-w-md">
+              Your browser is unable to display this PDF inline. Click below to download or open it directly.
+            </p>
+            <Button asChild>
+              <a href={file} target="_blank" rel="noopener noreferrer">
+                Open PDF
+              </a>
+            </Button>
+          </div>
+        </object>
       </div>
     </div>
   );
