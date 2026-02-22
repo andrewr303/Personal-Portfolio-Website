@@ -27,7 +27,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:andrew@andrewvrodriguez.com"
+                href="mailto:andrew@electionai.io"
                 className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                 aria-label="Email"
               >
@@ -106,10 +106,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:andrew@hypestake.ai"
+                  href="mailto:andrew@electionai.io"
                   className="hover:text-primary transition-colors"
                 >
-                  andrew@hypestake.ai
+                  andrew@electionai.io
                 </a>
               </li>
             </ul>
