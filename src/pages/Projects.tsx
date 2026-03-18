@@ -12,6 +12,14 @@ const categories = ["All", "Finance", "AI & Automation", "Business", "School"];
 
 const pdfProjects = [
   {
+    title: "HypeStake Pitch Deck V3",
+    subtitle: "HypeStake — AI-Powered Creator-Brand Equity Platform",
+    description:
+      "15-slide $500K pre-seed investor deck for HypeStake, the first platform giving creators real ownership in the brands they grow. Covers market opportunity, product, traction, and financial projections.",
+    tags: ["Pitch Deck", "Pre-Seed", "Creator Economy", "AI"],
+    file: "/projects/HypeStake-Pitch-Deck-V3.pdf",
+  },
+  {
     title: "Strategic Corporate Analysis & Stock Buyback Recommendation",
     subtitle: "American Greetings — Senior Seminar in Finance",
     description:
