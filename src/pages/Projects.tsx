@@ -12,6 +12,14 @@ const categories = ["All", "Finance", "AI & Automation", "Business", "School"];
 
 const pdfProjects = [
   {
+    title: "HypeStake Pitch Deck V3",
+    subtitle: "HypeStake — AI-Powered Creator-Brand Equity Platform",
+    description:
+      "15-slide $500K pre-seed investor deck for HypeStake, the first platform giving creators real ownership in the brands they grow. Covers market opportunity, product, traction, and financial projections.",
+    tags: ["Pitch Deck", "Pre-Seed", "Creator Economy", "AI"],
+    file: "/projects/HypeStake-Pitch-Deck-V3.pdf",
+  },
+  {
     title: "Strategic Corporate Analysis & Stock Buyback Recommendation",
     subtitle: "American Greetings — Senior Seminar in Finance",
     description:
@@ -126,7 +134,7 @@ export default function Projects() {
               centered
             />
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {pdfProjects.map((proj) => (
                 <Link
                   key={proj.title}
@@ -161,6 +169,39 @@ export default function Projects() {
 
                 </Link>
               ))}
+
+              {/* Excel download card */}
+              <a
+                href="/projects/HypeStake-Financial-Model.xlsx"
+                download
+                className="group relative p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer block"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="inline-flex p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <Download className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="flex gap-2">
+                    <span className="p-2 rounded-lg bg-secondary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      <Download className="h-4 w-4" />
+                    </span>
+                  </div>
+                </div>
+
+                <h3 className="font-display text-lg font-semibold mb-1 group-hover:text-primary transition-colors leading-tight">
+                  HypeStake Financial Model
+                </h3>
+                <p className="text-sm text-primary/70 font-medium mb-3">HypeStake — Pre-Seed Financial Projections</p>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Comprehensive 5-year financial model including revenue projections, unit economics, burn rate analysis, and fundraising scenario planning for the HypeStake platform.
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary" className="text-xs">Excel</Badge>
+                  <Badge variant="secondary" className="text-xs">Financial Model</Badge>
+                  <Badge variant="secondary" className="text-xs">Pre-Seed</Badge>
+                  <Badge variant="secondary" className="text-xs">SaaS Metrics</Badge>
+                </div>
+              </a>
             </div>
           </div>
         </section>
