@@ -57,7 +57,7 @@ export default function HeroSection() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:andrew@electionai.io"
+                href="mailto:andrew@hypestake.ai"
                 className="p-3 rounded-xl bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                 aria-label="Email"
               >
