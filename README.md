@@ -1,73 +1,217 @@
-# Welcome to your Lovable project
+# Andrew V. Rodriguez — Personal Portfolio Website
 
-## Project info
+A production-ready personal portfolio website built with React, TypeScript, and Tailwind CSS to showcase my work in **finance, entrepreneurship, AI workflows, and product execution**.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+🌐 **Live Portfolio:** [andrewvrodriguez.com](https://andrewvrodriguez.com)
 
-## How can I edit this code?
+This repository is public both as a showcase of my development skills and as a reusable starting point for anyone who wants to launch a high-quality portfolio quickly.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## Table of Contents
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- [Overview](#overview)
+- [Portfolio Sections](#portfolio-sections)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Using This Repo as a Template](#using-this-repo-as-a-template)
+- [Project Structure](#project-structure)
+- [Customization Guide](#customization-guide)
+- [Build & Deployment](#build--deployment)
+- [Scripts](#scripts)
+- [Contact](#contact)
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## Overview
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+This portfolio is designed to do two things well:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Tell a clear professional story** through structured sections (experience, ventures, projects, tools, prompts, and contact).
+2. **Serve as a reusable template** for other developers, founders, students, and professionals who want a modern personal site.
 
-Follow these steps:
+The UI emphasizes strong typography, responsive layout, reusable components, and fast page performance via Vite.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Portfolio Sections
 
-# Step 3: Install the necessary dependencies.
-npm i
+The site currently includes the following major sections/pages:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 1) Home (`/`)
+- Hero section and primary introduction
+- Farm Insights feature narrative
+- Skills & expertise overview
+- Professional experience preview
+- Education preview and CTA navigation
+
+### 2) Resume / Experience (`/resume`, `/experience`, `/about`)
+- Full professional timeline
+- Detailed role breakdowns (including measurable impact)
+- Skills by category
+- Education and certifications
+
+### 3) Ventures (`/ventures`)
+- Startup and venture initiatives
+- Company concepts, traction, and strategic vision
+- External link support for live ventures
+
+### 4) Projects (`/projects`)
+- Highlighted strategic/finance project work
+- Project cards and supporting resources (PDFs, docs, files)
+
+### 5) Tools & Systems (`/tools`)
+- Custom systems and internal workflows
+- Applied AI, analytics, and operational tooling examples
+- Impact-driven tool summaries
+
+### 6) AI Prompts (`/prompts`)
+- Curated prompt library
+- Category filtering
+- Prompt descriptions, tags, and use-case outputs
+
+### 7) Contact (`/contact`)
+- Direct email and LinkedIn links
+- Contact form UI
+- Resume download CTA
+
+### 8) Utility Routes
+- PDF viewer (`/view-pdf`)
+- 404 route (`*`)
+
+---
+
+## Tech Stack
+
+- **Framework:** React + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **Routing:** React Router
+- **State/Data Utilities:** TanStack Query (React Query)
+- **Icons:** Lucide React
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+ (recommended)
+- npm (or Bun, if preferred)
+
+### Installation
+
+```bash
+# 1) Clone the repository
+git clone https://github.com/<your-username>/Personal-Portfolio-Website.git
+
+# 2) Enter the project directory
+cd Personal-Portfolio-Website
+
+# 3) Install dependencies
+npm install
+
+# 4) Start the local development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Then open the local URL shown in your terminal (typically `http://localhost:5173`).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## Using This Repo as a Template
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+If you want to reuse this codebase for your own portfolio:
 
-## What technologies are used for this project?
+### Option A — GitHub “Use this template” (recommended)
+1. Click **Use this template** on the repository page.
+2. Create a new repository under your account.
+3. Clone your new repo:
+   ```bash
+   git clone https://github.com/<your-username>/<your-new-repo>.git
+   cd <your-new-repo>
+   npm install
+   npm run dev
+   ```
 
-This project is built with:
+### Option B — Fork + customize
+1. Fork this repository.
+2. Clone your fork and install dependencies.
+3. Replace branding, content, and links with your own.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### What you should change first
+- Your name and headline text
+- Domain + social links
+- Resume PDF in `public/`
+- Project/venture data and descriptions
+- Contact details and email endpoints
+- SEO metadata and favicon assets
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## Project Structure
 
-## Can I connect a custom domain to my Lovable project?
+```text
+.
+├── public/                 # Static files (resume, favicon, project attachments, robots)
+├── src/
+│   ├── components/         # Reusable UI and layout components
+│   ├── pages/              # Route-level pages (Home, Resume, Ventures, etc.)
+│   ├── data/               # Prompt/content data sources
+│   ├── hooks/              # Custom React hooks
+│   ├── lib/                # Utility helpers
+│   └── integrations/       # External integration clients/types
+├── index.html
+├── package.json
+└── vite.config.ts
+```
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Customization Guide
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+To adapt this as your own portfolio template:
+
+1. **Update route content** in `src/pages/*`.
+2. **Swap images/assets** in `src/assets/` and `public/`.
+3. **Adjust navigation** in `src/components/Navbar.tsx`.
+4. **Update prompt/project datasets** in `src/data/` and project page content.
+5. **Refine design tokens** via Tailwind config and global CSS.
+
+Tip: keep components generic and content-specific data in page/data files to make future updates easier.
+
+---
+
+## Build & Deployment
+
+```bash
+# Production build
+npm run build
+
+# Preview production build locally
+npm run preview
+```
+
+Deploy the `dist/` output to your hosting provider of choice (e.g., Vercel, Netlify, Cloudflare Pages, static hosting, etc.).
+
+---
+
+## Scripts
+
+- `npm run dev` — Start development server
+- `npm run build` — Build for production
+- `npm run preview` — Preview production build
+- `npm run lint` — Run ESLint
+
+---
+
+## Contact
+
+If you want to connect about startup finance, AI workflows, portfolio engineering, or collaboration:
+
+- **Website:** [andrewvrodriguez.com](https://andrewvrodriguez.com)
+- **LinkedIn:** [linkedin.com/in/andrewvrodriguez](https://linkedin.com/in/andrewvrodriguez)
+
+---
+
+If you reuse this project as a template, feel free to star the repo and tag your version—I’d love to see what you build.
