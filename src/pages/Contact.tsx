@@ -12,8 +12,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "andrew@electionai.io",
-    href: "mailto:andrew@electionai.io",
+    value: "andrew@hypestake.ai",
+    href: "mailto:andrew@hypestake.ai",
   },
   {
     icon: Linkedin,
