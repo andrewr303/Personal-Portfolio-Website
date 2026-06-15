@@ -9,6 +9,7 @@ import Projects from "./pages/Projects";
 import Tools from "./pages/Tools";
 import Prompts from "./pages/Prompts";
 import Blog from "./pages/Blog";
+import GitHubPage from "./pages/GitHub";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Ventures from "./pages/Ventures";
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/resume" element={<Resume />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/github" element={<GitHubPage />} />
           <Route path="/tools" element={<Tools />} />
           <Route path="/prompts" element={<Prompts />} />
           
