@@ -40,8 +40,8 @@ The site currently includes the following major sections/pages:
 
 ### 1) Home (`/`)
 - Hero section and primary introduction
-- Farm Insights feature narrative
-- Skills & expertise overview
+- HypeStake feature narrative (founder, CEO & sole engineer)
+- Skills & expertise overview (finance, AI/ML, software engineering, leadership)
 - Professional experience preview
 - Education preview and CTA navigation
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Briefcase, GraduationCap, Lightbulb, Code } from "lucide-react";
+import { ArrowRight, Briefcase, GraduationCap, Lightbulb, Code, Sparkles, Cpu, Network, Calculator } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,28 +10,74 @@ import SkillBadge from "@/components/SkillBadge";
 
 const skills = {
   finance: [
-    "Financial Statement Analysis",
+    "Financial Modeling",
+    "Pro Forma Statements",
+    "Unit Economics",
     "DCF Valuation",
-    "Revenue Modeling",
+    "Scenario Analysis",
+    "Burn Rate Modeling",
+    "FP&A",
     "VC Fundraising",
-    "Pitch Deck Development",
-    "Due Diligence",
+  ],
+  ai: [
+    "AI-Native Product Design",
+    "LLM Orchestration",
+    "AI Agents",
+    "Retrieval Augmented Generation",
+    "Multi-Provider LLM Integration",
+    "Prompt Engineering",
+    "AI Evaluation & Observability",
   ],
   tech: [
-    "Excel & VBA",
-    "AI Automation",
-    "Prompt Engineering",
-    "Notion",
-    "Bloomberg Terminal",
-    "Data Analysis",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "Python",
+    "Supabase",
+    "Edge Functions",
+    "Trigger.dev",
+    "Full-Stack Engineering",
   ],
   leadership: [
-    "Strategic Planning",
+    "Founder / CEO",
+    "Product Strategy",
+    "Go-to-Market Planning",
     "Investor Relations",
-    "Project Management",
+    "Fundraising Strategy",
     "Cross-functional Leadership",
   ],
 };
+
+const hypestakeBuilds = [
+  {
+    icon: Calculator,
+    title: "AI-Powered Valuation Engine",
+    accent: true,
+    description:
+      "Built an AI-powered financial modeling engine that converts company data, market research, and internal context into structured valuation outputs and qualitative analysis—pairing LLM research with deterministic Python math so every figure stays reproducible and auditable rather than model-generated.",
+  },
+  {
+    icon: Network,
+    title: "Multi-Provider AI Infrastructure",
+    accent: false,
+    description:
+      "Integrated multi-provider AI and research infrastructure across Anthropic, OpenAI, Google/Gemini, AWS Bedrock, Perplexity, Cohere, Exa, and You.com—plus internal knowledge systems—to dramatically increase the accuracy and quality of AI outputs.",
+  },
+  {
+    icon: Cpu,
+    title: "Full-Stack AI Product",
+    accent: false,
+    description:
+      "Architected and shipped the entire platform as the only engineer: full-stack AI-powered workflows built with React, TypeScript, Supabase, Edge Functions, Trigger.dev, and Python services, powering complex multi-layer product features end to end.",
+  },
+  {
+    icon: Briefcase,
+    title: "Finance + Fundraising",
+    accent: false,
+    description:
+      "Constructed a 5-year pro forma model with revenue projections, unit economics, burn-rate analysis, and multi-scenario forecasting to support fundraising and long-term strategy—owning architecture, code, finance, and go-to-market simultaneously.",
+  },
+];
 
 export default function Index() {
   return (
@@ -41,70 +87,60 @@ export default function Index() {
       <main>
         <HeroSection />
 
-        {/* Farm Insights Section */}
-        <section id="farm-insights" className="py-24 bg-secondary/50">
+        {/* HypeStake Section */}
+        <section id="hypestake" className="py-24 bg-secondary/50">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="animate-slide-up">
-                <SectionHeader
-                  title="Building the Future of Agriculture at Farm Insights"
-                  subtitle="Applying my entrepreneurial finance education from CU Boulder's Leeds School of Business to help revolutionize how farmers make decisions."
-                />
-                <p className="text-muted-foreground mb-4">
-                  As Financial Analyst at Farm Insights, I'm at the forefront of an AI-powered AgTech 
-                  startup transforming agricultural decision-making. From architecting fundraising 
-                  strategies to building market intelligence systems, I help drive the strategic 
-                  and financial foundation that enables our technology to reach farmers nationwide.
-                </p>
-                <p className="text-muted-foreground mb-6">
-                  My work spans financial modeling, investor relations, go-to-market strategy, 
-                  and building AI-powered content systems—all aimed at helping Farm Insights 
-                  deliver actionable intelligence to the agricultural community.
-                </p>
+            <div className="max-w-3xl mb-16 animate-slide-up">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary mb-6">
+                <Sparkles className="h-4 w-4" />
+                Currently building — Founder &amp; CEO
+              </div>
+              <SectionHeader
+                title="Building HypeStake from Zero to Product"
+                subtitle="An AI-powered creator-brand equity marketplace—taken from concept to a working, shipped product as founder, CEO, and the only engineer."
+              />
+              <p className="text-muted-foreground mb-4">
+                At HypeStake I wear every hat: I own the architecture, write all the code, build the
+                financial models, and drive go-to-market. The product introduces a new financial
+                instrument—Creator Equity—that lets creators earn real ownership in the brands they
+                champion, replacing what investment bankers charge tens of thousands for with intelligent
+                automation.
+              </p>
+              <p className="text-muted-foreground mb-6">
+                What makes it unusual is the blend: a finance-native founder who can also ship a
+                full-stack, multi-provider AI platform. The result is an AI-assisted valuation stack
+                where LLM-driven research is grounded by deterministic Python math, so every number is
+                reproducible and auditable.
+              </p>
+              <div className="flex flex-wrap gap-4">
                 <Button asChild>
-                  <Link to="/about">
-                    Learn More About My Work <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link to="/ventures">
+                    Explore HypeStake <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
+                <Button asChild variant="outline">
+                  <a href="https://hypestake.ai" target="_blank" rel="noopener noreferrer">
+                    Visit hypestake.ai
+                  </a>
+                </Button>
               </div>
+            </div>
 
-              <div className="space-y-6">
-                <div className="p-6 rounded-2xl bg-card border border-border shadow-sm">
-                  <h3 className="font-display text-lg font-semibold mb-4 text-primary">Strategic Growth & Fundraising</h3>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2" />
-                      Designed comprehensive investor outreach campaign targeting AgTech and AI-focused VCs
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2" />
-                      Secured Top 20 finalist position at AgLaunch365 accelerator from hundreds of global applicants
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2" />
-                      Created investor pitch deck with continuous improvement process and documented enhancements
-                    </li>
-                  </ul>
+            <div className="grid md:grid-cols-2 gap-6">
+              {hypestakeBuilds.map((build) => (
+                <div
+                  key={build.title}
+                  className="p-6 rounded-2xl bg-card border border-border shadow-sm hover:border-primary/40 hover:shadow-md transition-all"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className={`p-3 rounded-xl ${build.accent ? "bg-primary/10" : "bg-muted"}`}>
+                      <build.icon className={`h-6 w-6 ${build.accent ? "text-primary" : "text-foreground"}`} />
+                    </div>
+                    <h3 className="font-display text-lg font-semibold">{build.title}</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{build.description}</p>
                 </div>
-
-                <div className="p-6 rounded-2xl bg-card border border-border shadow-sm">
-                  <h3 className="font-display text-lg font-semibold mb-4 text-foreground">Market Intelligence & Operations</h3>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2" />
-                      Built proprietary market intelligence engine covering 450+ U.S. farming counties
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2" />
-                      Developed custom "Opportunity Score" algorithm to identify optimal market entry points
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2" />
-                      Established AI-assisted content workflow aligned with brand voice guidelines
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -114,17 +150,17 @@ export default function Index() {
           <div className="container mx-auto px-4">
             <SectionHeader
               title="Skills & Expertise"
-              subtitle="A versatile toolkit spanning financial analysis, technical implementation, and strategic leadership."
+              subtitle="A rare full-stack toolkit spanning strategic finance, AI engineering, software development, and founder-level leadership."
               centered
             />
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="p-6 rounded-2xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-3 rounded-xl bg-primary/10">
                     <Briefcase className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold">Financial Analysis</h3>
+                  <h3 className="font-display text-lg font-semibold">Strategic Finance</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {skills.finance.map((skill) => (
@@ -135,10 +171,24 @@ export default function Index() {
 
               <div className="p-6 rounded-2xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 rounded-xl bg-chart-3/10">
+                    <Sparkles className="h-6 w-6 text-chart-3" />
+                  </div>
+                  <h3 className="font-display text-lg font-semibold">AI &amp; Machine Learning</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {skills.ai.map((skill) => (
+                    <SkillBadge key={skill} name={skill} category="ai" />
+                  ))}
+                </div>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-3 mb-6">
                   <div className="p-3 rounded-xl bg-muted">
                     <Code className="h-6 w-6 text-foreground" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold">Technical Skills</h3>
+                  <h3 className="font-display text-lg font-semibold">Software Engineering</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {skills.tech.map((skill) => (
@@ -152,7 +202,7 @@ export default function Index() {
                   <div className="p-3 rounded-xl bg-chart-4/10">
                     <Lightbulb className="h-6 w-6 text-chart-4" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold">Leadership</h3>
+                  <h3 className="font-display text-lg font-semibold">Leadership</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {skills.leadership.map((skill) => (
@@ -175,26 +225,26 @@ export default function Index() {
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <ExperienceCard
-                title="Financial Analyst"
-                company="Farm Insights"
-                period="June 2025 - Present"
-                description="Leading financial strategy and fundraising efforts at an AI-powered AgTech startup revolutionizing agriculture."
+                title="Founder & CEO"
+                company="HypeStake"
+                period="Feb 2026 - Present"
+                description="Took an AI-powered creator-brand equity marketplace from concept to working product as founder, CEO, and the only engineer."
                 highlights={[
-                  "Architected $1M pre-seed fundraising strategy",
-                  "Built 5-year pro forma financial model",
-                  "Developed market intelligence database covering 450+ U.S. counties",
+                  "Shipped a full-stack AI platform: React, TypeScript, Supabase, Edge Functions, Trigger.dev, Python",
+                  "Built an AI-powered valuation engine grounded by deterministic Python math",
+                  "Integrated 8+ AI/research providers (Anthropic, OpenAI, Gemini, AWS Bedrock, and more)",
                 ]}
                 link="/experience"
               />
               <ExperienceCard
-                title="Founder"
-                company="Dirty Politix LLC"
-                period="June 2023 - May 2025"
-                description="Built and scaled a digital political news platform from concept to 120,000+ monthly visitors."
+                title="Financial Analyst"
+                company="Farm Insights"
+                period="Jun 2025 - Feb 2026"
+                description="Drove financial planning and fundraising for an early-stage AgTech company, building investor-ready models and AI-powered tools."
                 highlights={[
-                  "Scaled audience 4x through digital growth strategies",
-                  "Leveraged AI for content optimization",
-                  "Managed all operational facets end-to-end",
+                  "Built investor-ready 60-month pro forma and runway scenarios",
+                  "Developed PitchCoach, an AI-powered pitch-rehearsal platform",
+                  "Secured a top-20 finalist spot in the AgLaunch365 accelerator",
                 ]}
                 link="/experience"
               />
@@ -234,7 +284,7 @@ export default function Index() {
                           University of Colorado Boulder
                         </p>
                         <p className="text-muted-foreground">
-                          Leeds School of Business • Finance • May 2023
+                          Leeds School of Business • Entrepreneurial Finance • May 2023
                         </p>
                       </div>
                     </div>

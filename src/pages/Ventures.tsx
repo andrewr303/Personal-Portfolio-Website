@@ -1,24 +1,40 @@
-import { ExternalLink, Rocket, TrendingUp, Shield, BarChart3, Vote, Bot, Megaphone } from "lucide-react";
+import { ExternalLink, Rocket, TrendingUp, Shield, BarChart3, Vote, Bot, Megaphone, Calculator, Network, Cpu } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-const ventures = [
+interface Venture {
+  name: string;
+  tagline: string;
+  url: string;
+  role?: string;
+  period?: string;
+  description: string;
+  details: string;
+  features: { icon: typeof Rocket; title: string; description: string }[];
+  buildStack?: string[];
+  tags: string[];
+  embed?: boolean;
+}
+
+const ventures: Venture[] = [
   {
     name: "HypeStake",
     tagline: "Creator Equity for the $250B Creator Economy",
     url: "https://hypestake.ai",
+    role: "Founder, CEO & Sole Engineer",
+    period: "Feb 2026 - Present",
     description:
       "The creator economy has exploded to $250 billion, yet 95% of creator compensation remains transactional cash—leaving creators without upside when the brands they champion succeed. HypeStake is solving this fundamental misalignment by creating a new financial instrument: Creator Equity (CE).",
     details:
-      "We're building the AI-powered SaaS platform that enables creators to earn real ownership stakes in the brands they promote. Our proprietary technology replaces what investment bankers charge $50K for with intelligent automation.",
+      "I took HypeStake from concept to a working, shipped product as founder, CEO, and the only engineer—owning architecture, code, finance, and go-to-market. It's an AI-powered SaaS platform that lets creators earn real ownership stakes in the brands they promote, replacing what investment bankers charge tens of thousands for with intelligent automation. The technical heart is an AI-assisted valuation stack that pairs LLM-driven research with deterministic Python math, so every financial figure stays reproducible and auditable rather than model-generated.",
     features: [
       {
         icon: Rocket,
         title: "Dynamic Deal Architect",
         description:
-          "Patent-pending Creator Genome algorithm calculates risk-adjusted equity offers in real-time, factoring in startup stage, audience LTV, engagement quality, and cultural relevance.",
+          "Creator Genome algorithm calculates risk-adjusted equity offers in real-time, factoring in startup stage, audience LTV, engagement quality, and cultural relevance.",
       },
       {
         icon: Shield,
@@ -32,6 +48,40 @@ const ventures = [
         description:
           "Robinhood-style portfolio view of equity holdings, liquidity timelines, and sector diversification for creators.",
       },
+      {
+        icon: Calculator,
+        title: "AI Valuation Engine",
+        description:
+          "Converts company data, market research, and internal context into structured valuation outputs and qualitative analysis—LLM research grounded by deterministic Python math for reproducible, auditable numbers.",
+      },
+      {
+        icon: Network,
+        title: "Multi-Provider AI Infrastructure",
+        description:
+          "Orchestrates Anthropic, OpenAI, Google/Gemini, AWS Bedrock, Perplexity, Cohere, Exa, and You.com alongside internal knowledge systems to maximize the accuracy and quality of AI outputs.",
+      },
+      {
+        icon: Cpu,
+        title: "Full-Stack AI Platform",
+        description:
+          "Built end to end with React, TypeScript, Supabase, Edge Functions, Trigger.dev, and Python services—powering complex, multi-layer product features as a solo engineer.",
+      },
+    ],
+    buildStack: [
+      "React",
+      "TypeScript",
+      "Supabase",
+      "Edge Functions",
+      "Trigger.dev",
+      "Python",
+      "Anthropic",
+      "OpenAI",
+      "Google/Gemini",
+      "AWS Bedrock",
+      "Perplexity",
+      "Cohere",
+      "Exa",
+      "You.com",
     ],
     tags: ["AI/ML", "FinTech", "Creator Economy", "SaaS"],
     embed: true,
@@ -106,6 +156,11 @@ export default function Ventures() {
                     <p className="text-lg text-primary font-medium">
                       {venture.tagline}
                     </p>
+                    {(venture.role || venture.period) && (
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {[venture.role, venture.period].filter(Boolean).join(" • ")}
+                      </p>
+                    )}
                   </div>
                   <Button asChild>
                     <a
@@ -152,6 +207,24 @@ export default function Ventures() {
                   </div>
                 ))}
               </div>
+
+              {/* Build stack */}
+              {venture.buildStack && venture.buildStack.length > 0 && (
+                <div className="max-w-4xl mx-auto mb-12">
+                  <div className="p-6 rounded-2xl bg-card border border-border">
+                    <p className="text-sm text-muted-foreground mb-3 font-medium">
+                      Designed, built &amp; shipped solo — tech &amp; AI stack
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {venture.buildStack.map((tech) => (
+                        <Badge key={tech} variant="secondary" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {/* Embedded site */}
               {venture.embed && (

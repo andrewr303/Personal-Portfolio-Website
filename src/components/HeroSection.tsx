@@ -20,7 +20,7 @@ export default function HeroSection() {
           <div className="space-y-6 animate-slide-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Financial Analyst at Farm Insights
+              Founder &amp; CEO at HypeStake
             </div>
 
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
@@ -30,10 +30,12 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
-              Analytical finance professional with proven expertise in{" "}
-              <span className="text-primary font-medium">financial modeling</span>,{" "}
-              <span className="text-foreground font-medium">fundraising strategy</span>, and
-              AI-powered growth at cutting-edge startups.
+              Founder, CEO, and sole engineer building{" "}
+              <span className="text-primary font-medium">HypeStake</span>—an{" "}
+              <span className="text-foreground font-medium">AI-powered creator-brand equity marketplace</span>.
+              A rare hybrid of <span className="text-primary font-medium">finance</span> and{" "}
+              <span className="text-foreground font-medium">software engineering</span>, shipping
+              full-stack AI products from concept to launch.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -90,7 +92,7 @@ export default function HeroSection() {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <a href="#farm-insights" className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+          <a href="#hypestake" className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
             <span className="text-sm">Scroll to explore</span>
             <ArrowDown className="h-5 w-5" />
           </a>

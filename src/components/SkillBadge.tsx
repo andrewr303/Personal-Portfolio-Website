@@ -1,6 +1,6 @@
 interface SkillBadgeProps {
   name: string;
-  category?: "finance" | "tech" | "leadership";
+  category?: "finance" | "tech" | "leadership" | "ai";
 }
 
 export default function SkillBadge({ name, category = "finance" }: SkillBadgeProps) {
@@ -8,6 +8,7 @@ export default function SkillBadge({ name, category = "finance" }: SkillBadgePro
     finance: "bg-primary/10 text-primary border-primary/20",
     tech: "bg-muted text-foreground border-border",
     leadership: "bg-chart-4/10 text-chart-4 border-chart-4/20",
+    ai: "bg-chart-3/10 text-chart-3 border-chart-3/20",
   };
 
   return (

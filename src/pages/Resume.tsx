@@ -1,4 +1,4 @@
-import { Building2, TrendingUp, Users, Database, Megaphone, Award, GraduationCap, BookOpen, Trophy, Calendar, Briefcase, Code, BarChart3, Shield, Lightbulb } from "lucide-react";
+import { Building2, TrendingUp, Users, Database, Megaphone, Award, GraduationCap, BookOpen, Trophy, Calendar, Briefcase, Code, BarChart3, Shield, Lightbulb, Sparkles, Cpu, Network, Calculator, Rocket } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionHeader from "@/components/SectionHeader";
@@ -69,68 +69,103 @@ function CertificationCard({ title, issuer, year, description }: CertificationCa
 // Skills data
 const skillCategories = [
   {
-    title: "Financial Analysis",
+    title: "Strategic Finance",
     icon: BarChart3,
-    skills: ["Valuation", "Capital Structure Optimization", "Cash Flow Projections", "Financial Statement Analysis", "Budgeting", "Scenario Modeling"],
+    skills: ["FP&A", "Financial Statements (P&L, Balance Sheet, Cash Flow)", "Unit Economics", "Scenario Analysis", "Revenue Forecasting", "Burn Rate Modeling", "Budgeting", "Valuation", "Financial Modeling", "Corporate Finance"],
   },
   {
-    title: "Investment Management",
-    icon: TrendingUp,
-    skills: ["Asset Allocation", "Risk Mitigation", "Hedging Strategies", "Equity Research", "Market Research", "Portfolio Management", "Financial Derivatives"],
+    title: "AI & Machine Learning",
+    icon: Sparkles,
+    skills: ["AI-Native Product Design", "Prompt Engineering", "AI Agents", "Retrieval Augmented Generation", "AI Evaluation & Observability", "LLM Orchestration", "Multi-Provider LLM Integration (Anthropic, OpenAI, AWS Bedrock)"],
   },
   {
-    title: "Entrepreneurial Acumen",
-    icon: Lightbulb,
-    skills: ["Business Plan Development", "Financial Forecasting", "Strategic Planning", "Competitive Analysis", "Performance Metrics", "Operational Efficiency"],
-  },
-  {
-    title: "Technical Skills",
+    title: "Software Engineering",
     icon: Code,
-    skills: ["Microsoft Excel", "VBA", "Bloomberg Terminal", "AI Automation", "AI Prompt Engineering", "Office 365"],
+    skills: ["TypeScript", "React", "Node.js", "Python", "Supabase", "Edge Functions", "Trigger.dev", "Process Improvement", "AI Automation", "Advanced Excel", "CSS"],
+  },
+  {
+    title: "Business Development",
+    icon: Rocket,
+    skills: ["Pitch Deck Development", "Fundraising Strategy", "Business Plan Development", "Market Research", "Competitive Analysis", "Go-to-Market Planning", "Strategic Planning"],
   },
 ];
 
 // Experience data
+const hypestakeDetails = [
+  {
+    icon: Rocket,
+    title: "Product & Platform (Founder, CEO & Sole Engineer)",
+    items: [
+      "Took an AI-powered creator-brand equity marketplace from concept to a working, shipped product—owning architecture, code, finance, and go-to-market simultaneously",
+      "Introduced Creator Equity, a new financial instrument letting creators earn real ownership in the brands they champion, replacing what investment bankers charge tens of thousands for with intelligent automation",
+      "Operated as the only engineer, shipping every layer of the product solo from first commit to launch",
+    ],
+  },
+  {
+    icon: Calculator,
+    title: "AI-Powered Valuation & Financial Modeling",
+    items: [
+      "Engineered an AI-powered financial modeling engine converting company data, market research, internal context, and Python calculations into structured valuation outputs and qualitative analyses",
+      "Built an AI-assisted valuation stack pairing LLM research with deterministic Python math—keeping every financial figure reproducible and auditable rather than model-generated",
+      "Constructed a 5-year pro forma model with revenue projections, unit economics, burn-rate analysis, and multi-scenario forecasting to support fundraising and long-term strategy",
+      "Significantly reduced model-building time while improving forecast accuracy through automation",
+    ],
+  },
+  {
+    icon: Network,
+    title: "Multi-Provider AI & Research Infrastructure",
+    items: [
+      "Integrated AI and research infrastructure across Anthropic, OpenAI, Google/Gemini, AWS Bedrock, Perplexity, Cohere, Exa, and You.com plus internal knowledge systems",
+      "Orchestrated providers to drastically increase the accuracy and quality of AI outputs",
+      "Designed retrieval and evaluation flows to ground generation in verifiable context",
+    ],
+  },
+  {
+    icon: Cpu,
+    title: "Full-Stack AI Engineering",
+    items: [
+      "Built full-stack AI-powered workflows using React, TypeScript, Supabase, Edge Functions, Trigger.dev, and Python services with AI provider integrations",
+      "Powered complex, multi-layer product features end to end across frontend, backend, and async job orchestration",
+      "Architected scalable, AI-native systems as a finance-fluent founder who also writes production code",
+    ],
+  },
+];
+
 const farmInsightsDetails = [
   {
-    icon: TrendingUp,
-    title: "Strategic Growth & Fundraising",
-    items: [
-      "Architected $1M Pre-Seed Fundraising Strategy with custom investor database replicating enterprise platform capabilities at zero cost",
-      "Led AgLaunch365 accelerator application, securing top-20 finalist position from hundreds of global applicants",
-      "Traveled to Memphis, TN for finals, actively participating in event programming and preparing CEO for pitch presentation",
-      "Produced monthly investor updates highlighting product milestones, partnerships, and competitive positioning",
-      "Created 15-slide investor pitch deck with continuous improvement process and documented enhancements",
-    ],
-  },
-  {
     icon: Database,
-    title: "Financial Modeling",
+    title: "Financial Planning & Modeling",
     items: [
-      "Developed comprehensive 5-year pro forma model: P&L, Balance Sheet, Cash Flow, Statement of Retained Earnings",
-      "Modeled 18-month runway on $1M pre-seed with NOL carryforward tax optimization ($6.4M)",
-      "Projected path to profitability by Year 5: 7% net margin, $8.7M net income",
-      "Designed 60-month revenue model tracking customer acquisition, churn (0.9% Chat, 0.7% Pro), and tier conversions",
-      "Engineered detailed API cost model across six providers with tiered pricing and optimization strategies",
+      "Built investor-ready pro forma statements, revenue forecasts, unit economics, and runway scenarios in Excel, translating product-engineering assumptions into fundable projections",
+      "Designed a 60-month revenue model tracking customer acquisition, churn (0.9% and 0.7% across tiers), upgrade flows, and evolving revenue mix for monthly leadership visibility",
+      "Gave leadership clear monthly visibility into growth trajectories and runway",
     ],
   },
   {
-    icon: Users,
-    title: "Market Intelligence & GTM",
+    icon: Sparkles,
+    title: "AI-Powered Tooling",
     items: [
-      "Built proprietary market intelligence engine covering 450+ U.S. farming counties",
-      "Developed custom 'Opportunity Score' algorithm identifying top-10 entry markets",
-      "Created cold-outreach pipeline of 2,400+ qualified farm prospects",
-      "Developed customer segmentation strategy to refine Ideal Customer Profile (ICP)",
+      "Developed PitchCoach, an AI-powered platform automating pitch rehearsal by integrating the pitch-deck workflow with CRM administration and workflow-automation tools",
+      "Enabled founders to practice independently and improve presentation consistency",
+      "Applied the same automation lens to fundraising operations across the company",
     ],
   },
   {
-    icon: Megaphone,
-    title: "AI-Powered Marketing",
+    icon: TrendingUp,
+    title: "Fundraising & Pitch",
     items: [
-      "Established end-to-end social media operations across LinkedIn, Facebook, and TikTok",
-      "Designed AI-assisted content generation workflow for high-volume, platform-specific content",
-      "Aligned content with PhD-validated brand voice for increased engagement with minimal manual effort",
+      "Created the pitch deck in PowerPoint, wrote presentation scripts, and ran slide-by-slide reviews with the CEO, coaching founders before investor meetings",
+      "Built a zero-cost investor CRM with personalized outreach that lifted response rates 40%",
+      "Generated investor interest through more compelling, consistent pitches",
+    ],
+  },
+  {
+    icon: Award,
+    title: "AgLaunch365 Accelerator",
+    items: [
+      "Secured a top-20 finalist position from hundreds of global applicants",
+      "Traveled to Memphis to prepare co-founders for pitch events",
+      "Participated directly in investor meetings on behalf of the company",
     ],
   },
 ];
@@ -175,19 +210,19 @@ const otherRoles = [
 
 const education = [
   {
-    year: "2022 - 2024",
+    year: "Aug 2019 - May 2023",
     title: "Bachelor of Science in Business Administration",
     institution: "University of Colorado Boulder - Leeds School of Business",
-    description: "Concentration in Finance with focus on financial modeling, investment analysis, and entrepreneurial finance.",
+    description: "Concentration in Entrepreneurial Finance with focus on financial modeling, investment analysis, and startup valuation.",
     icon: <GraduationCap className="h-5 w-5 text-primary" />,
     highlights: [
-      "Finance concentration with emphasis on startup valuation",
+      "Entrepreneurial Finance concentration with emphasis on startup valuation",
       "Developed comprehensive business plans and financial models",
       "Completed coursework in corporate finance, investments, and accounting",
     ],
   },
   {
-    year: "2018 - 2022",
+    year: "2015 - 2019",
     title: "High School Diploma",
     institution: "Monarch High School",
     description: "Business-focused curriculum with emphasis on entrepreneurship and financial literacy.",
@@ -280,20 +315,74 @@ export default function Resume() {
       <Navbar />
 
       <main className="pt-24">
-        {/* Farm Insights - Featured Role */}
+        {/* HypeStake - Featured Current Role */}
         <section className="py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-12">
               <div>
                 <Badge className="mb-4">Current Role</Badge>
+                <h2 className="font-display text-3xl font-bold">Founder &amp; CEO</h2>
+                <p className="text-xl text-primary font-medium">HypeStake</p>
+                <p className="text-muted-foreground">Feb 2026 - Present • Denver, CO</p>
+              </div>
+              <div className="p-6 rounded-2xl glass max-w-md">
+                <p className="text-sm text-muted-foreground mb-2">AI-Powered Creator-Brand Equity Marketplace</p>
+                <p className="text-muted-foreground">
+                  A new financial instrument—Creator Equity—that lets creators earn real ownership in the
+                  brands they champion. Built concept-to-launch as founder, CEO, and the only engineer.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {hypestakeDetails.map((section, index) => (
+                <div key={index} className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-3 rounded-xl bg-primary/10">
+                      <section.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="font-display text-xl font-semibold">{section.title}</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {section.items.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-muted-foreground">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span className="text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 p-6 rounded-2xl border border-border bg-card/50">
+              <p className="text-sm text-muted-foreground mb-3 font-medium">Tech &amp; AI stack</p>
+              <div className="flex flex-wrap gap-2">
+                {["React", "TypeScript", "Supabase", "Edge Functions", "Trigger.dev", "Python", "Anthropic", "OpenAI", "Google/Gemini", "AWS Bedrock", "Perplexity", "Cohere", "Exa", "You.com"].map((tech) => (
+                  <span key={tech} className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium border bg-chart-3/10 text-chart-3 border-chart-3/20">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Farm Insights - Featured Previous Role */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-12">
+              <div>
+                <Badge variant="secondary" className="mb-4">Previous Role</Badge>
                 <h2 className="font-display text-3xl font-bold">Financial Analyst</h2>
                 <p className="text-xl text-primary font-medium">Farm Insights</p>
-                <p className="text-muted-foreground">June 2025 - Present</p>
+                <p className="text-muted-foreground">Jun 2025 - Feb 2026 • Remote</p>
               </div>
-              <div className="p-6 rounded-2xl glass">
-                <p className="text-sm text-muted-foreground mb-2">AI-Powered AgTech Startup</p>
+              <div className="p-6 rounded-2xl glass max-w-md">
+                <p className="text-sm text-muted-foreground mb-2">Early-Stage AI-Powered AgTech Startup</p>
                 <p className="text-muted-foreground">
-                  Revolutionizing agriculture through real-time plant and soil health insights for farmers worldwide.
+                  Drove financial planning and fundraising—building investor-ready models and AI-powered
+                  tools that translated product assumptions into fundable projections.
                 </p>
               </div>
             </div>
@@ -322,9 +411,9 @@ export default function Resume() {
         </section>
 
         {/* Other Roles */}
-        <section className="py-24">
+        <section className="py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <SectionHeader title="Previous Experience" subtitle="A foundation of entrepreneurship, service, and early business ventures" />
+            <SectionHeader title="Earlier Experience" subtitle="A foundation of entrepreneurship, service, and early business ventures" />
 
             <div className="space-y-8">
               {otherRoles.map((role, index) => (
@@ -353,7 +442,7 @@ export default function Resume() {
         </section>
 
         {/* Education Timeline */}
-        <section className="py-24 bg-secondary/30">
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <SectionHeader title="Education" subtitle="Academic foundation in finance and business" />
 
@@ -366,7 +455,7 @@ export default function Resume() {
         </section>
 
         {/* School Projects */}
-        <section className="py-24">
+        <section className="py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <SectionHeader title="School Projects" subtitle="Academic work demonstrating analytical and financial modeling expertise" centered />
 
@@ -393,9 +482,9 @@ export default function Resume() {
         </section>
 
         {/* Skills */}
-        <section className="py-24 bg-secondary/30">
+        <section className="py-24">
           <div className="container mx-auto px-4">
-            <SectionHeader title="Skills & Expertise" subtitle="A comprehensive toolkit spanning finance, technology, and leadership" centered />
+            <SectionHeader title="Skills & Expertise" subtitle="A comprehensive toolkit spanning strategic finance, AI engineering, software development, and business growth" centered />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {skillCategories.map((cat) => (
@@ -419,7 +508,7 @@ export default function Resume() {
         </section>
 
         {/* Certifications */}
-        <section className="py-24">
+        <section className="py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="flex items-center gap-3 mb-8">
               <BookOpen className="h-6 w-6 text-primary" />
@@ -435,7 +524,7 @@ export default function Resume() {
         </section>
 
         {/* Recognition */}
-        <section className="py-24 bg-secondary/30">
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <SectionHeader title="Recognition & Awards" centered />
 
