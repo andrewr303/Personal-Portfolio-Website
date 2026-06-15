@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { Sparkles, Filter } from "lucide-react";
+import { Sparkles, Filter, Boxes } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionHeader from "@/components/SectionHeader";
 import PromptCard from "@/components/PromptCard";
+import SkillCard from "@/components/SkillCard";
 import { Button } from "@/components/ui/button";
 import { categories, prompts } from "@/data/prompts";
+import { skills } from "@/data/skills";
 
 export default function Prompts() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -55,6 +57,46 @@ export default function Prompts() {
                   <category.icon className="h-4 w-4 mr-2" />
                   {category.name}
                 </Button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Claude Skills */}
+        <section className="py-16 border-b border-border">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center gap-3 mb-3 animate-slide-up">
+              <div className="p-2 rounded-lg bg-primary/10">
+                <Boxes className="h-6 w-6 text-primary" />
+              </div>
+              <h2 className="font-display text-3xl font-bold">
+                Claude <span className="gradient-text-red">Skills</span>
+              </h2>
+            </div>
+            <p className="text-muted-foreground max-w-3xl mb-4 animate-slide-up">
+              Packaged, reusable skills for Claude — production-grade systems I use
+              to build products and run HypeStake. Read the full skill below, or
+              download the <code className="text-primary">.skill</code> file to drop
+              it straight into Claude.
+            </p>
+
+            <div className="grid gap-8 mt-8">
+              {skills.map((skill, index) => (
+                <div
+                  key={skill.name}
+                  className="animate-slide-up"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <SkillCard
+                    title={skill.title}
+                    description={skill.description}
+                    icon={skill.icon}
+                    tags={skill.tags}
+                    content={skill.content}
+                    download={skill.download}
+                    downloadName={skill.downloadName}
+                  />
+                </div>
               ))}
             </div>
           </div>
