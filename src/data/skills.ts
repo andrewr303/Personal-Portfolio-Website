@@ -1,4 +1,15 @@
-import { FileText, Image, Mail, Users, Presentation } from "lucide-react";
+import {
+  FileText,
+  Image,
+  Mail,
+  Users,
+  Presentation,
+  Search,
+  ShieldCheck,
+  LineChart,
+  Wand2,
+  FileSignature,
+} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 // SKILL.md contents imported as raw text so the full skill is rendered verbatim.
@@ -7,6 +18,11 @@ import imageContent from "./skills/image.md?raw";
 import emailContent from "./skills/email.md?raw";
 import meetingPrepContent from "./skills/meeting-prep.md?raw";
 import pitchDeckContent from "./skills/pitch-deck.md?raw";
+import hypestakeSeoContent from "./skills/hypestake-seo.md?raw";
+import financeAuditContent from "./skills/finance-audit.md?raw";
+import investorUpdateContent from "./skills/investor-update.md?raw";
+import promptEngineerContent from "./skills/prompt-engineer.md?raw";
+import coverLetterProContent from "./skills/cover-letter-pro.md?raw";
 
 export interface SkillData {
   /** Display name of the skill. */
@@ -80,5 +96,60 @@ export const skills: SkillData[] = [
     content: pitchDeckContent,
     download: "/skills/pitch-deck.skill",
     downloadName: "pitch-deck.skill",
+  },
+  {
+    name: "hypestake-seo",
+    title: "HypeStake SEO",
+    description:
+      "A full-stack SEO operating system tuned for HypeStake — technical audits, content briefs, pillar/cluster strategy, and JSON-LD schema. It optimizes for both classical Google ranking and AI-search citation (AI Overviews, ChatGPT, Perplexity, Gemini, Claude). Use it for competitor teardowns, programmatic SEO, link building, and category positioning.",
+    icon: Search,
+    tags: ["SEO", "AI Search", "Content", "Growth"],
+    content: hypestakeSeoContent,
+    download: "/skills/hypestake-seo.skill",
+    downloadName: "hypestake-seo.skill",
+  },
+  {
+    name: "finance-audit",
+    title: "Financial AI Output Auditor",
+    description:
+      "A ruthless forensic auditor that tears apart financial outputs from AI agents before they reach a creator, brand, or admin. It applies short-seller skepticism with ReAct, Reflexion, and chain-of-thought to catch errors, bad assumptions, and hallucinated numbers. Use it as a quality gate on any AI-generated financial analysis.",
+    icon: ShieldCheck,
+    tags: ["Finance", "Audit", "Quality Gate", "Analysis"],
+    content: financeAuditContent,
+    download: "/skills/finance-audit.skill",
+    downloadName: "finance-audit.skill",
+  },
+  {
+    name: "investor-update",
+    title: "Investor Update Writer",
+    description:
+      "An investor-relations strategist that turns raw founder notes into sharp monthly updates for investors you've already met. It surfaces concrete progress over adjectives, handles misses honestly, and keeps warm relationships alive without sounding like a generic newsletter. It will also flag when an update is too weak to send broadly.",
+    icon: LineChart,
+    tags: ["Fundraising", "Investor Relations", "Writing", "Founder"],
+    content: investorUpdateContent,
+    download: "/skills/investor-update.skill",
+    downloadName: "investor-update.skill",
+  },
+  {
+    name: "prompt-engineer",
+    title: "Prompt Architect",
+    description:
+      "A senior prompt engineer that builds production-ready prompts for Claude's current model family. It runs an explicit pipeline — decode, classify, decide, draft, self-critique, deliver — and ships copy-paste-ready artifacts with no bare placeholders. Crucially, it produces the prompt that produces the answer, never the answer itself.",
+    icon: Wand2,
+    tags: ["Prompting", "Claude", "Meta", "Engineering"],
+    content: promptEngineerContent,
+    download: "/skills/prompt-engineer.skill",
+    downloadName: "prompt-engineer.skill",
+  },
+  {
+    name: "cover-letter-pro",
+    title: "Cover Letter Pro",
+    description:
+      "A cover-letter strategist that writes one complete, ready-to-send letter per request — and outputs only the letter. It maps every claim one-to-one to the resume so nothing is fabricated, bridging gaps with honest framing instead. It writes for a recruiter's eight-second scan and a hiring manager's can-they-do-the-job test.",
+    icon: FileSignature,
+    tags: ["Writing", "Careers", "Job Search", "Founder"],
+    content: coverLetterProContent,
+    download: "/skills/cover-letter-pro.skill",
+    downloadName: "cover-letter-pro.skill",
   },
 ];
