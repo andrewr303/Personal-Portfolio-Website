@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@repo/shadcn-ui/lib/utils";
+import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type React from "react";
@@ -19,7 +19,7 @@ import {
   DURATION_INSTANT,
   SPRING_DEFAULT,
   SPRING_SNAPPY,
-} from "../../lib/animation";
+} from "../lib/animation";
 
 // ---------------------------------------------------------------------------
 // Constants
