@@ -21,9 +21,11 @@ export function Contact() {
 
   const validate = (): FormErrors => {
     const next: FormErrors = {};
+    const normalizedEmail = email.trim();
     if (!name.trim()) next.name = "Name is required.";
-    if (!email.trim()) next.email = "Email is required.";
-    else if (!EMAIL_RE.test(email)) next.email = "Please enter a valid email address.";
+    if (!normalizedEmail) next.email = "Email is required.";
+    else if (!EMAIL_RE.test(normalizedEmail))
+      next.email = "Please enter a valid email address.";
     if (!message.trim()) next.message = "Please add a short message.";
     return next;
   };
@@ -218,8 +220,13 @@ export function Contact() {
                       }}
                       placeholder="Your name"
                       aria-invalid={!!errors.name}
+                      aria-describedby={errors.name ? "contact-name-error" : undefined}
                     />
-                    {errors.name && <span style={errorText}>{errors.name}</span>}
+                    {errors.name && (
+                      <span id="contact-name-error" style={errorText}>
+                        {errors.name}
+                      </span>
+                    )}
                   </label>
                   <label style={{ flex: 1, minWidth: 140, display: "flex", flexDirection: "column", gap: 6 }}>
                     <span style={labelText}>Email</span>
@@ -234,8 +241,13 @@ export function Contact() {
                       }}
                       placeholder="your@email.com"
                       aria-invalid={!!errors.email}
+                      aria-describedby={errors.email ? "contact-email-error" : undefined}
                     />
-                    {errors.email && <span style={errorText}>{errors.email}</span>}
+                    {errors.email && (
+                      <span id="contact-email-error" style={errorText}>
+                        {errors.email}
+                      </span>
+                    )}
                   </label>
                 </div>
                 <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
@@ -260,8 +272,13 @@ export function Contact() {
                     }}
                     placeholder="Your message..."
                     aria-invalid={!!errors.message}
+                    aria-describedby={errors.message ? "contact-message-error" : undefined}
                   />
-                  {errors.message && <span style={errorText}>{errors.message}</span>}
+                  {errors.message && (
+                    <span id="contact-message-error" style={errorText}>
+                      {errors.message}
+                    </span>
+                  )}
                 </label>
                 <SmoothButton
                   type="submit"
