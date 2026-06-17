@@ -3,15 +3,18 @@ import "@once-ui-system/core/css/tokens.css";
 import "./globals.css";
 
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, JetBrains_Mono, Geist } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { Providers } from "./providers";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
+// Self-hosted Geist (variable weight) — the universal UI typeface.
+const geist = localFont({
+  src: [
+    { path: "./fonts/Geist-VariableFont_wght.ttf", weight: "100 900", style: "normal" },
+    { path: "./fonts/Geist-Italic-VariableFont_wght.ttf", weight: "100 900", style: "italic" },
+  ],
+  variable: "--font-geist",
   display: "swap",
 });
 
@@ -88,7 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       data-transition="all"
       data-scaling="100"
       suppressHydrationWarning
-      className={cn(dmSans.variable, jetbrainsMono.variable, "font-sans", geist.variable)}
+      className={cn(geist.variable, jetbrainsMono.variable, "font-sans")}
     >
       <body>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
