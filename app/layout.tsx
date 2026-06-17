@@ -3,8 +3,11 @@ import "@once-ui-system/core/css/tokens.css";
 import "./globals.css";
 
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, JetBrains_Mono } from "next/font/google";
+import { DM_Sans, JetBrains_Mono, Geist } from "next/font/google";
 import { Providers } from "./providers";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -85,7 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       data-transition="all"
       data-scaling="100"
       suppressHydrationWarning
-      className={`${dmSans.variable} ${jetbrainsMono.variable}`}
+      className={cn(dmSans.variable, jetbrainsMono.variable, "font-sans", geist.variable)}
     >
       <body>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />

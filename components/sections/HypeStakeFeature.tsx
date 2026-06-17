@@ -297,7 +297,7 @@ export function HypeStakeFeature() {
             <div
               style={{
                 position: "relative",
-                minHeight: 430,
+                height: 860,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -306,7 +306,8 @@ export function HypeStakeFeature() {
                 padding: "54px 28px",
                 background:
                   "radial-gradient(120% 90% at 50% -10%,rgba(168,85,247,0.16),transparent 60%),#07070d",
-                overflow: "hidden",
+                overflowX: "hidden",
+                overflowY: "auto",
               }}
             >
               <div
