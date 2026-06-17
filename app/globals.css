@@ -1,0 +1,139 @@
+/* ============================================================
+   Andrew Rodriguez — Portfolio
+   Global tokens, base styles, keyframes.
+   Dark is the default (token fallbacks carry the dark values);
+   light is a uniform override applied on [data-theme="light"].
+   ============================================================ */
+
+:root,
+:root[data-theme="dark"] {
+  --bg: #0a0a0f;
+  --bg-deep: #08080c;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-2: rgba(255, 255, 255, 0.14);
+  --t1: #ffffff;
+  --t2: #d4d4d8;
+  --t3: #9f9fa9;
+  --t4: #71717b;
+  --dot: rgba(255, 255, 255, 0.05);
+  /* Surfaces are intentionally left undefined in dark so each element keeps
+     its own near-black fallback (#0e0e14 / #0f0f16 / #111118 / #14141c). */
+
+  --font-sans: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, "SFMono-Regular", monospace;
+}
+
+:root[data-theme="light"] {
+  --bg: #f5f5f8;
+  --bg-deep: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f3f3f7;
+  --surface-3: #ececf2;
+  --chip: #ffffff;
+  --line: rgba(17, 17, 28, 0.09);
+  --line-2: rgba(17, 17, 28, 0.14);
+  --t1: #14141c;
+  --t2: #34343f;
+  --t3: #62626c;
+  --t4: #9595a0;
+  --dot: rgba(17, 17, 28, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg, #0a0a0f);
+  color: var(--t1, #ffffff);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+::selection {
+  background: rgba(192, 132, 252, 0.35);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 120, 180, 0.28);
+  border-radius: 99px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #c084fc;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+@keyframes hsFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+@keyframes hsGlow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+}
+@keyframes hsUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes hsPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 222, 127, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(16, 222, 127, 0);
+  }
+}
+@keyframes hsSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

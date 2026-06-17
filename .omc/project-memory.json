@@ -1,0 +1,360 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1781641377742,
+  "projectRoot": "c:\\dev\\Personal-Portfolio-Website",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 2,
+      "lastAccessed": 1781641377696,
+      "keyFiles": [
+        "Andrew Rodriguez Resume.pdf",
+        "robots.txt"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": ".handoff\\portfolio\\project\\Portfolio.dc.html",
+      "accessCount": 4,
+      "lastAccessed": 1781659712146,
+      "type": "file"
+    },
+    {
+      "path": "app\\providers.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1781662702318,
+      "type": "file"
+    },
+    {
+      "path": "app\\layout.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1781662715251,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 3,
+      "lastAccessed": 1781660150295,
+      "type": "file"
+    },
+    {
+      "path": "components\\sections\\Hero.module.css",
+      "accessCount": 3,
+      "lastAccessed": 1781660384347,
+      "type": "file"
+    },
+    {
+      "path": ".claude\\settings.local.json",
+      "accessCount": 2,
+      "lastAccessed": 1781657605462,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 2,
+      "lastAccessed": 1781657690820,
+      "type": "file"
+    },
+    {
+      "path": "components",
+      "accessCount": 2,
+      "lastAccessed": 1781659662737,
+      "type": "directory"
+    },
+    {
+      "path": ".handoff\\portfolio\\project\\Work.dc.html",
+      "accessCount": 2,
+      "lastAccessed": 1781659704325,
+      "type": "file"
+    },
+    {
+      "path": ".handoff\\portfolio\\project\\Projects.dc.html",
+      "accessCount": 2,
+      "lastAccessed": 1781659712564,
+      "type": "file"
+    },
+    {
+      "path": "content\\home.ts",
+      "accessCount": 2,
+      "lastAccessed": 1781659720170,
+      "type": "file"
+    },
+    {
+      "path": ".handoff\\portfolio\\project\\Tools.dc.html",
+      "accessCount": 2,
+      "lastAccessed": 1781659720315,
+      "type": "file"
+    },
+    {
+      "path": "content\\work.ts",
+      "accessCount": 2,
+      "lastAccessed": 1781659720966,
+      "type": "file"
+    },
+    {
+      "path": "content\\projects.ts",
+      "accessCount": 2,
+      "lastAccessed": 1781659721486,
+      "type": "file"
+    },
+    {
+      "path": "content\\tools.ts",
+      "accessCount": 2,
+      "lastAccessed": 1781659722103,
+      "type": "file"
+    },
+    {
+      "path": "content\\site.ts",
+      "accessCount": 2,
+      "lastAccessed": 1781659722499,
+      "type": "file"
+    },
+    {
+      "path": "app\\page.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659730375,
+      "type": "file"
+    },
+    {
+      "path": "app\\work\\page.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659731112,
+      "type": "file"
+    },
+    {
+      "path": "app\\projects\\page.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659732076,
+      "type": "file"
+    },
+    {
+      "path": "app\\tools\\page.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659732617,
+      "type": "file"
+    },
+    {
+      "path": "components\\sections\\Hero.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659738924,
+      "type": "file"
+    },
+    {
+      "path": "components\\sections\\HypeStakeFeature.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659739494,
+      "type": "file"
+    },
+    {
+      "path": "components\\sections\\ProductFlipbook.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659740111,
+      "type": "file"
+    },
+    {
+      "path": "components\\sections\\Skills.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659740820,
+      "type": "file"
+    },
+    {
+      "path": "components\\sections\\Contact.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659741301,
+      "type": "file"
+    },
+    {
+      "path": "components\\chrome\\TopNav.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659747324,
+      "type": "file"
+    },
+    {
+      "path": "components\\chrome\\BottomDock.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659747969,
+      "type": "file"
+    },
+    {
+      "path": "components\\chrome\\ThemeToggle.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659748589,
+      "type": "file"
+    },
+    {
+      "path": "components\\work\\WorkExperience.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659749159,
+      "type": "file"
+    },
+    {
+      "path": "components\\projects\\ProjectsGrid.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659750225,
+      "type": "file"
+    },
+    {
+      "path": "components\\tools\\SkillsLibrary.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659750433,
+      "type": "file"
+    },
+    {
+      "path": "app\\globals.css",
+      "accessCount": 2,
+      "lastAccessed": 1781659758733,
+      "type": "file"
+    },
+    {
+      "path": "components\\chrome\\TopNav.module.css",
+      "accessCount": 2,
+      "lastAccessed": 1781659759319,
+      "type": "file"
+    },
+    {
+      "path": "components\\chrome\\BottomDock.module.css",
+      "accessCount": 2,
+      "lastAccessed": 1781659759861,
+      "type": "file"
+    },
+    {
+      "path": "lib\\icons.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1781659765979,
+      "type": "file"
+    },
+    {
+      "path": "components\\projects\\ProjectsGrid.module.css",
+      "accessCount": 2,
+      "lastAccessed": 1781659766292,
+      "type": "file"
+    },
+    {
+      "path": "components\\sections\\HypeStakeFeature.module.css",
+      "accessCount": 2,
+      "lastAccessed": 1781659775991,
+      "type": "file"
+    },
+    {
+      "path": "components\\tools\\SkillsLibrary.module.css",
+      "accessCount": 2,
+      "lastAccessed": 1781659776512,
+      "type": "file"
+    },
+    {
+      "path": "tsconfig.json",
+      "accessCount": 1,
+      "lastAccessed": 1781657671628,
+      "type": "file"
+    },
+    {
+      "path": "next.config.mjs",
+      "accessCount": 1,
+      "lastAccessed": 1781657677355,
+      "type": "file"
+    },
+    {
+      "path": "app\\icon.svg",
+      "accessCount": 1,
+      "lastAccessed": 1781658693683,
+      "type": "file"
+    },
+    {
+      "path": "components\\sections\\ProductFlipbook.module.css",
+      "accessCount": 1,
+      "lastAccessed": 1781659262400,
+      "type": "file"
+    },
+    {
+      "path": "components\\sections\\Contact.module.css",
+      "accessCount": 1,
+      "lastAccessed": 1781659335740,
+      "type": "file"
+    },
+    {
+      "path": "components\\work\\WorkExperience.module.css",
+      "accessCount": 1,
+      "lastAccessed": 1781659420868,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 1,
+      "lastAccessed": 1781659634758,
+      "type": "directory"
+    },
+    {
+      "path": "app",
+      "accessCount": 1,
+      "lastAccessed": 1781659635743,
+      "type": "directory"
+    },
+    {
+      "path": ".handoff\\pw-test.js",
+      "accessCount": 1,
+      "lastAccessed": 1781662449809,
+      "type": "file"
+    },
+    {
+      "path": ".handoff\\shots\\01-home-dark.png",
+      "accessCount": 1,
+      "lastAccessed": 1781662764784,
+      "type": "file"
+    },
+    {
+      "path": ".handoff\\pw-check-flipbook.js",
+      "accessCount": 1,
+      "lastAccessed": 1781662809120,
+      "type": "file"
+    },
+    {
+      "path": ".handoff\\shots\\flipbook-focus.png",
+      "accessCount": 1,
+      "lastAccessed": 1781662832419,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

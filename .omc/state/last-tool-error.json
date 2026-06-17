@@ -1,0 +1,7 @@
+{
+  "tool_name": "Read",
+  "tool_input_preview": "{\"file_path\":\"c:\\\\dev\\\\Personal-Portfolio-Website\\\\.handoff\\\\fidelity-report.md\"}",
+  "error": "File does not exist. Note: your current working directory is C:\\dev\\Personal-Portfolio-Website.",
+  "timestamp": "2026-06-17T01:39:06.173Z",
+  "retry_count": 1
+}

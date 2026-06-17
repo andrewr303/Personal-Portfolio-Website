@@ -1,0 +1,65 @@
+.shrink {
+  flex: 1;
+  min-width: 300px;
+  max-width: 640px;
+}
+
+.visitBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(180deg, #e85cf5, #a21caf);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 4px 0 #86198f, 0 10px 20px rgba(162, 28, 175, 0.4);
+  transition: transform 0.12s, box-shadow 0.12s, filter 0.15s;
+}
+.visitBtn:hover {
+  filter: brightness(1.06);
+}
+.visitBtn:active {
+  transform: translateY(3px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 1px 0 #86198f, 0 4px 10px rgba(162, 28, 175, 0.35);
+}
+
+.openLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--t3, #9f9fa9);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.openLink:hover {
+  color: #fff;
+}
+
+.addressLink {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  color: #9f9fa9;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.addressLink:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .shrink {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
