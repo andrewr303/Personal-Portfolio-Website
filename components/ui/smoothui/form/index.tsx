@@ -83,6 +83,8 @@ interface FormContextValue {
   errors: FormErrors;
   prevErrors: FormErrors;
   submitCount: number;
+  /** Registers a field with the enclosing <Form> and returns its stable index. */
+  registerField: () => number;
 }
 
 interface FormFieldContextValue {
@@ -101,6 +103,7 @@ const FormContext = createContext<FormContextValue>({
   errors: {},
   submitCount: 0,
   prevErrors: {},
+  registerField: () => 0,
 });
 const FormFieldContext = createContext<FormFieldContextValue | null>(null);
 
@@ -129,9 +132,18 @@ export default function Form({
   const prevErrorsRef = useRef<FormErrors>({});
   const [prevErrors, setPrevErrors] = useState<FormErrors>({});
 
+  // Per-form field counter so stagger indices stay correct even when
+  // multiple <Form> instances are mounted at once.
+  const fieldCounterRef = useRef(0);
+  const registerField = useCallback(() => {
+    const index = fieldCounterRef.current;
+    fieldCounterRef.current += 1;
+    return index;
+  }, []);
+
   const ctxValue = useMemo(
-    () => ({ errors, submitCount, prevErrors }),
-    [errors, submitCount, prevErrors]
+    () => ({ errors, submitCount, prevErrors, registerField }),
+    [errors, submitCount, prevErrors, registerField]
   );
 
   const handleSubmit = useCallback(
@@ -164,30 +176,17 @@ export default function Form({
 // FormField — staggered entrance + validation shake
 // ---------------------------------------------------------------------------
 
-let fieldCounter = 0;
-
 export function FormField({ name, className, children }: FormFieldProps) {
-  const { errors, submitCount, prevErrors } = useFormCtx();
+  const { errors, submitCount, prevErrors, registerField } = useFormCtx();
   const id = useId();
   const error = errors[name];
   const prevError = prevErrors[name];
 
-  // Stable field index for stagger animation
+  // Stable field index for stagger animation, scoped to the enclosing <Form>.
   const fieldIndexRef = useRef<number | null>(null);
   if (fieldIndexRef.current === null) {
-    fieldIndexRef.current = fieldCounter;
-    fieldCounter += 1;
+    fieldIndexRef.current = registerField();
   }
-
-  // Reset counter on unmount of the first field (index 0)
-  useEffect(
-    () => () => {
-      if (fieldIndexRef.current === 0) {
-        fieldCounter = 0;
-      }
-    },
-    []
-  );
 
   const ctxValue = useMemo(
     () => ({

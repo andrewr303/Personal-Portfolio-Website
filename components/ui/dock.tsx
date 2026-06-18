@@ -10,7 +10,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { motion, useReducedMotion } from "framer-motion"
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion"
 
 export interface DockItem {
   /** Pre-rendered icon node — keeps brand colours / image assets intact. */
@@ -48,16 +48,18 @@ function DockControl({
   const inner = (
     <>
       <span className="flex items-center justify-center">{item.icon}</span>
-      {isHovered && (
-        <motion.span
-          layoutId="dock-glow"
-          className="pointer-events-none absolute inset-0 rounded-2xl border"
-          style={{ borderColor: `${ACCENT}66` }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        />
-      )}
+      <AnimatePresence>
+        {isHovered && (
+          <motion.span
+            layoutId="dock-glow"
+            className="pointer-events-none absolute inset-0 rounded-2xl border"
+            style={{ borderColor: `${ACCENT}66` }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          />
+        )}
+      </AnimatePresence>
     </>
   )
 
