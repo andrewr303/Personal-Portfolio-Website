@@ -22,9 +22,9 @@
   --t3: #9f9fa9;
   --t4: #71717b;
   --dot: rgba(255, 255, 255, 0.05);
-  /* Brand violet — drives the smoothui candy button + dock accents. */
-  --brand: #9a5cf2;
-  --brand-secondary: #6d28d9;
+  /* Brand navy-blue — drives the smoothui candy button + dock accents. */
+  --brand: #2f63c9;
+  --brand-secondary: #1b3f87;
   /* Surfaces are intentionally left undefined in dark so each element keeps
      its own near-black fallback (#0e0e14 / #0f0f16 / #111118 / #14141c). */
 
@@ -94,7 +94,7 @@ body {
 }
 
 ::selection {
-  background: rgba(192, 132, 252, 0.35);
+  background: rgba(111, 155, 232, 0.35);
   color: #fff;
 }
 
@@ -106,7 +106,7 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(140, 120, 180, 0.28);
+  background: rgba(110, 135, 180, 0.32);
   border-radius: 99px;
   border: 3px solid transparent;
   background-clip: content-box;
@@ -116,7 +116,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #c084fc;
+  outline: 2px solid #6f9be8;
   outline-offset: 2px;
   border-radius: 8px;
 }

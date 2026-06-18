@@ -28,12 +28,12 @@ export default function ProjectsPage() {
               alignItems: "center",
               padding: "8px 18px",
               borderRadius: 999,
-              background: "#0f0f16",
+              background: "var(--surface,#0f0f16)",
               border: "1px solid var(--line-2,rgba(255,255,255,0.14))",
               fontSize: 13,
               fontWeight: 700,
               color: "var(--t1,#fff)",
-              boxShadow: "0 6px 18px rgba(0,0,0,0.4)",
+              boxShadow: "0 6px 18px rgba(0,0,0,0.18)",
             }}
           >
             My Projects

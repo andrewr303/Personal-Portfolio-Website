@@ -44,7 +44,7 @@
   border-radius: 10px;
   border: none;
   background: linear-gradient(180deg, #e08a5f, #c2683f);
-  color: #fff;
+  color: #fff !important;
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;

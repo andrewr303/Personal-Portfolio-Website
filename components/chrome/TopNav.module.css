@@ -58,7 +58,7 @@
   border-radius: 999px;
   border: none;
   background: transparent;
-  color: var(--nav-fg);
+  color: var(--nav-fg) !important;
   text-decoration: none;
   cursor: pointer;
   transition:
@@ -68,7 +68,7 @@
 }
 .iconBtn:hover {
   background: var(--nav-hover);
-  color: var(--nav-fg);
+  color: var(--nav-fg) !important;
 }
 .iconBtn:active {
   transform: scale(0.92);
@@ -93,7 +93,7 @@
   letter-spacing: -0.01em;
   white-space: nowrap;
   background: transparent;
-  color: var(--nav-fg);
+  color: var(--nav-fg) !important;
   transition:
     background var(--duration-fast) var(--ease-smooth),
     color var(--duration-fast) var(--ease-smooth),
@@ -101,7 +101,7 @@
 }
 .link:hover {
   background: var(--nav-hover);
-  color: var(--nav-fg);
+  color: var(--nav-fg) !important;
 }
 .link:active {
   transform: scale(0.97);
@@ -110,7 +110,7 @@
 .active,
 .active:hover {
   background: var(--nav-active);
-  color: var(--nav-fg);
+  color: var(--nav-fg) !important;
 }
 
 @media (max-width: 600px) {

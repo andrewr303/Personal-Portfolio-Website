@@ -21,8 +21,8 @@ export const tools: Tool[] = [
   {
     title: "Investor CRM in Notion",
     subtitle: "Zero-Cost Enterprise Alternative",
-    tint: "#818cf8",
-    tintBg: "rgba(129,140,248,0.16)",
+    tint: "#5b8def",
+    tintBg: "rgba(91,141,239,0.16)",
     icon: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/>',
     desc: "Investor outreach and relationship management replicating enterprise fundraising platforms, with AI-powered email personalization.",
     impact: "Enabled $1M pre-seed strategy at zero software cost",
@@ -39,8 +39,8 @@ export const tools: Tool[] = [
   {
     title: "AI Content Generation Engine",
     subtitle: "Social Media Automation",
-    tint: "#c084fc",
-    tintBg: "rgba(192,132,252,0.16)",
+    tint: "#6f9be8",
+    tintBg: "rgba(111,155,232,0.16)",
     icon: '<path d="M3 11l18-8-8 18-2.5-7.5L3 11Z"/>',
     desc: "High-volume, platform-specific content aligned with brand voice across LinkedIn, Facebook, and TikTok, scheduled via Hootsuite.",
     impact: "Increased engagement with minimal manual effort",

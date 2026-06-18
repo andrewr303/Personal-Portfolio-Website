@@ -13,7 +13,7 @@
   transition: border-color 0.2s;
 }
 .card:hover {
-  border-color: rgba(168, 85, 247, 0.3);
+  border-color: rgba(47, 99, 201, 0.3);
 }
 
 .bar {
@@ -22,7 +22,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: linear-gradient(180deg, #c084fc, #6d28d9);
+  background: linear-gradient(180deg, #6f9be8, #1b3f87);
 }
 
 .toggle {

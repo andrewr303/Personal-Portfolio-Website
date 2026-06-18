@@ -28,8 +28,8 @@ interface DockProps {
   items: DockItem[]
 }
 
-/** Accent for the hover glow + active dot — the portfolio violet (matches focus rings). */
-const ACCENT = "#c084fc"
+/** Accent for the hover glow + active dot — the portfolio navy blue (matches focus rings). */
+const ACCENT = "#3b76d4"
 
 function DockControl({
   item,
@@ -40,8 +40,10 @@ function DockControl({
   isHovered: boolean
   onActivate: () => void
 }) {
+  // Icons inherit the dock container's color in every state — neutralize the
+  // ghost button's hover bg/text so currentColor icons stay legible on the glass.
   const className = cn(
-    "relative h-11 w-11 rounded-2xl transition-[transform,box-shadow,background-color] active:scale-95 sm:h-12 sm:w-12"
+    "relative h-11 w-11 rounded-2xl transition-[transform,box-shadow,background-color] active:scale-95 hover:!bg-black/5 hover:!text-inherit sm:h-12 sm:w-12"
   )
   const glowStyle = isHovered ? { boxShadow: `0 8px 24px ${ACCENT}40` } : undefined
 
@@ -122,9 +124,17 @@ export default function Dock({ items, className }: DockProps) {
         animate={reduceMotion ? { rotateX: 10 } : { rotateX: 10, y: [0, -2, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         className={cn(
-          "pointer-events-auto flex items-end gap-2 rounded-3xl px-3 py-3 sm:gap-4 sm:px-4",
-          "border bg-background/70 shadow-lg backdrop-blur-2xl"
+          "pointer-events-auto flex items-end gap-2 rounded-3xl px-3 py-3 sm:gap-4 sm:px-4"
         )}
+        style={{
+          color: "#16223a",
+          background: "rgba(255,255,255,0.72)",
+          border: "1px solid rgba(255,255,255,0.6)",
+          boxShadow:
+            "0 16px 44px rgba(15,23,42,0.28), 0 2px 8px rgba(15,23,42,0.12), inset 0 1px 0 rgba(255,255,255,0.85)",
+          WebkitBackdropFilter: "blur(22px) saturate(180%)",
+          backdropFilter: "blur(22px) saturate(180%)",
+        }}
       >
         <TooltipProvider delayDuration={100}>
           {items.map((item, i) => {

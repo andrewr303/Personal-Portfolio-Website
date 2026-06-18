@@ -16,10 +16,10 @@
   transition: all 0.15s;
 }
 .filterActive {
-  background: linear-gradient(180deg, #a855f7, #7c3aed);
+  background: linear-gradient(180deg, #2f63c9, #21478f);
   color: #fff;
   border: 1px solid transparent;
-  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.35);
+  box-shadow: 0 6px 16px rgba(31, 74, 160, 0.35);
 }
 .filterIdle {
   background: var(--surface, #0f0f16);
@@ -57,7 +57,7 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   font-size: 12px;
   font-weight: 700;
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
   transition: background 0.15s;
 }
@@ -67,12 +67,12 @@
 
 .primaryLink {
   flex: 0 0 auto;
-  color: var(--t3, #9f9fa9);
+  color: var(--t3, #9f9fa9) !important;
   margin-top: 2px;
   transition: color 0.15s;
 }
 .primaryLink:hover {
-  color: #fff;
+  color: var(--t1, #fff) !important;
 }
 
 .more {
@@ -85,11 +85,11 @@
   font-family: inherit;
   font-size: 13px;
   font-weight: 700;
-  color: #c084fc;
+  color: #6f9be8;
   transition: color 0.15s;
 }
 .more:hover {
-  color: #e9d5ff;
+  color: #d7e6ff;
 }
 
 .clamp {

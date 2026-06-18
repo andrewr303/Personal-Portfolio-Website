@@ -6,6 +6,7 @@ import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import { Providers } from "./providers";
+import { BottomDock } from "@/components/chrome/BottomDock";
 import { cn } from "@/lib/utils";
 
 // Self-hosted Geist (variable weight) — the universal UI typeface.
@@ -82,8 +83,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       data-theme="dark"
       data-neutral="gray"
-      data-brand="violet"
-      data-accent="violet"
+      data-brand="blue"
+      data-accent="blue"
       data-solid="contrast"
       data-solid-style="flat"
       data-border="rounded"
@@ -95,7 +96,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <BottomDock />
+        </Providers>
       </body>
     </html>
   );

@@ -35,7 +35,7 @@ export function ProductFlipbook() {
               fontWeight: 700,
               letterSpacing: "0.16em",
               textTransform: "uppercase",
-              color: "#c084fc",
+              color: "#6f9be8",
               marginBottom: 12,
             }}
           >
@@ -84,10 +84,10 @@ export function ProductFlipbook() {
           position: "relative",
           borderRadius: 20,
           overflow: "hidden",
-          border: "1px solid rgba(168,85,247,0.2)",
+          border: "1px solid rgba(47,99,201,0.2)",
           background: "#07070d",
           boxShadow:
-            "0 30px 80px rgba(0,0,0,0.55),0 0 0 1px rgba(255,255,255,0.03),0 0 60px rgba(168,85,247,0.1)",
+            "0 30px 80px rgba(0,0,0,0.55),0 0 0 1px rgba(255,255,255,0.03),0 0 60px rgba(47,99,201,0.1)",
         }}
       >
         <div
@@ -114,12 +114,12 @@ export function ProductFlipbook() {
               height: 30,
               padding: "0 14px",
               borderRadius: 8,
-              background: "rgba(168,85,247,0.12)",
-              border: "1px solid rgba(168,85,247,0.25)",
+              background: "rgba(47,99,201,0.12)",
+              border: "1px solid rgba(47,99,201,0.25)",
             }}
           >
-            <span style={{ width: 6, height: 6, borderRadius: 99, background: "#c084fc", boxShadow: "0 0 8px rgba(192,132,252,0.8)" }} />
-            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.04em", color: "#e9d5ff" }}>
+            <span style={{ width: 6, height: 6, borderRadius: 99, background: "#6f9be8", boxShadow: "0 0 8px rgba(111,155,232,0.8)" }} />
+            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.04em", color: "#d7e6ff" }}>
               {current.tag}
             </span>
           </div>
@@ -134,7 +134,7 @@ export function ProductFlipbook() {
             position: "relative",
             width: "100%",
             aspectRatio: "16 / 9",
-            background: "radial-gradient(120% 90% at 50% -10%,rgba(168,85,247,0.1),transparent 60%),#07070d",
+            background: "radial-gradient(120% 90% at 50% -10%,rgba(47,99,201,0.1),transparent 60%),#07070d",
           }}
         >
           {gallery.map((g, i) => {
@@ -222,9 +222,9 @@ export function ProductFlipbook() {
               aria-label={`View ${g.title}`}
               className={styles.thumb}
               style={{
-                border: `1.5px solid ${active ? "rgba(192,132,252,0.9)" : "rgba(255,255,255,0.08)"}`,
+                border: `1.5px solid ${active ? "rgba(111,155,232,0.9)" : "rgba(255,255,255,0.08)"}`,
                 opacity: active ? 1 : 0.5,
-                boxShadow: active ? "0 0 0 3px rgba(168,85,247,0.18)" : "none",
+                boxShadow: active ? "0 0 0 3px rgba(47,99,201,0.18)" : "none",
               }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}

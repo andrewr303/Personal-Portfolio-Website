@@ -1,5 +1,4 @@
 import { TopNav } from "@/components/chrome/TopNav";
-import { BottomDock } from "@/components/chrome/BottomDock";
 import { Hero } from "@/components/sections/Hero";
 import { HypeStakeFeature } from "@/components/sections/HypeStakeFeature";
 import { ProductFlipbook } from "@/components/sections/ProductFlipbook";
@@ -16,7 +15,7 @@ export default function HomePage() {
           zIndex: 1,
           maxWidth: 1120,
           margin: "0 auto",
-          padding: "0 26px 56px",
+          padding: "0 26px 120px",
         }}
       >
         <Hero />
@@ -25,7 +24,6 @@ export default function HomePage() {
         <Skills />
         <Contact />
       </main>
-      <BottomDock />
     </div>
   );
 }
