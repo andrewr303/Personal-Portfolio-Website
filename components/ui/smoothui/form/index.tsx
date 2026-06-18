@@ -83,13 +83,10 @@ interface FormContextValue {
   errors: FormErrors;
   prevErrors: FormErrors;
   submitCount: number;
-  /** Registers a field with the enclosing <Form> and returns its stable index. */
-  registerField: () => number;
 }
 
 interface FormFieldContextValue {
   error: string | undefined;
-  fieldIndex: number;
   formDescriptionId: string;
   formItemId: string;
   formMessageId: string;
@@ -103,7 +100,6 @@ const FormContext = createContext<FormContextValue>({
   errors: {},
   submitCount: 0,
   prevErrors: {},
-  registerField: () => 0,
 });
 const FormFieldContext = createContext<FormFieldContextValue | null>(null);
 
@@ -128,22 +124,14 @@ export default function Form({
   children,
   ...props
 }: FormProps) {
+  const shouldReduceMotion = useReducedMotion();
   const [submitCount, setSubmitCount] = useState(0);
   const prevErrorsRef = useRef<FormErrors>({});
   const [prevErrors, setPrevErrors] = useState<FormErrors>({});
 
-  // Per-form field counter so stagger indices stay correct even when
-  // multiple <Form> instances are mounted at once.
-  const fieldCounterRef = useRef(0);
-  const registerField = useCallback(() => {
-    const index = fieldCounterRef.current;
-    fieldCounterRef.current += 1;
-    return index;
-  }, []);
-
   const ctxValue = useMemo(
-    () => ({ errors, submitCount, prevErrors, registerField }),
-    [errors, submitCount, prevErrors, registerField]
+    () => ({ errors, submitCount, prevErrors }),
+    [errors, submitCount, prevErrors]
   );
 
   const handleSubmit = useCallback(
@@ -166,7 +154,25 @@ export default function Form({
         onSubmit={handleSubmit}
         {...props}
       >
-        {children}
+        {/* Stagger the fields' entrance via framer-motion variants. The timing
+            is driven by render order (deterministic) instead of a counter
+            mutated during render. `contents` keeps each field a direct grid
+            item of the form, so the gap layout is unchanged. */}
+        <motion.div
+          animate="show"
+          className="contents"
+          initial="hidden"
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: shouldReduceMotion ? 0 : STAGGER_DELAY,
+              },
+            },
+          }}
+        >
+          {children}
+        </motion.div>
       </form>
     </FormContext.Provider>
   );
@@ -177,16 +183,10 @@ export default function Form({
 // ---------------------------------------------------------------------------
 
 export function FormField({ name, className, children }: FormFieldProps) {
-  const { errors, submitCount, prevErrors, registerField } = useFormCtx();
+  const { errors, submitCount, prevErrors } = useFormCtx();
   const id = useId();
   const error = errors[name];
   const prevError = prevErrors[name];
-
-  // Stable field index for stagger animation, scoped to the enclosing <Form>.
-  const fieldIndexRef = useRef<number | null>(null);
-  if (fieldIndexRef.current === null) {
-    fieldIndexRef.current = registerField();
-  }
 
   const ctxValue = useMemo(
     () => ({
@@ -196,7 +196,6 @@ export function FormField({ name, className, children }: FormFieldProps) {
       formItemId: `${id}-form-item`,
       formDescriptionId: `${id}-form-item-description`,
       formMessageId: `${id}-form-item-message`,
-      fieldIndex: fieldIndexRef.current ?? 0,
       submitCount,
       prevError,
     }),
@@ -219,7 +218,7 @@ function FormFieldInner({
   children: React.ReactNode;
 }) {
   const shouldReduceMotion = useReducedMotion();
-  const { error, fieldIndex, submitCount, prevError } = useFormFieldCtx();
+  const { error, submitCount, prevError } = useFormFieldCtx();
 
   // Shake when a new error appears on submit
   const shouldShake = error && submitCount > 0;
@@ -233,18 +232,13 @@ function FormFieldInner({
 
   return (
     <motion.div
-      animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
       className={cn("grid gap-1.5", className)}
       data-slot="form-field"
-      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 8 }}
-      transition={
-        shouldReduceMotion
-          ? DURATION_INSTANT
-          : {
-              ...SPRING_DEFAULT,
-              delay: fieldIndex * STAGGER_DELAY,
-            }
-      }
+      variants={{
+        hidden: shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 8 },
+        show: shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 },
+      }}
+      transition={shouldReduceMotion ? DURATION_INSTANT : SPRING_DEFAULT}
     >
       <motion.div
         animate={
