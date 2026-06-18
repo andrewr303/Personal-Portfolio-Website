@@ -49,11 +49,7 @@ export function BottomDock() {
     {
       label: isLight ? "Switch to dark theme" : "Switch to light theme",
       onClick: () => setTheme(isLight ? "dark" : "light"),
-      icon: isLight ? (
-        <MoonIcon size={26} style={{ color: "#16223a" }} />
-      ) : (
-        <SunIcon size={26} style={{ color: "#16223a" }} />
-      ),
+      icon: isLight ? <MoonIcon size={26} /> : <SunIcon size={26} />,
     },
   ];
 

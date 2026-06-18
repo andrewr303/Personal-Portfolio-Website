@@ -296,6 +296,7 @@ export function HypeStakeFeature() {
                 title="HypeStake — live site (hypestake.ai)"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms allow-modals allow-downloads"
                 style={{
                   display: "block",
                   width: "100%",

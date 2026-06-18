@@ -40,8 +40,10 @@ function DockControl({
   isHovered: boolean
   onActivate: () => void
 }) {
+  // Icons inherit the dock container's color in every state — neutralize the
+  // ghost button's hover bg/text so currentColor icons stay legible on the glass.
   const className = cn(
-    "relative h-11 w-11 rounded-2xl transition-[transform,box-shadow,background-color] active:scale-95 hover:!bg-black/5 sm:h-12 sm:w-12"
+    "relative h-11 w-11 rounded-2xl transition-[transform,box-shadow,background-color] active:scale-95 hover:!bg-black/5 hover:!text-inherit sm:h-12 sm:w-12"
   )
   const glowStyle = isHovered ? { boxShadow: `0 8px 24px ${ACCENT}40` } : undefined
 
