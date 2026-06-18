@@ -33,7 +33,7 @@ export default function ToolsPage() {
               fontWeight: 700,
               letterSpacing: "0.16em",
               textTransform: "uppercase",
-              color: "#818cf8",
+              color: "#5b8def",
               marginBottom: 14,
             }}
           >
@@ -59,7 +59,7 @@ export default function ToolsPage() {
         </header>
 
         <section style={{ padding: "4px 0 8px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(300px,1fr))", gap: 16 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(min(100%,300px),1fr))", gap: 16 }}>
             {tools.map((t) => (
               <div
                 key={t.title}

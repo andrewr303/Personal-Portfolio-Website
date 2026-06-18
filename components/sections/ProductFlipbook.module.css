@@ -23,10 +23,10 @@
 }
 
 .nextBtn {
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  background: linear-gradient(180deg, #9a5cf2, #6d28d9);
+  border: 1px solid rgba(47, 99, 201, 0.3);
+  background: linear-gradient(180deg, #2f63c9, #1b3f87);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(109, 40, 217, 0.4);
+  box-shadow: 0 6px 18px rgba(27, 63, 135, 0.4);
 }
 .nextBtn:hover {
   filter: brightness(1.08);

@@ -45,8 +45,8 @@ export const skillCards: SkillCard[] = [
   },
   {
     title: "AI Systems",
-    tint: "#c084fc",
-    tintBg: "rgba(192,132,252,0.16)",
+    tint: "#6f9be8",
+    tintBg: "rgba(111,155,232,0.16)",
     icon: '<path d="M12 3a3 3 0 0 0-3 3 3 3 0 0 0-1.5 5.6A3 3 0 0 0 9 17a3 3 0 0 0 6 0 3 3 0 0 0 1.5-5.4A3 3 0 0 0 15 6a3 3 0 0 0-3-3Z"/>',
     body: "LLM orchestration, prompt routing, RAG, evaluation, multi-provider integrations, and observability.",
     proof:
@@ -54,8 +54,8 @@ export const skillCards: SkillCard[] = [
   },
   {
     title: "Full-Stack Product",
-    tint: "#818cf8",
-    tintBg: "rgba(129,140,248,0.16)",
+    tint: "#5b8def",
+    tintBg: "rgba(91,141,239,0.16)",
     icon: '<path d="m8 6-6 6 6 6M16 6l6 6-6 6"/>',
     body: "React, TypeScript, Supabase, Edge Functions, Trigger.dev, and Python services, built and shipped end to end.",
     proof: "Shipped HypeStake solo, from architecture and code to infrastructure and deploy.",

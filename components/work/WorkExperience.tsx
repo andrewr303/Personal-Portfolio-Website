@@ -94,7 +94,7 @@ export function WorkExperience() {
                             width: 5,
                             height: 5,
                             borderRadius: 99,
-                            background: "#a855f7",
+                            background: "#2f63c9",
                           }}
                         />
                         <span>{b}</span>

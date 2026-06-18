@@ -89,7 +89,7 @@ export default function WorkPage() {
               fontWeight: 700,
               letterSpacing: "0.16em",
               textTransform: "uppercase",
-              color: "#c084fc",
+              color: "#6f9be8",
               marginBottom: 14,
             }}
           >
@@ -117,7 +117,7 @@ export default function WorkPage() {
         <WorkExperience />
 
         <section style={{ padding: "40px 0 0" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))", gap: 40 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,320px),1fr))", gap: 40 }}>
             <div>
               <h2
                 style={{

@@ -15,8 +15,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
     <ThemeProvider
       theme="system"
       neutral="gray"
-      brand="violet"
-      accent="violet"
+      brand="blue"
+      accent="blue"
       solid="contrast"
       solidStyle="flat"
       border="rounded"

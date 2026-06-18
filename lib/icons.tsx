@@ -93,7 +93,7 @@ export const ProjectsIcon = stroke(
   17
 );
 export const ToolsIcon = stroke(
-  '<path d="M14.5 5.5a3.5 3.5 0 0 0-5 4.7L3 16.7 7.3 21l6.5-6.5a3.5 3.5 0 0 0 4.7-5l-2.8 2.8-2-2 2.8-2.8Z"/>',
+  '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/>',
   17
 );
 export const MailIcon = stroke(
@@ -103,7 +103,9 @@ export const MailIcon = stroke(
 export const SunIcon = stroke(
   '<circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2 12h2.2M19.8 12H22M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/>'
 );
-export const MoonIcon = stroke('<path d="M20 14.5A8 8 0 0 1 9.5 4 7 7 0 1 0 20 14.5Z"/>');
+export const MoonIcon = stroke(
+  '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/><path d="M19 3v4M17 5h4"/>'
+);
 
 /* ---- arrows / chevrons ---- */
 export const ArrowRightIcon = stroke('<path d="M5 12h14"/><path d="m13 6 6 6-6 6"/>', 16);

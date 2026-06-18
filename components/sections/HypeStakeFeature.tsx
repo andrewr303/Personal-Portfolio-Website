@@ -22,7 +22,7 @@ export function HypeStakeFeature() {
           overflow: "hidden",
           border: "1px solid var(--line,rgba(255,255,255,0.09))",
           background:
-            "linear-gradient(160deg,rgba(168,85,247,0.10),rgba(10,10,15,0)),var(--surface,#0e0e14)",
+            "linear-gradient(160deg,rgba(47,99,201,0.10),rgba(10,10,15,0)),var(--surface,#0e0e14)",
         }}
       >
         <div
@@ -33,7 +33,7 @@ export function HypeStakeFeature() {
             right: -80,
             width: 420,
             height: 420,
-            background: "radial-gradient(50% 50% at 50% 50%,rgba(217,70,239,0.10),transparent 70%)",
+            background: "radial-gradient(50% 50% at 50% 50%,rgba(47,99,201,0.10),transparent 70%)",
             pointerEvents: "none",
           }}
         />
@@ -59,11 +59,11 @@ export function HypeStakeFeature() {
                 fontWeight: 700,
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",
-                color: "#c084fc",
+                color: "#6f9be8",
                 marginBottom: 18,
               }}
             >
-              <span style={{ filter: "drop-shadow(0 0 4px rgba(240,0,255,0.5))", color: "#f000ff" }}>
+              <span style={{ filter: "drop-shadow(0 0 4px rgba(47,143,255,0.5))", color: "#2f8fff" }}>
                 <SparkleIcon size={15} />
               </span>
               Currently building — Founder &amp; CEO
@@ -99,16 +99,7 @@ export function HypeStakeFeature() {
             </div>
           </div>
 
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              minWidth: 180,
-              flex: "0 0 auto",
-              alignSelf: "center",
-            }}
-          >
+          <div className={styles.monoWrap}>
             <div
               style={{
                 position: "relative",
@@ -123,7 +114,7 @@ export function HypeStakeFeature() {
                 style={{
                   position: "absolute",
                   inset: 0,
-                  background: "radial-gradient(50% 50% at 50% 50%,rgba(240,0,255,0.16),transparent 68%)",
+                  background: "radial-gradient(50% 50% at 50% 50%,rgba(47,143,255,0.16),transparent 68%)",
                   filter: "blur(14px)",
                 }}
               />
@@ -137,7 +128,7 @@ export function HypeStakeFeature() {
                   height: 170,
                   objectFit: "contain",
                   animation: "hsFloat 7s ease-in-out infinite",
-                  filter: "drop-shadow(0 0 12px rgba(240,0,255,0.22))",
+                  filter: "drop-shadow(0 0 12px rgba(47,143,255,0.22))",
                 }}
               />
             </div>
@@ -149,7 +140,7 @@ export function HypeStakeFeature() {
           style={{
             position: "relative",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(232px,1fr))",
+            gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,232px),1fr))",
             gap: 14,
             padding: `0 ${PAD} ${PAD}`,
           }}
@@ -165,7 +156,7 @@ export function HypeStakeFeature() {
               }}
             >
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <span style={{ flex: "0 0 auto", display: "inline-flex", color: "#c084fc" }}>
+                <span style={{ flex: "0 0 auto", display: "inline-flex", color: "#6f9be8" }}>
                   <InlineIcon inner={h.icon} size={19} />
                 </span>
                 <span
@@ -186,12 +177,10 @@ export function HypeStakeFeature() {
           ))}
         </div>
 
-        {/* live-product preview.
-            This is a static mock of hypestake.ai (the design's shipped state). To embed the live
-            site on deploy, replace the ".embedScreen" block with:
-              <iframe src="https://hypestake.ai" title="HypeStake live site" loading="lazy"
-                      style={{ width: "100%", height: "100%", border: 0 }} />
-            keeping the browser-chrome wrapper. Requires hypestake.ai to allow framing. */}
+        {/* live-product preview — the real hypestake.ai embedded in a browser-chrome frame.
+            The iframe scrolls internally, so the full site can be explored without leaving
+            the page. hypestake.ai sends no X-Frame-Options / frame-ancestors, so framing
+            is permitted. */}
         <div style={{ position: "relative", padding: `0 ${PAD} ${PAD}` }}>
           <div
             style={{
@@ -221,7 +210,7 @@ export function HypeStakeFeature() {
                   fontWeight: 700,
                   letterSpacing: "0.14em",
                   textTransform: "uppercase",
-                  color: "#c084fc",
+                  color: "#6f9be8",
                 }}
               >
                 Live Product · hypestake.ai
@@ -238,10 +227,10 @@ export function HypeStakeFeature() {
               position: "relative",
               borderRadius: 18,
               overflow: "hidden",
-              border: "1px solid rgba(168,85,247,0.22)",
+              border: "1px solid rgba(47,99,201,0.22)",
               background: "#07070d",
               boxShadow:
-                "0 30px 80px rgba(0,0,0,0.6),0 0 0 1px rgba(255,255,255,0.03),0 0 60px rgba(168,85,247,0.12)",
+                "0 30px 80px rgba(0,0,0,0.6),0 0 0 1px rgba(255,255,255,0.03),0 0 60px rgba(47,99,201,0.12)",
             }}
           >
             {/* browser chrome */}
@@ -293,132 +282,27 @@ export function HypeStakeFeature() {
               </a>
             </div>
 
-            {/* .embedScreen — replace with live iframe on deploy */}
+            {/* Live, scrollable embed of hypestake.ai */}
             <div
               style={{
                 position: "relative",
-                height: 860,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                padding: "54px 28px",
+                height: "clamp(460px,72vh,760px)",
                 background:
-                  "radial-gradient(120% 90% at 50% -10%,rgba(168,85,247,0.16),transparent 60%),#07070d",
-                overflowX: "hidden",
-                overflowY: "auto",
+                  "radial-gradient(120% 90% at 50% -10%,rgba(47,99,201,0.16),transparent 60%),#07070d",
               }}
             >
-              <div
-                aria-hidden
+              <iframe
+                src={profile.hypestake}
+                title="HypeStake — live site (hypestake.ai)"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
                 style={{
-                  position: "absolute",
-                  inset: 0,
-                  backgroundImage:
-                    "linear-gradient(rgba(255,255,255,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.035) 1px,transparent 1px)",
-                  backgroundSize: "46px 46px",
-                  WebkitMaskImage: "radial-gradient(120% 80% at 50% 30%,#000,transparent 75%)",
-                  maskImage: "radial-gradient(120% 80% at 50% 30%,#000,transparent 75%)",
+                  display: "block",
+                  width: "100%",
+                  height: "100%",
+                  border: 0,
                 }}
               />
-              <div
-                style={{
-                  position: "relative",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  padding: "9px 20px",
-                  borderRadius: 999,
-                  border: "1px solid rgba(168,85,247,0.35)",
-                  background: "rgba(168,85,247,0.08)",
-                  fontSize: 11.5,
-                  fontWeight: 700,
-                  letterSpacing: "0.13em",
-                  color: "#c084fc",
-                  boxShadow: "0 0 24px rgba(168,85,247,0.18)",
-                }}
-              >
-                WHERE CREATORS BECOME OWNERS. WHERE BRANDS FIND ALLIES.
-              </div>
-              <h3
-                style={{
-                  position: "relative",
-                  margin: "26px 0 0",
-                  fontSize: "clamp(34px,5.2vw,58px)",
-                  lineHeight: 1,
-                  fontWeight: 800,
-                  letterSpacing: "-0.03em",
-                  color: "#fff",
-                }}
-              >
-                Don&apos;t Just Get Paid.
-                <br />
-                <span
-                  style={{
-                    background: "linear-gradient(95deg,#e879f9,#a855f7 45%,#38bdf8)",
-                    WebkitBackgroundClip: "text",
-                    backgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  Build Your Empire.
-                </span>
-              </h3>
-              <p
-                style={{
-                  position: "relative",
-                  margin: "20px auto 0",
-                  maxWidth: 520,
-                  fontSize: 16,
-                  lineHeight: 1.6,
-                  color: "#9f9fa9",
-                }}
-              >
-                A flat fee buys one inauthentic campaign. HypeStake replaces it with an{" "}
-                <strong style={{ color: "#fff", fontWeight: 600 }}>alliance</strong> that makes both
-                sides <strong style={{ color: "#c084fc", fontWeight: 600 }}>long-term partners</strong>.
-              </p>
-              <div
-                style={{
-                  position: "relative",
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: 13,
-                  justifyContent: "center",
-                  marginTop: 30,
-                }}
-              >
-                <span
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    padding: "13px 26px",
-                    borderRadius: 12,
-                    fontSize: 15,
-                    fontWeight: 700,
-                    color: "#fff",
-                    background: "linear-gradient(180deg,#c084fc,#9333ea)",
-                    boxShadow: "0 10px 30px rgba(147,51,234,0.5),inset 0 1px 0 rgba(255,255,255,0.3)",
-                  }}
-                >
-                  Generate My Genome
-                </span>
-                <span
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    padding: "13px 26px",
-                    borderRadius: 12,
-                    fontSize: 15,
-                    fontWeight: 700,
-                    color: "#fff",
-                    background: "#1a1a24",
-                    border: "1px solid rgba(255,255,255,0.14)",
-                  }}
-                >
-                  List My Brand
-                </span>
-              </div>
             </div>
           </div>
           <div
@@ -432,7 +316,7 @@ export function HypeStakeFeature() {
             }}
           >
             <InfoIcon size={13} />
-            Static preview of the live site. A real-time embed gets wired in on deploy.
+            Live embed of hypestake.ai — scroll inside the frame to explore, or open the full site.
           </div>
         </div>
       </div>

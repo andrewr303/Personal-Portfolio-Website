@@ -4,26 +4,38 @@
   max-width: 640px;
 }
 
+.monoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  flex: 0 0 auto;
+  align-self: center;
+}
+
 .visitBtn {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  padding: 12px 20px;
-  border-radius: 999px;
+  padding: 13px 22px;
+  border-radius: 13px;
   font-size: 14.5px;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 600;
+  color: #fff !important;
   text-decoration: none;
-  background: linear-gradient(180deg, #e85cf5, #a21caf);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 4px 0 #86198f, 0 10px 20px rgba(162, 28, 175, 0.4);
-  transition: transform 0.12s, box-shadow 0.12s, filter 0.15s;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(180deg, #3b76d4, #1f4aa0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 10px 24px rgba(31, 74, 160, 0.4);
+  transition: transform 0.15s var(--ease-smooth), box-shadow 0.15s, filter 0.15s;
 }
 .visitBtn:hover {
   filter: brightness(1.06);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 14px 30px rgba(31, 74, 160, 0.5);
 }
 .visitBtn:active {
-  transform: translateY(3px);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 1px 0 #86198f, 0 4px 10px rgba(162, 28, 175, 0.35);
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .openLink {
@@ -32,12 +44,12 @@
   gap: 7px;
   font-size: 13px;
   font-weight: 600;
-  color: var(--t3, #9f9fa9);
+  color: var(--t3, #9f9fa9) !important;
   text-decoration: none;
   transition: color 0.15s;
 }
 .openLink:hover {
-  color: #fff;
+  color: var(--t1, #fff) !important;
 }
 
 .addressLink {
@@ -48,18 +60,22 @@
   width: 30px;
   height: 30px;
   border-radius: 8px;
-  color: #9f9fa9;
+  color: var(--t3, #9f9fa9) !important;
   text-decoration: none;
   transition: background 0.15s, color 0.15s;
 }
 .addressLink:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  background: rgba(127, 127, 140, 0.14);
+  color: var(--t1, #fff) !important;
 }
 
 @media (max-width: 768px) {
   .shrink {
-    min-width: 0;
+    min-width: 100%;
     max-width: 100%;
+  }
+  .monoWrap {
+    min-width: 100%;
+    margin-top: 8px;
   }
 }
