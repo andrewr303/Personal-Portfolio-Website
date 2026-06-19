@@ -43,7 +43,7 @@ function DockControl({
   // Icons inherit the dock container's color in every state — neutralize the
   // ghost button's hover bg/text so currentColor icons stay legible on the glass.
   const className = cn(
-    "relative h-11 w-11 rounded-2xl transition-[transform,box-shadow,background-color] active:scale-95 hover:!bg-black/5 hover:!text-inherit sm:h-12 sm:w-12"
+    "relative h-11 w-11 rounded-2xl transition-[transform,box-shadow,background-color] active:scale-95 hover:!bg-black/5 hover:!text-inherit max-[380px]:h-10 max-[380px]:w-10 sm:h-12 sm:w-12"
   )
   const glowStyle = isHovered ? { boxShadow: `0 8px 24px ${ACCENT}40` } : undefined
 
@@ -124,7 +124,7 @@ export default function Dock({ items, className }: DockProps) {
         animate={reduceMotion ? { rotateX: 10 } : { rotateX: 10, y: [0, -2, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         className={cn(
-          "pointer-events-auto flex items-end gap-2 rounded-3xl px-3 py-3 sm:gap-4 sm:px-4"
+          "pointer-events-auto flex items-end gap-2 rounded-3xl px-3 py-3 max-[380px]:gap-1.5 max-[380px]:px-2 sm:gap-4 sm:px-4"
         )}
         style={{
           color: "#16223a",

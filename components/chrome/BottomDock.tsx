@@ -56,7 +56,7 @@ export function BottomDock() {
   return (
     <Dock
       items={items}
-      className="pointer-events-none fixed inset-x-0 bottom-5 z-90 px-4 py-0"
+      className="pointer-events-none fixed inset-x-0 bottom-[calc(env(safe-area-inset-bottom)+1.25rem)] z-90 px-4 py-0 max-[380px]:px-2"
     />
   );
 }

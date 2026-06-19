@@ -82,6 +82,11 @@
 
 html {
   scroll-behavior: smooth;
+  /* Mobile hardening: never allow horizontal scroll from fixed chrome or
+     wide media, and stop iOS from inflating text on orientation change. */
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
