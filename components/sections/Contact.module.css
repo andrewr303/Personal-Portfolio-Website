@@ -14,6 +14,19 @@
   border: 1px solid var(--line, rgba(255, 255, 255, 0.09));
   text-decoration: none;
   transition: border-color 0.15s;
+  /* Allow the row to shrink inside a narrow grid column. */
+  min-width: 0;
+}
+/* Icon keeps its size; the text column shrinks and the email/handle wraps
+   instead of forcing the whole grid track wider than the phone (320px). */
+.linkRow > span:first-child {
+  flex: 0 0 auto;
+}
+.linkRow > span:last-child {
+  min-width: 0;
+}
+.linkRow > span:last-child span {
+  overflow-wrap: anywhere;
 }
 .linkRow:hover {
   border-color: rgba(255, 255, 255, 0.2);
@@ -57,7 +70,13 @@
 }
 
 @media (max-width: 768px) {
+  /* minmax(0,1fr) — not the default 1fr (= minmax(auto,1fr)) — so a wide
+     child (long email/handle) can't blow the column past the viewport. */
   .gridContact {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  /* >=16px font stops iOS Safari from auto-zooming when a field is focused. */
+  .input {
+    font-size: 16px;
   }
 }

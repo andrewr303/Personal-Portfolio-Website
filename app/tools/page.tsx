@@ -20,7 +20,7 @@ export default function ToolsPage() {
           zIndex: 1,
           maxWidth: 1120,
           margin: "0 auto",
-          padding: "128px 26px 120px",
+          padding: "128px 26px calc(120px + env(safe-area-inset-bottom))",
         }}
       >
         <header style={{ marginBottom: 32 }}>

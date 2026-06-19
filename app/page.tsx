@@ -15,7 +15,7 @@ export default function HomePage() {
           zIndex: 1,
           maxWidth: 1120,
           margin: "0 auto",
-          padding: "0 26px 120px",
+          padding: "0 26px calc(120px + env(safe-area-inset-bottom))",
         }}
       >
         <Hero />
