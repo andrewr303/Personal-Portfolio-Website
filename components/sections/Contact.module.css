@@ -4,6 +4,15 @@
   gap: 44px;
 }
 
+/* Card + form padding: roomy on desktop, trimmed on mobile so the form
+   itself gets more usable width inside the nested containers. */
+.card {
+  padding: clamp(28px, 4vw, 48px);
+}
+.form {
+  padding: 24px;
+}
+
 .linkRow {
   display: flex;
   align-items: center;
@@ -74,6 +83,13 @@
      child (long email/handle) can't blow the column past the viewport. */
   .gridContact {
     grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+  .card {
+    padding: 20px 14px;
+  }
+  .form {
+    padding: 18px 16px;
   }
   /* >=16px font stops iOS Safari from auto-zooming when a field is focused. */
   .input {

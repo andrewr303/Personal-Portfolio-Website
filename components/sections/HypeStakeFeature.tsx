@@ -181,7 +181,7 @@ export function HypeStakeFeature() {
             The iframe scrolls internally, so the full site can be explored without leaving
             the page. hypestake.ai sends no X-Frame-Options / frame-ancestors, so framing
             is permitted. */}
-        <div style={{ position: "relative", padding: `0 ${PAD} ${PAD}` }}>
+        <div className={styles.preview}>
           <div
             style={{
               display: "flex",
@@ -235,11 +235,10 @@ export function HypeStakeFeature() {
           >
             {/* browser chrome */}
             <div
+              className={styles.chrome}
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: 14,
-                padding: "13px 16px",
                 background: "linear-gradient(180deg,rgba(22,18,34,0.95),rgba(13,11,22,0.95))",
                 borderBottom: "1px solid rgba(255,255,255,0.06)",
               }}

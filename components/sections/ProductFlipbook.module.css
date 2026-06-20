@@ -32,30 +32,16 @@
   filter: brightness(1.08);
 }
 
-.overlayBtn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(13, 11, 22, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.15s, transform 0.12s;
-}
-.overlayBtn:hover {
-  background: rgba(40, 30, 60, 0.85);
-}
-.overlayBtn:active {
-  transform: translateY(-50%) scale(0.9);
+/* On wide screens the product tour breaks out of the page's content column
+   to a near-full-bleed width, so the screenshots render noticeably larger. */
+@media (min-width: 1180px) {
+  .section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: clamp(26px, 5vw, 90px);
+    padding-right: clamp(26px, 5vw, 90px);
+  }
 }
 
 .thumb {
