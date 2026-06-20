@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -34,11 +35,9 @@ const ACCENT = "#3b76d4"
 function DockControl({
   item,
   isHovered,
-  onActivate,
 }: {
   item: DockItem
   isHovered: boolean
-  onActivate: () => void
 }) {
   // Icons inherit the dock container's color in every state — neutralize the
   // ghost button's hover bg/text so currentColor icons stay legible on the glass.
@@ -72,7 +71,6 @@ function DockControl({
         <a
           href={item.href}
           aria-label={item.label}
-          onClick={onActivate}
           {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         >
           {inner}
@@ -85,7 +83,7 @@ function DockControl({
   if (item.href) {
     return (
       <Button asChild variant="ghost" size="icon" className={className} style={glowStyle}>
-        <Link href={item.href} aria-label={item.label} onClick={onActivate}>
+        <Link href={item.href} aria-label={item.label}>
           {inner}
         </Link>
       </Button>
@@ -100,18 +98,23 @@ function DockControl({
       className={className}
       style={glowStyle}
       aria-label={item.label}
-      onClick={() => {
-        onActivate()
-        item.onClick?.()
-      }}
+      onClick={() => item.onClick?.()}
     >
       {inner}
     </Button>
   )
 }
 
+/** True when a dock item points at the page we're currently on. */
+function isCurrentRoute(href: string | undefined, pathname: string) {
+  // Only internal routes can be "current"; external/mailto/tel never are.
+  if (!href || !href.startsWith("/")) return false
+  const normalize = (p: string) => (p.length > 1 ? p.replace(/\/$/, "") : p)
+  return normalize(href) === normalize(pathname)
+}
+
 export default function Dock({ items, className }: DockProps) {
-  const [active, setActive] = React.useState<string | null>(null)
+  const pathname = usePathname()
   const [hovered, setHovered] = React.useState<number | null>(null)
   const reduceMotion = useReducedMotion()
 
@@ -138,7 +141,7 @@ export default function Dock({ items, className }: DockProps) {
       >
         <TooltipProvider delayDuration={100}>
           {items.map((item, i) => {
-            const isActive = active === item.label
+            const isActive = isCurrentRoute(item.href, pathname)
             const isHovered = hovered === i
 
             return (
@@ -147,8 +150,6 @@ export default function Dock({ items, className }: DockProps) {
                   <motion.div
                     onMouseEnter={() => setHovered(i)}
                     onMouseLeave={() => setHovered(null)}
-                    onFocus={() => setHovered(i)}
-                    onBlur={() => setHovered(null)}
                     animate={
                       reduceMotion
                         ? undefined
@@ -157,19 +158,20 @@ export default function Dock({ items, className }: DockProps) {
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     className="relative flex flex-col items-center"
                   >
-                    <DockControl
-                      item={item}
-                      isHovered={isHovered}
-                      onActivate={() => setActive(item.label)}
-                    />
+                    <DockControl item={item} isHovered={isHovered} />
 
-                    {isActive && (
-                      <motion.div
-                        layoutId="dock-dot"
-                        className="mt-1 h-1.5 w-1.5 rounded-full"
-                        style={{ backgroundColor: ACCENT }}
-                      />
-                    )}
+                    {/* Reserve the dot's row height always so the active
+                        indicator never shifts an icon up/down (was causing
+                        tapped icons to jump on touch devices). */}
+                    <span className="mt-1 flex h-1.5 items-center justify-center">
+                      {isActive && (
+                        <motion.span
+                          layoutId="dock-dot"
+                          className="h-1.5 w-1.5 rounded-full"
+                          style={{ backgroundColor: ACCENT }}
+                        />
+                      )}
+                    </span>
                   </motion.div>
                 </TooltipTrigger>
                 <TooltipContent side="top" className="text-xs">
