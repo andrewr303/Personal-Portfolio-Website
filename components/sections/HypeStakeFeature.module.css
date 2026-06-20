@@ -69,6 +69,18 @@
   color: var(--t1, #fff) !important;
 }
 
+/* Live-product preview: matches the card padding on desktop, but runs much
+   closer to the card edges on mobile so the embedded site renders wider. */
+.preview {
+  position: relative;
+  padding: 0 clamp(28px, 4vw, 52px) clamp(28px, 4vw, 52px);
+}
+
+.chrome {
+  gap: 14px;
+  padding: 13px 16px;
+}
+
 @media (max-width: 768px) {
   .shrink {
     min-width: 100%;
@@ -77,5 +89,12 @@
   .monoWrap {
     min-width: 100%;
     margin-top: 8px;
+  }
+  .preview {
+    padding: 0 12px 24px;
+  }
+  .chrome {
+    gap: 9px;
+    padding: 11px 12px;
   }
 }

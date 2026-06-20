@@ -12,6 +12,8 @@ export type Project = {
   liveLabel?: string;
   source?: string;
   primary: string;
+  /** Optional screenshot shown in the card header; falls back to the monogram. */
+  image?: string;
 };
 
 export const projectFilters = [
@@ -46,6 +48,7 @@ export const projects: Project[] = [
     liveLabel: "Website",
     source: "https://github.com/andrewr303/AI-FPA-Assistant",
     primary: "https://fpa.andrewvrodriguez.com",
+    image: "/assets/shot-fpa-expert.png",
   },
   {
     name: "FounderPilot",
@@ -59,6 +62,7 @@ export const projects: Project[] = [
     liveLabel: "Website",
     source: "https://github.com/andrewr303/VC-meeting-prep-assistant",
     primary: "https://founderpilot.ai",
+    image: "/assets/shot-founderpilot.png",
   },
   {
     name: "PitchCoach AI",
@@ -70,6 +74,7 @@ export const projects: Project[] = [
     tags: ["React", "pdfjs", "Supabase", "Claude"],
     source: "https://github.com/andrewr303/PitchCoach-AI",
     primary: "https://github.com/andrewr303/PitchCoach-AI",
+    image: "/assets/shot-pitchcoach.png",
   },
   {
     name: "Ticket Trading Intel",
@@ -92,6 +97,7 @@ export const projects: Project[] = [
     tags: ["React 18", "TypeScript", "Supabase", "Vitest"],
     source: "https://github.com/andrewr303/Simple-Finance-Tracker",
     primary: "https://github.com/andrewr303/Simple-Finance-Tracker",
+    image: "/assets/shot-credit-tracker.png",
   },
   {
     name: "ElectionAI",
@@ -104,6 +110,7 @@ export const projects: Project[] = [
     live: "https://electionai.io",
     liveLabel: "Website",
     primary: "https://electionai.io",
+    image: "/assets/shot-electionai.png",
   },
   {
     name: "American Greetings Analysis",
@@ -116,6 +123,7 @@ export const projects: Project[] = [
     live: "/projects/American-Greetings-Stock-Repurchase-Report.pdf",
     liveLabel: "View",
     primary: "/projects/American-Greetings-Stock-Repurchase-Report.pdf",
+    image: "/assets/shot-american-greetings.png",
   },
   {
     name: "Mars-Wrigley Merger",
@@ -128,5 +136,6 @@ export const projects: Project[] = [
     live: "/projects/Mars-Wrigley-Merger-Analysis-1.pdf",
     liveLabel: "View",
     primary: "/projects/Mars-Wrigley-Merger-Analysis-1.pdf",
+    image: "/assets/shot-mars-wrigley.png",
   },
 ];

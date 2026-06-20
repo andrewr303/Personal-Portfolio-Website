@@ -55,12 +55,12 @@ export function Contact() {
   return (
     <section id="contact" style={{ padding: "64px 0 40px" }}>
       <div
+        className={styles.card}
         style={{
           borderRadius: 28,
           border: "1px solid var(--line,rgba(255,255,255,0.09))",
           background:
             "linear-gradient(160deg,rgba(6,182,212,0.07),rgba(47,99,201,0.06)),var(--surface,#0e0e14)",
-          padding: "clamp(28px,4vw,48px)",
         }}
       >
         <div className={styles.gridContact}>
@@ -194,6 +194,7 @@ export function Contact() {
             ) : (
               <form
                 onSubmit={submit}
+                className={styles.form}
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -201,7 +202,6 @@ export function Contact() {
                   borderRadius: 18,
                   background: "var(--surface,#111118)",
                   border: "1px solid var(--line,rgba(255,255,255,0.09))",
-                  padding: 24,
                 }}
               >
                 <div style={{ fontSize: 18, fontWeight: 700, color: "var(--t1,#fff)", letterSpacing: "-0.01em" }}>

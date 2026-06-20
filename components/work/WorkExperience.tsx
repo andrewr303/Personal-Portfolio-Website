@@ -30,36 +30,29 @@ export function WorkExperience() {
                     style={{ objectFit: job.logoFit ?? "contain", padding: job.logoPad ?? 0 }}
                   />
                 </span>
-                <span style={{ flex: 1, minWidth: 0 }}>
-                  <span
-                    style={{
-                      display: "block",
-                      fontSize: 20,
-                      fontWeight: 700,
-                      color: "var(--t1,#fff)",
-                      letterSpacing: "-0.01em",
-                    }}
-                  >
-                    {job.company}
+                <span className={styles.head}>
+                  <span className={styles.info}>
+                    <span
+                      style={{
+                        display: "block",
+                        fontSize: 20,
+                        fontWeight: 700,
+                        color: "var(--t1,#fff)",
+                        letterSpacing: "-0.01em",
+                      }}
+                    >
+                      {job.company}
+                    </span>
+                    <span style={{ display: "block", fontSize: 16, color: "var(--t2,#d4d4d8)", marginTop: 2 }}>
+                      {job.role}
+                    </span>
                   </span>
-                  <span style={{ display: "block", fontSize: 16, color: "var(--t2,#d4d4d8)", marginTop: 2 }}>
-                    {job.role}
+                  <span className={styles.meta}>
+                    <span style={{ fontSize: 13, fontWeight: 500, color: "var(--t3,#9f9fa9)", fontFamily: "var(--font-mono)" }}>
+                      {job.date}
+                    </span>
+                    <span style={{ fontSize: 12.5, color: "var(--t4,#71717b)" }}>{job.loc}</span>
                   </span>
-                </span>
-                <span
-                  style={{
-                    flex: "0 0 auto",
-                    textAlign: "right",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-end",
-                    gap: 3,
-                  }}
-                >
-                  <span style={{ fontSize: 13, fontWeight: 500, color: "var(--t3,#9f9fa9)", fontFamily: "var(--font-mono)" }}>
-                    {job.date}
-                  </span>
-                  <span style={{ fontSize: 12.5, color: "var(--t4,#71717b)" }}>{job.loc}</span>
                 </span>
                 <span className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`}>
                   <ChevronDownIcon size={18} />

@@ -17,7 +17,8 @@ export function BottomDock() {
   const items: DockItem[] = [
     {
       label: "Resume",
-      href: "/work",
+      href: profile.resume,
+      download: true,
       // eslint-disable-next-line @next/next/no-img-element
       icon: <img src="/assets/icon-resume.png" alt="" width={28} height={28} />,
     },

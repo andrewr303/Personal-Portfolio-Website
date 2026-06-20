@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { TopNav } from "@/components/chrome/TopNav";
 import { WorkExperience } from "@/components/work/WorkExperience";
-import { education, involvement, certs, type EducationEntry, type InvolvementEntry } from "@/content/work";
-import { WorkIcon, AwardIcon } from "@/lib/icons";
+import { education, involvement, type EducationEntry, type InvolvementEntry } from "@/content/work";
+import { WorkIcon } from "@/lib/icons";
+import { WorkSkills } from "@/components/work/WorkSkills";
 
 export const metadata: Metadata = {
   title: "Work & Education",
@@ -131,30 +132,6 @@ export default function WorkPage() {
                 Education
               </h2>
               <Roster entries={education} />
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 20 }}>
-                {certs.map((c) => (
-                  <span
-                    key={c}
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 7,
-                      fontSize: 12.5,
-                      fontWeight: 600,
-                      color: "var(--t3,#9f9fa9)",
-                      padding: "7px 12px",
-                      borderRadius: 9,
-                      background: "var(--surface,#111118)",
-                      border: "1px solid var(--line,rgba(255,255,255,0.08))",
-                    }}
-                  >
-                    <span style={{ display: "inline-flex", color: "#f5b73c" }}>
-                      <AwardIcon size={13} />
-                    </span>
-                    {c}
-                  </span>
-                ))}
-              </div>
             </div>
             <div>
               <h2
@@ -172,6 +149,8 @@ export default function WorkPage() {
             </div>
           </div>
         </section>
+
+        <WorkSkills />
       </main>
     </div>
   );

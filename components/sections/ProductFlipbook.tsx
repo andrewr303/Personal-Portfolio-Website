@@ -14,7 +14,7 @@ export function ProductFlipbook() {
   const num = String(index + 1).padStart(2, "0");
 
   return (
-    <section id="product-tour" style={{ padding: "18px 0 44px" }}>
+    <section id="product-tour" className={styles.section} style={{ padding: "18px 0 44px" }}>
       <div
         style={{
           display: "flex",
@@ -148,7 +148,7 @@ export function ProductFlipbook() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  padding: 18,
+                  padding: 8,
                   transition: "opacity .5s ease, transform .6s ease",
                   opacity: active ? 1 : 0,
                   transform: active ? "scale(1)" : "scale(1.03)",
@@ -172,12 +172,6 @@ export function ProductFlipbook() {
               </div>
             );
           })}
-          <button onClick={prev} aria-label="Previous screen" className={styles.overlayBtn} style={{ left: 14 }}>
-            <ChevronLeftIcon size={20} strokeWidth={2.2} />
-          </button>
-          <button onClick={next} aria-label="Next screen" className={styles.overlayBtn} style={{ right: 14 }}>
-            <ChevronRightIcon size={20} strokeWidth={2.2} />
-          </button>
         </div>
 
         <div

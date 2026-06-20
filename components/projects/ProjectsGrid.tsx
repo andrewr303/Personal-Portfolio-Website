@@ -33,7 +33,7 @@ export function ProjectsGrid() {
               <div
                 style={{
                   position: "relative",
-                  height: 172,
+                  height: 210,
                   background: p.grad,
                   display: "flex",
                   alignItems: "center",
@@ -41,18 +41,35 @@ export function ProjectsGrid() {
                   overflow: "hidden",
                 }}
               >
-                <span
-                  style={{
-                    position: "absolute",
-                    fontSize: 118,
-                    fontWeight: 800,
-                    letterSpacing: "-0.04em",
-                    color: "rgba(255,255,255,0.14)",
-                    userSelect: "none",
-                  }}
-                >
-                  {p.mono}
-                </span>
+                {p.image ? (
+                  /* eslint-disable-next-line @next/next/no-img-element */
+                  <img
+                    src={p.image}
+                    alt={`${p.name} screenshot`}
+                    loading="lazy"
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top center",
+                    }}
+                  />
+                ) : (
+                  <span
+                    style={{
+                      position: "absolute",
+                      fontSize: 118,
+                      fontWeight: 800,
+                      letterSpacing: "-0.04em",
+                      color: "rgba(255,255,255,0.14)",
+                      userSelect: "none",
+                    }}
+                  >
+                    {p.mono}
+                  </span>
+                )}
                 <span
                   style={{
                     position: "absolute",

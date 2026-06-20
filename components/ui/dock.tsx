@@ -21,6 +21,8 @@ export interface DockItem {
   href?: string
   /** Open off-site in a new tab with a safe rel. */
   external?: boolean
+  /** Force a file download instead of navigation (e.g. the resume PDF). */
+  download?: boolean
   onClick?: () => void
 }
 
@@ -68,6 +70,17 @@ function DockControl({
       </AnimatePresence>
     </>
   )
+
+  // Download → plain anchor with the download attribute (no client-side nav).
+  if (item.href && item.download) {
+    return (
+      <Button asChild variant="ghost" size="icon" className={className} style={glowStyle}>
+        <a href={item.href} aria-label={item.label} download>
+          {inner}
+        </a>
+      </Button>
+    )
+  }
 
   // External / mailto / tel → plain anchor (off-site links get target + rel).
   if (item.href && (item.external || !item.href.startsWith("/"))) {
