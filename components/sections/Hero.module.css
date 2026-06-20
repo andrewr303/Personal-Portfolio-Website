@@ -162,7 +162,10 @@
   }
   .badge {
     order: 1;
-    align-self: flex-start;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
   }
   .portrait {
     order: 2;
