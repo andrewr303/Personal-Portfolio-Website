@@ -32,6 +32,11 @@ interface DockProps {
 /** Accent for the hover glow + active dot — the portfolio navy blue (matches focus rings). */
 const ACCENT = "#3b76d4"
 
+/**
+ * Renders a single dock entry as the appropriate element for its target:
+ * an external/mailto anchor, an internal Next.js `Link`, or an action-only
+ * button (e.g. the theme toggle). `isHovered` drives the accent glow overlay.
+ */
 function DockControl({
   item,
   isHovered,
@@ -113,6 +118,11 @@ function isCurrentRoute(href: string | undefined, pathname: string) {
   return normalize(href) === normalize(pathname)
 }
 
+/**
+ * Floating glass dock of icon links/actions. The active-page dot is derived
+ * from the current route (not taps), and hover scaling responds to pointer
+ * hover only, so tapping an icon on touch devices leaves no stuck state.
+ */
 export default function Dock({ items, className }: DockProps) {
   const pathname = usePathname()
   const [hovered, setHovered] = React.useState<number | null>(null)
