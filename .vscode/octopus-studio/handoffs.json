@@ -1,0 +1,352 @@
+[
+  {
+    "id": "handoff.debug",
+    "name": "Debug Pipeline",
+    "description": "Triage → reproduce → isolate → patch → test → review.",
+    "builtIn": true,
+    "createdAt": "2026-06-19T18:46:33.888Z",
+    "updatedAt": "2026-06-19T18:46:33.888Z",
+    "stages": [
+      {
+        "id": "s1",
+        "name": "Triage",
+        "ownerType": "squad",
+        "ownerId": "squad.hypestake-debug",
+        "instructions": "Form hypotheses and identify the suspect layers.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "plan"
+        ],
+        "doneCriteria": [
+          "Produced plan"
+        ],
+        "approvalRequired": false,
+        "retryLimit": 1,
+        "timeoutMs": 600000,
+        "status": "planned",
+        "outputArtifactIds": []
+      },
+      {
+        "id": "s2",
+        "name": "Reproduce",
+        "ownerType": "squad",
+        "ownerId": "squad.hypestake-debug",
+        "instructions": "Reproduce the failure with a minimal case.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "test-report"
+        ],
+        "doneCriteria": [
+          "Produced test-report"
+        ],
+        "approvalRequired": false,
+        "retryLimit": 1,
+        "timeoutMs": 600000,
+        "status": "planned",
+        "outputArtifactIds": []
+      },
+      {
+        "id": "s3",
+        "name": "Isolate",
+        "ownerType": "squad",
+        "ownerId": "squad.hypestake-debug",
+        "instructions": "Trace where state first diverges.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "research"
+        ],
+        "doneCriteria": [
+          "Produced research"
+        ],
+        "approvalRequired": false,
+        "retryLimit": 1,
+        "timeoutMs": 600000,
+        "status": "planned",
+        "outputArtifactIds": []
+      },
+      {
+        "id": "s4",
+        "name": "Patch",
+        "ownerType": "squad",
+        "ownerId": "squad.hypestake-debug",
+        "instructions": "Apply a focused patch.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "patch"
+        ],
+        "doneCriteria": [
+          "Produced patch"
+        ],
+        "approvalRequired": true,
+        "retryLimit": 1,
+        "timeoutMs": 600000,
+        "status": "planned",
+        "outputArtifactIds": []
+      },
+      {
+        "id": "s5",
+        "name": "Test",
+        "ownerType": "squad",
+        "ownerId": "squad.hypestake-debug",
+        "instructions": "Verify the original failing case now passes.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "test-report"
+        ],
+        "doneCriteria": [
+          "Produced test-report"
+        ],
+        "approvalRequired": false,
+        "retryLimit": 1,
+        "timeoutMs": 600000,
+        "status": "planned",
+        "outputArtifactIds": []
+      },
+      {
+        "id": "s6",
+        "name": "Review",
+        "ownerType": "squad",
+        "ownerId": "squad.hypestake-debug",
+        "instructions": "Review the patch for quality and risk.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "review"
+        ],
+        "doneCriteria": [
+          "Produced review"
+        ],
+        "approvalRequired": true,
+        "retryLimit": 1,
+        "timeoutMs": 600000,
+        "status": "planned",
+        "outputArtifactIds": []
+      }
+    ]
+  },
+  {
+    "id": "handoff.ui",
+    "name": "UI Pipeline",
+    "description": "Screenshot audit → component mapping → implementation → responsive QA → visual review.",
+    "builtIn": true,
+    "createdAt": "2026-06-19T18:46:33.888Z",
+    "updatedAt": "2026-06-19T18:46:33.888Z",
+    "stages": [
+      {
+        "id": "s1",
+        "name": "Screenshot audit",
+        "ownerType": "squad",
+        "ownerId": "squad.hypestake-debug",
+        "instructions": "Audit current UI against the design.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "screenshot"
+        ],
+        "doneCriteria": [
+          "Produced screenshot"
+        ],
+        "approvalRequired": false,
+        "retryLimit": 1,
+        "timeoutMs": 600000,
+        "status": "planned",
+        "outputArtifactIds": []
+      },
+      {
+        "id": "s2",
+        "name": "Component mapping",
+        "ownerType": "squad",
+        "ownerId": "squad.hypestake-debug",
+        "instructions": "Map issues to components.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "plan"
+        ],
+        "doneCriteria": [
+          "Produced plan"
+        ],
+        "approvalRequired": false,
+        "retryLimit": 1,
+        "timeoutMs": 600000,
+        "status": "planned",
+        "outputArtifactIds": []
+      },
+      {
+        "id": "s3",
+        "name": "Implementation",
+        "ownerType": "squad",
+        "ownerId": "squad.hypestake-debug",
+        "instructions": "Implement the fixes.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "patch"
+        ],
+        "doneCriteria": [
+          "Produced patch"
+        ],
+        "approvalRequired": true,
+        "retryLimit": 1,
+        "timeoutMs": 600000,
+        "status": "planned",
+        "outputArtifactIds": []
+      },
+      {
+        "id": "s4",
+        "name": "Responsive QA",
+        "ownerType": "squad",
+        "ownerId": "squad.hypestake-debug",
+        "instructions": "Verify across breakpoints.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "test-report"
+        ],
+        "doneCriteria": [
+          "Produced test-report"
+        ],
+        "approvalRequired": false,
+        "retryLimit": 1,
+        "timeoutMs": 600000,
+        "status": "planned",
+        "outputArtifactIds": []
+      },
+      {
+        "id": "s5",
+        "name": "Visual review",
+        "ownerType": "squad",
+        "ownerId": "squad.hypestake-debug",
+        "instructions": "Review the visual result.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "review"
+        ],
+        "doneCriteria": [
+          "Produced review"
+        ],
+        "approvalRequired": true,
+        "retryLimit": 1,
+        "timeoutMs": 600000,
+        "status": "planned",
+        "outputArtifactIds": []
+      }
+    ]
+  },
+  {
+    "id": "handoff.bmad-lifecycle",
+    "name": "BMad Lifecycle",
+    "description": "Analysis → Planning → Architecture → Implementation. Each phase has a contract and an exit gate; depth scales to the size of the problem.",
+    "builtIn": true,
+    "createdAt": "2026-06-19T18:46:33.888Z",
+    "updatedAt": "2026-06-19T18:46:33.888Z",
+    "stages": [
+      {
+        "id": "s1-analysis",
+        "name": "Analysis",
+        "ownerType": "agent",
+        "ownerId": "agent.bmad-analyst",
+        "instructions": "Clarify the problem, users, and constraints. Gather evidence and produce a product brief. Flag assumptions as assumptions.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "research",
+          "markdown"
+        ],
+        "doneCriteria": [
+          "Problem statement and target users are explicit",
+          "Key assumptions and open questions are listed",
+          "A product brief exists"
+        ],
+        "approvalRequired": false,
+        "retryLimit": 1,
+        "timeoutMs": 900000,
+        "status": "planned",
+        "outputArtifactIds": []
+      },
+      {
+        "id": "s2-planning",
+        "name": "Planning (PRD + UX)",
+        "ownerType": "agent",
+        "ownerId": "agent.bmad-pm",
+        "instructions": "Turn the brief into a PRD organized around Jobs-to-be-Done, decomposed into small validated increments. UX produces user flows for the primary jobs.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "plan",
+          "markdown"
+        ],
+        "doneCriteria": [
+          "Every requirement has testable acceptance criteria",
+          "Scope is sliced into independently shippable increments",
+          "Primary user flows are defined"
+        ],
+        "approvalRequired": true,
+        "retryLimit": 1,
+        "timeoutMs": 900000,
+        "status": "planned",
+        "outputArtifactIds": []
+      },
+      {
+        "id": "s3-architecture",
+        "name": "Architecture & Stories",
+        "ownerType": "agent",
+        "ownerId": "agent.bmad-architect",
+        "instructions": "Produce the architecture and an implementation-ready backlog of epics and stories. Favor boring technology; record trade-offs. Confirm implementation readiness.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "plan",
+          "handoff-contract",
+          "markdown"
+        ],
+        "doneCriteria": [
+          "Architecture decisions are recorded with trade-offs",
+          "Stories have clear, testable acceptance criteria",
+          "Implementation-readiness check passes"
+        ],
+        "approvalRequired": true,
+        "retryLimit": 1,
+        "timeoutMs": 900000,
+        "status": "planned",
+        "outputArtifactIds": []
+      },
+      {
+        "id": "s4-implementation",
+        "name": "Implementation (TDD)",
+        "ownerType": "agent",
+        "ownerId": "agent.bmad-dev",
+        "instructions": "Implement stories test-first (red, green, refactor) in a worktree. Keep patches focused and traceable to acceptance criteria. Achieve a full pass before review.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "patch",
+          "test-report"
+        ],
+        "doneCriteria": [
+          "Tests written before code",
+          "All relevant tests pass (100%)",
+          "Each change traces to an acceptance criterion"
+        ],
+        "approvalRequired": true,
+        "retryLimit": 1,
+        "timeoutMs": 900000,
+        "status": "planned",
+        "outputArtifactIds": []
+      },
+      {
+        "id": "s5-review",
+        "name": "Review & Retrospective",
+        "ownerType": "agent",
+        "ownerId": "agent.bmad-tech-writer",
+        "instructions": "Review the result against the stories, capture docs and decisions, and run a short retrospective on what to carry forward.",
+        "inputArtifactIds": [],
+        "requiredOutputKinds": [
+          "review",
+          "markdown"
+        ],
+        "doneCriteria": [
+          "Result reviewed against acceptance criteria",
+          "Docs and decisions captured",
+          "Retrospective notes recorded"
+        ],
+        "approvalRequired": true,
+        "retryLimit": 1,
+        "timeoutMs": 900000,
+        "status": "planned",
+        "outputArtifactIds": []
+      }
+    ]
+  }
+]

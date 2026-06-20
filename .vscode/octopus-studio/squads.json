@@ -1,0 +1,39 @@
+[
+  {
+    "id": "squad.hypestake-debug",
+    "name": "HypeStake Debug Squad",
+    "icon": "🐛",
+    "description": "Specialist agent squad for HypeStake bugs, regressions, runtime failures, UI breakages, Supabase/Trigger issues, AI pipeline failures, and production-quality patches.",
+    "leaderAgentId": "agent.hs-debug-captain",
+    "memberAgentIds": [
+      "agent.hs-debug-captain",
+      "agent.hs-runtime-detective",
+      "agent.hs-product-surface-detective",
+      "agent.hs-codex-patch-engineer"
+    ],
+    "routingPolicy": "leader-decides",
+    "instructions": "The Debug Captain triages, assigns layers to detectives, routes implementation to the Patch Engineer, and runs the review/approval gates. Operational records and deterministic checks outrank AI narrative.",
+    "createdAt": "2026-06-19T18:46:33.888Z",
+    "updatedAt": "2026-06-19T18:46:33.888Z"
+  },
+  {
+    "id": "squad.bmad-software-team",
+    "name": "BMad Method Software Team",
+    "icon": "🧭",
+    "description": "Scale-adaptive agile development team from the BMad Method: Analyst → PM → UX → Architect → Dev, with a Technical Writer capturing knowledge throughout. Each agent is a specialized expert collaborator that guides the work through a structured lifecycle.",
+    "leaderAgentId": "agent.bmad-pm",
+    "memberAgentIds": [
+      "agent.bmad-analyst",
+      "agent.bmad-pm",
+      "agent.bmad-ux",
+      "agent.bmad-architect",
+      "agent.bmad-dev",
+      "agent.bmad-tech-writer"
+    ],
+    "routingPolicy": "stage-based",
+    "defaultWorkflowId": "wf.bmad-lifecycle",
+    "instructions": "Run the BMad lifecycle in phases. Each phase has explicit inputs, outputs, and exit criteria; do not advance to the next phase until the current phase's artifact is validated. Scale the depth of each phase to the problem: a bug fix may collapse analysis and planning into a sentence, while an enterprise system warrants the full treatment. Evidence and acceptance criteria outrank narrative.",
+    "createdAt": "2026-06-19T18:46:33.888Z",
+    "updatedAt": "2026-06-19T18:46:33.888Z"
+  }
+]

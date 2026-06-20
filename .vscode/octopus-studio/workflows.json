@@ -1,0 +1,120 @@
+[
+  {
+    "defaultAgents": [],
+    "builtIn": true,
+    "createdAt": "2026-06-19T18:46:33.888Z",
+    "updatedAt": "2026-06-19T18:46:33.888Z",
+    "id": "wf.council",
+    "name": "Agent Council",
+    "description": "Multiple providers deliberate, a chair synthesizes, gates control the outcome.",
+    "type": "council",
+    "gates": [
+      "quorum",
+      "critical-veto",
+      "cost-cap",
+      "human-approval"
+    ]
+  },
+  {
+    "defaultAgents": [],
+    "builtIn": true,
+    "createdAt": "2026-06-19T18:46:33.888Z",
+    "updatedAt": "2026-06-19T18:46:33.888Z",
+    "id": "wf.review",
+    "name": "Multi-LLM Review",
+    "description": "Codex + Gemini + Claude review the current diff.",
+    "type": "review",
+    "gates": [
+      "human-approval"
+    ]
+  },
+  {
+    "defaultAgents": [],
+    "builtIn": true,
+    "createdAt": "2026-06-19T18:46:33.888Z",
+    "updatedAt": "2026-06-19T18:46:33.888Z",
+    "id": "wf.security",
+    "name": "Security Audit",
+    "description": "OWASP + vulnerability scan across the target.",
+    "type": "security",
+    "gates": [
+      "security",
+      "human-approval"
+    ]
+  },
+  {
+    "defaultAgents": [],
+    "builtIn": true,
+    "createdAt": "2026-06-19T18:46:33.888Z",
+    "updatedAt": "2026-06-19T18:46:33.888Z",
+    "id": "wf.double-diamond",
+    "name": "Double Diamond",
+    "description": "Discover → Define → Develop → Deliver end-to-end.",
+    "type": "double-diamond",
+    "gates": [
+      "human-approval",
+      "cost-cap"
+    ]
+  },
+  {
+    "defaultAgents": [],
+    "builtIn": true,
+    "createdAt": "2026-06-19T18:46:33.888Z",
+    "updatedAt": "2026-06-19T18:46:33.888Z",
+    "id": "wf.debug",
+    "name": "Debug Pipeline",
+    "description": "Triage → reproduce → isolate → patch → test → review handoff.",
+    "type": "handoff",
+    "gates": [
+      "human-approval",
+      "test"
+    ]
+  },
+  {
+    "builtIn": true,
+    "createdAt": "2026-06-19T18:46:33.888Z",
+    "updatedAt": "2026-06-19T18:46:33.888Z",
+    "id": "wf.bmad-lifecycle",
+    "defaultAgents": [],
+    "name": "BMad Lifecycle",
+    "description": "Scale-adaptive agile pipeline: Analysis → Planning → Architecture → Implementation, with explicit phase contracts and approval gates between phases.",
+    "type": "handoff",
+    "defaultSquadId": "squad.bmad-software-team",
+    "gates": [
+      "human-approval",
+      "test",
+      "cost-cap"
+    ]
+  },
+  {
+    "builtIn": true,
+    "createdAt": "2026-06-19T18:46:33.888Z",
+    "updatedAt": "2026-06-19T18:46:33.888Z",
+    "id": "wf.bmad-party-mode",
+    "defaultAgents": [],
+    "name": "BMad Party Mode",
+    "description": "A multi-persona round-table where the BMad agents deliberate, push back, and clash on one decision — a chair synthesizes. Real drama beats premature consensus.",
+    "type": "council",
+    "defaultSquadId": "squad.bmad-software-team",
+    "gates": [
+      "quorum",
+      "critical-veto",
+      "cost-cap",
+      "human-approval"
+    ]
+  },
+  {
+    "builtIn": true,
+    "createdAt": "2026-06-19T18:46:33.888Z",
+    "updatedAt": "2026-06-19T18:46:33.888Z",
+    "id": "wf.bmad-elicitation",
+    "defaultAgents": [],
+    "name": "Advanced Elicitation",
+    "description": "Adversarial critique of a draft using structured methods — Socratic questioning, first-principles, pre-mortem, and red-team — to push output to reconsider and improve.",
+    "type": "review",
+    "defaultSquadId": "squad.bmad-software-team",
+    "gates": [
+      "human-approval"
+    ]
+  }
+]
