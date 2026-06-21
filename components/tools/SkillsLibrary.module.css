@@ -10,8 +10,9 @@
   border-radius: 18px;
   background: var(--surface, #0f0f16);
   border: 1px solid var(--line, rgba(255, 255, 255, 0.08));
+  box-shadow: var(--shadow-card);
   overflow: hidden;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 .card:hover {
   border-color: rgba(217, 119, 87, 0.3);

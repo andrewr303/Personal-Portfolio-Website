@@ -18,8 +18,8 @@
   color: var(--t2, #d4d4d8);
 }
 .prevBtn:hover {
-  background: var(--surface-2, #16161f);
-  color: #fff;
+  background: var(--surface-3, #e9eaf1);
+  color: var(--t1, #12121a);
 }
 
 .nextBtn {

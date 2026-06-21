@@ -40,11 +40,13 @@
   overflow: hidden;
   background: var(--surface, #0f0f16);
   border: 1px solid var(--line, rgba(255, 255, 255, 0.08));
-  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 .card:hover {
-  border-color: rgba(255, 255, 255, 0.16);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.32);
+  border-color: rgba(47, 99, 201, 0.28);
+  box-shadow: 0 16px 36px rgba(17, 17, 28, 0.14);
+  transform: translateY(-2px);
 }
 
 .badge {

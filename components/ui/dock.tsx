@@ -144,20 +144,19 @@ export default function Dock({ items, className }: DockProps) {
   return (
     <div
       className={cn("flex w-full items-center justify-center py-12", className)}
-      style={{ perspective: "600px" }}
     >
       <motion.div
-        animate={reduceMotion ? { rotateX: 10 } : { rotateX: 10, y: [0, -2, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        animate={reduceMotion ? undefined : { y: [0, -3, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         className={cn(
-          "pointer-events-auto flex items-end gap-2 rounded-3xl px-3 py-3 max-[380px]:gap-1.5 max-[380px]:px-2 sm:gap-4 sm:px-4"
+          "pointer-events-auto flex max-w-[calc(100vw-1.5rem)] items-end gap-2 rounded-[26px] px-3 py-3 max-[380px]:gap-1 max-[380px]:px-2 sm:gap-3 sm:px-4"
         )}
         style={{
           color: "#16223a",
-          background: "rgba(255,255,255,0.72)",
-          border: "1px solid rgba(255,255,255,0.6)",
+          background: "rgba(255,255,255,0.9)",
+          border: "1px solid rgba(17,17,28,0.08)",
           boxShadow:
-            "0 16px 44px rgba(15,23,42,0.28), 0 2px 8px rgba(15,23,42,0.12), inset 0 1px 0 rgba(255,255,255,0.85)",
+            "0 14px 40px rgba(17,23,42,0.16), 0 3px 10px rgba(17,23,42,0.08), inset 0 1px 0 rgba(255,255,255,0.9)",
           WebkitBackdropFilter: "blur(22px) saturate(180%)",
           backdropFilter: "blur(22px) saturate(180%)",
         }}

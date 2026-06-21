@@ -22,7 +22,8 @@ export function HypeStakeFeature() {
           overflow: "hidden",
           border: "1px solid var(--line,rgba(255,255,255,0.09))",
           background:
-            "linear-gradient(160deg,rgba(47,99,201,0.10),rgba(10,10,15,0)),var(--surface,#0e0e14)",
+            "linear-gradient(160deg,rgba(47,99,201,0.07),rgba(255,255,255,0)),var(--surface,#0e0e14)",
+          boxShadow: "var(--shadow-elevated)",
         }}
       >
         <div
