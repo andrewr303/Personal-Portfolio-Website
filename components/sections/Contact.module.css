@@ -19,10 +19,10 @@
   gap: 14px;
   padding: 16px;
   border-radius: 14px;
-  background: var(--surface, #111118);
+  background: var(--surface-2, #111118);
   border: 1px solid var(--line, rgba(255, 255, 255, 0.09));
   text-decoration: none;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, background 0.15s;
   /* Allow the row to shrink inside a narrow grid column. */
   min-width: 0;
 }
@@ -38,7 +38,7 @@
   overflow-wrap: anywhere;
 }
 .linkRow:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(47, 99, 201, 0.28);
 }
 
 .resumeBtn {
@@ -62,16 +62,20 @@
 .input {
   padding: 11px 13px;
   border-radius: 10px;
-  background: var(--surface-2, #16161f);
-  border: 1px solid var(--line, rgba(255, 255, 255, 0.1));
+  background: var(--surface, #16161f);
+  border: 1px solid var(--line-2, rgba(255, 255, 255, 0.1));
   color: var(--t1, #fff);
   font-size: 14px;
   font-family: inherit;
   outline: none;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.input::placeholder {
+  color: var(--t4, #9595a0);
 }
 .input:focus {
   border-color: #2f63c9;
+  box-shadow: 0 0 0 3px rgba(47, 99, 201, 0.14);
 }
 
 .textarea {

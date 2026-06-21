@@ -70,6 +70,7 @@ export default function ToolsPage() {
                   padding: 22,
                   background: "var(--surface,#0f0f16)",
                   border: "1px solid var(--line,rgba(255,255,255,0.08))",
+                  boxShadow: "var(--shadow-card)",
                 }}
               >
                 <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
@@ -128,9 +129,9 @@ export default function ToolsPage() {
                 width: 48,
                 height: 48,
                 borderRadius: 13,
-                background: "#1a1208",
+                background: "rgba(217,119,87,0.12)",
                 border: "1px solid rgba(217,119,87,0.3)",
-                boxShadow: "0 0 24px rgba(217,119,87,0.18)",
+                boxShadow: "0 6px 18px rgba(217,119,87,0.16)",
               }}
             >
               <ClaudeMark size={26} />

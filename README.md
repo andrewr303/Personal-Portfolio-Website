@@ -7,7 +7,7 @@ Claude Design handoff. Built from scratch with **Next.js (App Router) + React + 
 ## Stack
 
 - **Next.js 16** (App Router, Turbopack), **React 19**, **TypeScript**
-- **@once-ui-system/core** — `ThemeProvider` (persisted dark/light), layout + toast providers
+- **@once-ui-system/core** — `ThemeProvider` (pinned to light), layout + toast providers
 - Fonts: **DM Sans** + **JetBrains Mono** via `next/font/google`
 - Styling: CSS custom-property design tokens (`app/globals.css`) + CSS Modules per component
 - No backend — content is static and typed under `content/`
@@ -26,12 +26,12 @@ npm run typecheck  # tsc --noEmit
 ```text
 app/
   layout.tsx        Root layout: Once UI CSS, fonts, metadata, theme attributes
-  providers.tsx     Once UI ThemeProvider / LayoutProvider / ToastProvider (dark default)
-  globals.css       Design tokens (dark baseline + light overrides), keyframes, base styles
+  providers.tsx     Once UI ThemeProvider / LayoutProvider / ToastProvider (light, pinned)
+  globals.css       Design tokens (light palette), keyframes, base styles
   page.tsx          Home (/)
   work/  projects/  tools/   Sub-pages
 components/
-  chrome/           TopNav, BottomDock, ThemeToggle (shared)
+  chrome/           TopNav, BottomDock (shared)
   sections/         Home sections: Hero, HypeStakeFeature, ProductFlipbook, Skills, Contact
   work/  projects/  tools/   Page-specific interactive pieces
 content/            Typed data: site, home, work, projects, tools
@@ -45,9 +45,10 @@ public/
 
 ## Theming
 
-Dark is the default and lives in per-element token fallbacks (`var(--surface, #0f0f16)` etc.).
-Light is a uniform override applied on `:root[data-theme="light"]` in `app/globals.css`. The toggle
-in the nav/dock flips Once UI's theme (persisted to `localStorage`, no flash on reload).
+The site is **light-only**. The full light palette is defined on `:root` in `app/globals.css`, so
+every component-level `var(--token, fallback)` resolves to the light value. Once UI's `ThemeProvider`
+is pinned to `theme="light"` and the `dark:` Tailwind variant is scoped to an unused `.dark` class so
+the OS `prefers-color-scheme` can never flip the theme.
 
 ## Notes for deployment
 

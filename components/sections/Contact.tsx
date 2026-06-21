@@ -60,7 +60,8 @@ export function Contact() {
           borderRadius: 28,
           border: "1px solid var(--line,rgba(255,255,255,0.09))",
           background:
-            "linear-gradient(160deg,rgba(6,182,212,0.07),rgba(47,99,201,0.06)),var(--surface,#0e0e14)",
+            "linear-gradient(160deg,rgba(6,182,212,0.06),rgba(47,99,201,0.05)),var(--surface,#0e0e14)",
+          boxShadow: "var(--shadow-elevated)",
         }}
       >
         <div className={styles.gridContact}>
@@ -164,7 +165,7 @@ export function Contact() {
                   height: "100%",
                   minHeight: 340,
                   borderRadius: 18,
-                  background: "var(--surface,#111118)",
+                  background: "var(--surface-2,#111118)",
                   border: "1px solid var(--line,rgba(255,255,255,0.09))",
                   padding: 30,
                 }}
@@ -200,7 +201,7 @@ export function Contact() {
                   flexDirection: "column",
                   gap: 14,
                   borderRadius: 18,
-                  background: "var(--surface,#111118)",
+                  background: "var(--surface-2,#111118)",
                   border: "1px solid var(--line,rgba(255,255,255,0.09))",
                 }}
               >

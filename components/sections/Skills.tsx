@@ -44,6 +44,7 @@ export function Skills() {
               padding: 26,
               background: "var(--surface,#0f0f16)",
               border: "1px solid var(--line,rgba(255,255,255,0.08))",
+              boxShadow: "var(--shadow-card)",
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: 13, marginBottom: 15 }}>

@@ -1,19 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useTheme } from "@once-ui-system/core";
 import Dock, { type DockItem } from "@/components/ui/dock";
-import { LinkedInColorMark, XMark, SunIcon, MoonIcon } from "@/lib/icons";
+import { LinkedInColorMark, XMark } from "@/lib/icons";
 import { profile } from "@/content/site";
 
-/** Bottom floating dock — appears on the home page only (matches the design). */
+/** Bottom floating dock — quick links to resume + social profiles. */
 export function BottomDock() {
-  // Theme toggle, rendered as a dock item so it animates like the rest.
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  const isLight = mounted && resolvedTheme === "light";
-
   const items: DockItem[] = [
     {
       label: "Resume",
@@ -46,11 +38,6 @@ export function BottomDock() {
       href: `mailto:${profile.email}`,
       // eslint-disable-next-line @next/next/no-img-element
       icon: <img src="/assets/mail.png" alt="" width={28} height={28} />,
-    },
-    {
-      label: isLight ? "Switch to dark theme" : "Switch to light theme",
-      onClick: () => setTheme(isLight ? "dark" : "light"),
-      icon: isLight ? <MoonIcon size={26} /> : <SunIcon size={26} />,
     },
   ];
 

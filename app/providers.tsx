@@ -3,17 +3,15 @@
 import { ThemeProvider, LayoutProvider, ToastProvider } from "@once-ui-system/core";
 
 /**
- * Once UI providers. theme="system" keeps the toggle un-forced so it can flip
- * + persist (a forced "dark"/"light" prop pins the theme — see ThemeProvider).
- * Dark is still the default: the pre-paint script in layout.tsx seeds
- * localStorage["data-theme"]="dark" on first visit, so the OS preference is not
- * followed and there is no flash. brand/accent = blue to align Once UI's own
- * primitives with the portfolio's navy-blue palette where they are used.
+ * Once UI providers. The site is light-only, so theme is pinned to "light"
+ * (a forced prop keeps ThemeProvider from ever following the OS preference).
+ * brand/accent = blue to align Once UI's own primitives with the portfolio's
+ * navy-blue palette where they are used.
  */
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider
-      theme="system"
+      theme="light"
       neutral="gray"
       brand="blue"
       accent="blue"

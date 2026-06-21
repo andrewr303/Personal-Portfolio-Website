@@ -2,31 +2,36 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
+/* Site is light-only. Scope the `dark:` variant to an explicit `.dark`
+   class (which is never applied) so OS `prefers-color-scheme: dark` can
+   never flip any `dark:` utility. */
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* ============================================================
    Andrew Rodriguez — Portfolio
    Global tokens, base styles, keyframes.
-   Dark is the default (token fallbacks carry the dark values);
-   light is a uniform override applied on [data-theme="light"].
+   The site is light-only: every surface/text token below carries a
+   light value, so component-level `var(--token, fallback)` references
+   resolve to the light palette everywhere.
    ============================================================ */
 
-:root,
-:root[data-theme="dark"] {
-  --bg: #0a0a0f;
-  --bg-deep: #08080c;
-  --line: rgba(255, 255, 255, 0.08);
-  --line-2: rgba(255, 255, 255, 0.14);
-  --t1: #ffffff;
-  --t2: #d4d4d8;
-  --t3: #9f9fa9;
-  --t4: #71717b;
-  --dot: rgba(255, 255, 255, 0.05);
+:root {
+  --bg: #f4f5f9;
+  --bg-deep: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f4f5f9;
+  --surface-3: #e9eaf1;
+  --chip: #ffffff;
+  --line: rgba(17, 17, 28, 0.1);
+  --line-2: rgba(17, 17, 28, 0.16);
+  --t1: #12121a;
+  --t2: #3a3a47;
+  --t3: #62626f;
+  --t4: #8a8a96;
+  --dot: rgba(17, 17, 28, 0.07);
   /* Brand navy-blue — drives the smoothui candy button + dock accents. */
   --brand: #2f63c9;
   --brand-secondary: #1b3f87;
-  /* Surfaces are intentionally left undefined in dark so each element keeps
-     its own near-black fallback (#0e0e14 / #0f0f16 / #111118 / #14141c). */
 
   --font-sans: var(--font-geist), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, "SFMono-Regular", monospace;
@@ -48,32 +53,15 @@
   --radius-lg: 32px;
 
   --shadow-card:
-    0 1px 2px rgba(0, 0, 0, 0.05),
-    0 2px 4px rgba(0, 0, 0, 0.02),
-    0 0 0 0.5px rgba(0, 0, 0, 0.08);
+    0 1px 2px rgba(17, 17, 28, 0.05),
+    0 4px 12px rgba(17, 17, 28, 0.06),
+    0 0 0 0.5px rgba(17, 17, 28, 0.05);
 
   --shadow-elevated:
-    0 4px 8px rgba(0, 0, 0, 0.02),
-    0 8px 12px rgba(0, 0, 0, 0.02),
-    0 2px 4px rgba(0, 0, 0, 0.02),
-    0 1px 2px rgba(0, 0, 0, 0.04),
-    0 0 0 0.5px rgba(0, 0, 0, 0.08);
-}
-
-:root[data-theme="light"] {
-  --bg: #f5f5f8;
-  --bg-deep: #ffffff;
-  --surface: #ffffff;
-  --surface-2: #f3f3f7;
-  --surface-3: #ececf2;
-  --chip: #ffffff;
-  --line: rgba(17, 17, 28, 0.09);
-  --line-2: rgba(17, 17, 28, 0.14);
-  --t1: #14141c;
-  --t2: #34343f;
-  --t3: #62626c;
-  --t4: #9595a0;
-  --dot: rgba(17, 17, 28, 0.06);
+    0 2px 4px rgba(17, 17, 28, 0.04),
+    0 12px 28px rgba(17, 17, 28, 0.1),
+    0 1px 2px rgba(17, 17, 28, 0.06),
+    0 0 0 0.5px rgba(17, 17, 28, 0.05);
 }
 
 * {
@@ -91,16 +79,15 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg, #0a0a0f);
-  color: var(--t1, #ffffff);
+  background: var(--bg, #f4f5f9);
+  color: var(--t1, #12121a);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  transition: background 0.35s ease, color 0.35s ease;
 }
 
 ::selection {
-  background: rgba(111, 155, 232, 0.35);
-  color: #fff;
+  background: rgba(47, 99, 201, 0.22);
+  color: #12121a;
 }
 
 ::-webkit-scrollbar {

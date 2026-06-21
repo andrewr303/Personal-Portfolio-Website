@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styles from "./TopNav.module.css";
-import { ThemeToggle } from "./ThemeToggle";
 import {
   HomeIcon,
   WorkIcon,
@@ -44,8 +43,6 @@ export function TopNav({ active }: { active: NavKey }) {
           <MailIcon size={17} />
           <span className={styles.navtxt}>Contact</span>
         </Link>
-        <span className={styles.divider} />
-        <ThemeToggle className={styles.iconBtn} iconSize={18} />
       </nav>
     </div>
   );
