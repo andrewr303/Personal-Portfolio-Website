@@ -1,30 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./SkillsLibrary.module.css";
 import { skills } from "@/content/tools";
 import { ClaudeMark, EyeIcon, DownloadIcon } from "@/lib/icons";
 
 const fmtBytes = (n: number) => (n < 1024 ? `${n} B` : `${(n / 1024).toFixed(1)} KB`);
 
-export function SkillsLibrary() {
-  const [texts, setTexts] = useState<Record<string, string>>({});
-  const [openName, setOpenName] = useState<string | null>(null);
+type SkillsLibraryProps = {
+  initialTexts: Record<string, string>;
+};
 
-  useEffect(() => {
-    let cancelled = false;
-    skills.forEach((k) => {
-      fetch(`/skills/${k.name}.md`)
-        .then((r) => (r.ok ? r.text() : Promise.reject(new Error("not found"))))
-        .then((t) => {
-          if (!cancelled) setTexts((prev) => ({ ...prev, [k.name]: t }));
-        })
-        .catch(() => {});
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+export function SkillsLibrary({ initialTexts }: SkillsLibraryProps) {
+  const texts = initialTexts;
+  const [openName, setOpenName] = useState<string | null>(null);
 
   return (
     <div className={styles.grid}>
