@@ -66,28 +66,53 @@ export function WorkSkills() {
               </span>
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-              {group.skills.map((skill) => (
-                <span
-                  key={skill.name}
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 9,
-                    padding: "10px 15px",
-                    borderRadius: 12,
-                    fontSize: 14.5,
-                    fontWeight: 600,
-                    color: "var(--t1,#fff)",
-                    background: "var(--surface,#0f0f16)",
-                    border: "1px solid var(--line,rgba(255,255,255,0.08))",
-                  }}
-                >
-                  <span style={{ flex: "0 0 auto", display: "inline-flex", color: group.tint }}>
-                    <InlineIcon inner={skill.icon} size={16} />
+              {group.skills.map((skill) => {
+                const hasBrandAsset = Boolean(skill.iconSrc);
+
+                return (
+                  <span
+                    key={skill.name}
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 10,
+                      padding: "10px 15px",
+                      borderRadius: 12,
+                      fontSize: 14.5,
+                      fontWeight: 600,
+                      color: "var(--t1,#fff)",
+                      background: "var(--surface,#0f0f16)",
+                      border: "1px solid var(--line,rgba(255,255,255,0.08))",
+                      boxShadow: "0 8px 22px rgba(15,23,42,0.04)",
+                    }}
+                  >
+                    <span
+                      style={{
+                        flex: "0 0 auto",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        width: 22,
+                        height: 22,
+                        color: group.tint,
+                      }}
+                    >
+                      {hasBrandAsset ? (
+                        <img
+                          src={skill.iconSrc}
+                          alt=""
+                          width={22}
+                          height={22}
+                          style={{ display: "block", width: 22, height: 22, objectFit: "contain" }}
+                        />
+                      ) : (
+                        <InlineIcon inner={skill.icon} size={18} strokeWidth={2.15} />
+                      )}
+                    </span>
+                    {skill.name}
                   </span>
-                  {skill.name}
-                </span>
-              ))}
+                );
+              })}
             </div>
           </div>
         ))}
