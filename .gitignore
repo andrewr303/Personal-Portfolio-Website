@@ -30,6 +30,12 @@ yarn-error.log*
 
 # editor / agent
 .claude/
+.claude-octopus/
+.omc/
+.vscode/octopus-studio/
+_bmad/
+Geist.zip
+desktop.ini
 
 # design handoff source (kept out of the repo)
 /.handoff/
