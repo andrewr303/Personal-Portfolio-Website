@@ -32,16 +32,8 @@
   filter: brightness(1.08);
 }
 
-/* On wide screens the product tour breaks out of the page's content column
-   to a near-full-bleed width, so the screenshots render noticeably larger. */
-@media (min-width: 1180px) {
-  .section {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    padding-left: clamp(26px, 5vw, 90px);
-    padding-right: clamp(26px, 5vw, 90px);
-  }
+.section {
+  width: 100%;
 }
 
 .thumb {
