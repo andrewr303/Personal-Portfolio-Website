@@ -110,7 +110,7 @@ export const projects: Project[] = [
     live: "https://electionai.io",
     liveLabel: "Website",
     primary: "https://electionai.io",
-    image: "/assets/shot-electionai.png",
+    image: "/assets/Screenshot_20-6-2026_114121_electionai.io_result.png",
   },
   {
     name: "American Greetings Analysis",
