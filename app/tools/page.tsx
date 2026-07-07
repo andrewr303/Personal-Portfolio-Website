@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import path from "node:path";
+import { readFile } from "node:fs/promises";
 import { TopNav } from "@/components/chrome/TopNav";
 import { SkillsLibrary } from "@/components/tools/SkillsLibrary";
-import { tools } from "@/content/tools";
+import { skills, tools } from "@/content/tools";
 import { InlineIcon, ToolsIcon, ClaudeMark, CheckIcon } from "@/lib/icons";
 
 export const metadata: Metadata = {
@@ -10,7 +12,25 @@ export const metadata: Metadata = {
     "Custom-built tools and Claude skills that create enterprise-level capability without enterprise-level cost.",
 };
 
-export default function ToolsPage() {
+export const dynamic = "force-static";
+
+async function loadSkillText(name: string) {
+  try {
+    return await readFile(path.join(process.cwd(), "public", "skills", `${name}.md`), "utf8");
+  } catch (error) {
+    console.error(`Unable to load skill markdown for ${name}`, error);
+    return "";
+  }
+}
+
+async function loadSkillTexts() {
+  const entries = await Promise.all(skills.map(async ({ name }) => [name, await loadSkillText(name)] as const));
+  return Object.fromEntries(entries);
+}
+
+export default async function ToolsPage() {
+  const skillTexts = await loadSkillTexts();
+
   return (
     <div style={{ position: "relative", minHeight: "100vh", overflowX: "hidden" }}>
       <TopNav active="tools" />
@@ -155,7 +175,7 @@ export default function ToolsPage() {
             <strong style={{ color: "var(--t1,#fff)", fontWeight: 600 }}>.skill</strong> to drop straight
             into Claude.
           </p>
-          <SkillsLibrary />
+          <SkillsLibrary initialTexts={skillTexts} />
         </section>
       </main>
     </div>
