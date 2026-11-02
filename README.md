@@ -52,10 +52,11 @@ the OS `prefers-color-scheme` can never flip the theme.
 
 ## Notes for deployment
 
-- **HypeStake site preview** (home, feature section) is an intentional **static mock** of
-  hypestake.ai, faithful to the design. To embed the live site, swap the `.embedScreen` block in
-  `components/sections/HypeStakeFeature.tsx` for an `<iframe src="https://hypestake.ai">` — requires
-  hypestake.ai to allow framing.
+- **HypeStake product preview** (home, feature section) shows a real product screenshot that links to
+  hypestake.ai. A live `<iframe>` does not work: hypestake.ai sends `X-Frame-Options: SAMEORIGIN` and
+  `frame-ancestors 'self'`, and this site's CSP has no `frame-src`. Embedding the live site needs both
+  hypestake.ai to allow `frame-ancestors https://andrewvrodriguez.com` and this site to add
+  `frame-src https://hypestake.ai` in `next.config.mjs`.
 - **Contact form** mirrors the design: it shows a simulated "Message Sent!" state and does not yet
   deliver. Wire the `submit` handler in `components/sections/Contact.tsx` to an email service
   (Resend/Formspree) to send for real. The email + LinkedIn links are the live channels meanwhile.

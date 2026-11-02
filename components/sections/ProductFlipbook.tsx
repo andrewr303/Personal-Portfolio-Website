@@ -54,8 +54,8 @@ export function ProductFlipbook() {
             A flip through HypeStake
           </h2>
           <p style={{ margin: "12px 0 0", fontSize: 16, lineHeight: 1.62, color: "var(--t2,#d4d4d8)", maxWidth: 560 }}>
-            Real screens from the live product. Creator Genome, the Deal Engine, the Valuation stack,
-            and portfolio analytics, all built solo.
+            Real screens from the product: the creator dashboard, Creator Genome, Contract Studio,
+            campaign tracking, and the content studio, all built solo.
           </p>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 10, flex: "0 0 auto" }}>
