@@ -54,8 +54,8 @@ export function ProductFlipbook() {
             A flip through HypeStake
           </h2>
           <p style={{ margin: "12px 0 0", fontSize: 16, lineHeight: 1.62, color: "var(--t2,#d4d4d8)", maxWidth: 560 }}>
-            Real screens from the product: the creator dashboard, Creator Genome, Contract Studio,
-            campaign tracking, and the content studio, all built solo.
+            Real screens from the product: creator portfolios, Creator Genome, deal review, contracts,
+            campaigns, and content, all built solo.
           </p>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 10, flex: "0 0 auto" }}>
@@ -187,42 +187,31 @@ export function ProductFlipbook() {
           }}
         >
           <div style={{ minWidth: 240, flex: 1 }}>
-            <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-0.015em", color: "var(--t1,#fff)" }}>
+            <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-0.015em", color: "#f4f4f7" }}>
               {current.title}
             </div>
-            <div style={{ fontSize: 14, lineHeight: 1.5, color: "var(--t3,#9f9fa9)", marginTop: 5, maxWidth: 560 }}>
+            <div style={{ fontSize: 14, lineHeight: 1.5, color: "#a7a7b4", marginTop: 5, maxWidth: 560 }}>
               {current.blurb}
             </div>
           </div>
         </div>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          gap: 10,
-          marginTop: 16,
-          overflowX: "auto",
-          padding: "4px 2px 8px",
-          WebkitOverflowScrolling: "touch",
-        }}
-      >
+      {/* Labeled screen switcher: names every screen up front, so visitors can
+          jump to the one they care about instead of guessing from tiny thumbnails. */}
+      <div className={styles.tabs} role="group" aria-label="Choose a product screen">
         {gallery.map((g, i) => {
           const active = i === index;
           return (
             <button
               key={g.src}
+              type="button"
               onClick={() => setIndex(i)}
-              aria-label={`View ${g.title}`}
-              className={styles.thumb}
-              style={{
-                border: `1.5px solid ${active ? "rgba(111,155,232,0.9)" : "rgba(255,255,255,0.08)"}`,
-                opacity: active ? 1 : 0.5,
-                boxShadow: active ? "0 0 0 3px rgba(47,99,201,0.18)" : "none",
-              }}
+              aria-pressed={active}
+              className={`${styles.tab} ${active ? styles.tabActive : ""}`}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={g.src} alt="" loading="lazy" />
+              <span className={styles.tabTag}>{g.tag}</span>
+              <span className={styles.tabTitle}>{g.title}</span>
             </button>
           );
         })}

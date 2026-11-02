@@ -30,6 +30,11 @@ export function Hero() {
               Connect With Me
             </a>
           </div>
+          <ul className={styles.facts} aria-label="At a glance">
+            <li>Founder &amp; CEO, HypeStake</li>
+            <li>B.S. Business, CU Boulder</li>
+            <li>Denver, CO</li>
+          </ul>
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className={styles.portrait} src="/assets/andrew-portrait.jpg" alt="Andrew Rodriguez" />

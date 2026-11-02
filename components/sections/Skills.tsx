@@ -1,9 +1,25 @@
 import { skillCards } from "@/content/home";
-import { InlineIcon, CheckIcon } from "@/lib/icons";
+import { InlineIcon, CheckIcon, SparkleIcon } from "@/lib/icons";
 
 export function Skills() {
   return (
     <section id="skills" style={{ padding: "64px 0 40px" }}>
+      <div
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: 8,
+          fontSize: 11,
+          fontWeight: 700,
+          letterSpacing: "0.16em",
+          textTransform: "uppercase",
+          color: "#6f9be8",
+          marginBottom: 12,
+        }}
+      >
+        <SparkleIcon size={14} />
+        Expertise
+      </div>
       <h2
         style={{
           margin: 0,

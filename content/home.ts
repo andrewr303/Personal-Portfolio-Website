@@ -71,9 +71,10 @@ export const skillCards: SkillCard[] = [
 ];
 
 export const gallery: GalleryItem[] = [
-  { src: "/assets/hs-creator-dashboard.webp", title: "Creator Dashboard", tag: "Creator Hub", blurb: "Portfolio value, active deals by structure, pending offers, revenue earned, and audience across every platform." },
+  { src: "/assets/hs-creator-portfolio.webp", title: "Creator Portfolio", tag: "Creator Hub", blurb: "Every equity holding with its value, vesting progress, company valuation, stake, and growth." },
   { src: "/assets/hs-creator-genome.webp", title: "Creator Genome", tag: "Creator Genome", blurb: "AI-scored creator profile with a CERS rating, reach, earnings potential, and dimension scores." },
+  { src: "/assets/hs-deal-review.webp", title: "Deal Review", tag: "Deal Engine", blurb: "A hybrid offer split into equity, cash, and revenue share, with match score, expiry, and timeline." },
   { src: "/assets/hs-contract-studio.webp", title: "Contract Studio", tag: "Deal Engine", blurb: "AI-drafted hybrid creator agreements with blocking findings, required-section checks, and signature tracking." },
-  { src: "/assets/hs-campaign-today.webp", title: "Campaign Command Center", tag: "Campaigns", blurb: "Reach against target, spend against cap, and the open decisions waiting on the brand." },
+  { src: "/assets/hs-campaign-today.webp", title: "Campaign Center", tag: "Campaigns", blurb: "Reach against target, spend against cap, and the open decisions waiting on the brand." },
   { src: "/assets/hs-content-studio.webp", title: "Content Studio", tag: "Creator Studio", blurb: "Briefs anchored to a deal generate platform-specific post variants in the brand's voice." },
 ];
