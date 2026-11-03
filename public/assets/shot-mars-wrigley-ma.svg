@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Mars Wrigley M&A Analysis first page preview">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Mars Wrigley M&amp;A Analysis first page preview">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#334155"/><stop offset="1" stop-color="#020617"/></linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity="0.35"/></filter>
@@ -12,7 +12,7 @@
     <rect x="335" y="164" width="480" height="4" rx="2" fill="#cbd5e1"/>
     <rect x="335" y="188" width="410" height="4" rx="2" fill="#cbd5e1"/>
     <text x="335" y="300" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="800" fill="#0f172a">Mars + Wrigley</text>
-    <text x="337" y="358" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#334155">M&A Analysis</text>
+    <text x="337" y="358" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#334155">M&amp;A Analysis</text>
     <rect x="335" y="415" width="430" height="6" rx="3" fill="#e2e8f0"/>
     <rect x="335" y="445" width="500" height="6" rx="3" fill="#e2e8f0"/>
     <rect x="335" y="475" width="455" height="6" rx="3" fill="#e2e8f0"/>

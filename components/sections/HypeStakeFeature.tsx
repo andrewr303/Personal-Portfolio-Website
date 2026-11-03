@@ -137,15 +137,7 @@ export function HypeStakeFeature() {
         </div>
 
         {/* highlights */}
-        <div
-          style={{
-            position: "relative",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,232px),1fr))",
-            gap: 14,
-            padding: `0 ${PAD} ${PAD}`,
-          }}
-        >
+        <div className={styles.highlights} style={{ padding: `0 ${PAD} ${PAD}` }}>
           {highlights.map((h) => (
             <div
               key={h.title}
@@ -178,10 +170,10 @@ export function HypeStakeFeature() {
           ))}
         </div>
 
-        {/* live-product preview — the real hypestake.ai embedded in a browser-chrome frame.
-            The iframe scrolls internally, so the full site can be explored without leaving
-            the page. hypestake.ai sends no X-Frame-Options / frame-ancestors, so framing
-            is permitted. */}
+        {/* Product preview. hypestake.ai sends `X-Frame-Options: SAMEORIGIN` and
+            `frame-ancestors 'self'`, so browsers refuse to render it in an iframe on
+            this domain. The preview shows a real product screen and links out to the
+            live site instead of showing an empty frame. */}
         <div className={styles.preview}>
           <div
             style={{
@@ -214,7 +206,7 @@ export function HypeStakeFeature() {
                   color: "#6f9be8",
                 }}
               >
-                Live Product · hypestake.ai
+                The product · hypestake.ai
               </span>
             </div>
             <a href={profile.hypestake} target="_blank" rel="noopener" className={styles.openLink}>
@@ -282,29 +274,26 @@ export function HypeStakeFeature() {
               </a>
             </div>
 
-            {/* Live, scrollable embed of hypestake.ai */}
-            <div
-              style={{
-                position: "relative",
-                height: "clamp(460px,72vh,760px)",
-                background:
-                  "radial-gradient(120% 90% at 50% -10%,rgba(47,99,201,0.16),transparent 60%),#07070d",
-              }}
+            <a
+              href={profile.hypestake}
+              target="_blank"
+              rel="noopener"
+              className={styles.screen}
+              aria-label="Open hypestake.ai in a new tab"
             >
-              <iframe
-                src={profile.hypestake}
-                title="HypeStake — live site (hypestake.ai)"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/hs-creator-dashboard.webp"
+                alt="HypeStake creator dashboard showing portfolio value, active and pending deals, revenue earned, and audience by platform"
+                width={1600}
+                height={1034}
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms allow-modals allow-downloads"
-                style={{
-                  display: "block",
-                  width: "100%",
-                  height: "100%",
-                  border: 0,
-                }}
               />
-            </div>
+              <span className={styles.screenCta}>
+                Open the live site
+                <ArrowUpRightIcon size={15} strokeWidth={2.2} />
+              </span>
+            </a>
           </div>
           <div
             style={{
@@ -317,7 +306,7 @@ export function HypeStakeFeature() {
             }}
           >
             <InfoIcon size={13} />
-            Live embed of hypestake.ai — scroll inside the frame to explore, or open the full site.
+            Product screen from hypestake.ai. More screens in the tour below.
           </div>
         </div>
       </div>

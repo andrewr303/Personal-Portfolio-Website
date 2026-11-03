@@ -71,14 +71,10 @@ export const skillCards: SkillCard[] = [
 ];
 
 export const gallery: GalleryItem[] = [
-  { src: "/assets/shot-portfolio.jpg", title: "Creator Portfolio", tag: "Creator Hub", blurb: "Equity stakes, vesting, and scenario-weighted portfolio value in one view." },
-  { src: "/assets/shot-genome-music.png", title: "Music Creator Genome", tag: "Creator Genome", blurb: "AI-scored creator profile with CERS rating, reach, and revenue potential." },
-  { src: "/assets/shot-genome-streamer.png", title: "Streamer Viewership Vitality", tag: "Creator Genome", blurb: "Live audience heatmap, concurrents, and streaming cadence." },
-  { src: "/assets/shot-genome-athlete.png", title: "Athlete Activation Calendar", tag: "Creator Genome", blurb: "Season phases and tournament windows mapped to brand activation moments." },
-  { src: "/assets/shot-deal.png", title: "Deal Architect", tag: "Deal Engine", blurb: "Equity, cash, and rev-share structured with AI deal-health scoring." },
-  { src: "/assets/shot-stake-rating.png", title: "AI Stake Rating", tag: "Valuation Engine", blurb: "Cost basis, IRR, and a 0-100 stake rating with outlook scenarios." },
-  { src: "/assets/shot-trajectory.png", title: "Exit Scenarios", tag: "Valuation Engine", blurb: "Entry-to-exit trajectory across floor, downside, base, and best case." },
-  { src: "/assets/shot-composition.png", title: "Portfolio Intelligence", tag: "Analytics", blurb: "Industry mix, diversification, and the holdings dragging the score." },
-  { src: "/assets/shot-scorepath.png", title: "Score Path", tag: "Analytics", blurb: "Transparent waterfall of every factor moving the final stake score." },
-  { src: "/assets/shot-finance-studio.jpg", title: "Brand Finance Studio", tag: "Brand Hub", blurb: "Planning-grade valuation and creator-equity cost, before a single match." },
+  { src: "/assets/hs-creator-portfolio.webp", title: "Creator Portfolio", tag: "Creator Hub", blurb: "Every equity holding with its value, vesting progress, company valuation, stake, and growth." },
+  { src: "/assets/hs-creator-genome.webp", title: "Creator Genome", tag: "Creator Genome", blurb: "AI-scored creator profile with a CERS rating, reach, earnings potential, and dimension scores." },
+  { src: "/assets/hs-deal-review.webp", title: "Deal Review", tag: "Deal Engine", blurb: "A hybrid offer split into equity, cash, and revenue share, with match score, expiry, and timeline." },
+  { src: "/assets/hs-contract-studio.webp", title: "Contract Studio", tag: "Deal Engine", blurb: "AI-drafted hybrid creator agreements with blocking findings, required-section checks, and signature tracking." },
+  { src: "/assets/hs-campaign-today.webp", title: "Campaign Center", tag: "Campaigns", blurb: "Reach against target, spend against cap, and the open decisions waiting on the brand." },
+  { src: "/assets/hs-content-studio.webp", title: "Content Studio", tag: "Creator Studio", blurb: "Briefs anchored to a deal generate platform-specific post variants in the brand's voice." },
 ];
